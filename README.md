@@ -7,4 +7,5 @@
 - [ ] Create Kanban to manage tasks
 - [ ] Use daily, weekly and monthly notes for tasks
 - [ ] Import schedule into calendar
+- [ ] Did the sync work on mobile?
 
