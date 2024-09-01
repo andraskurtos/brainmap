@@ -1,2 +1,10 @@
-# linked-blog-starter-md
-These are the markdown files for the [linked-blog-starter](https://github.com/matthewwong525/linked-blog-starter) repository
+## Tomorrow is the first day of uni again, and I'm gonna start hacking my brain. this is the first note of many to come.
+
+
+### Things to do for the notes:
+- [x] Create a github repo
+- [x] Make it back up
+- [ ] Create Kanban to manage tasks
+- [ ] Use daily, weekly and monthly notes for tasks
+- [ ] Import schedule into calendar
+- [ ] 
