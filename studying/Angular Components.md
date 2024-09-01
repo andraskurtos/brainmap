@@ -12,7 +12,8 @@ Angular components are the basic building blocks of Angular applications.
 
 Each component has 3 parts:
 - [[TypeScript]] Class
-- [[HTML template]]
+- [HTML template](Angular HTML template)
+- 
 - [[CSS]] styles
 
 ## Hello World!
