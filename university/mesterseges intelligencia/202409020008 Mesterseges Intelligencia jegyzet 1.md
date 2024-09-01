@@ -1,6 +1,10 @@
 ---
 created: 20240901 23:53
-tags: 
+tags:
+  - uni
+  - ai
+  - 5semester
+  - lecture
 cssclasses:
 ---
 
