@@ -1,4 +1,4 @@
-
+## **buttons:**
 ```meta-bind-button
 label: CURRENT DAILY NOTE
 icon: ""
@@ -69,3 +69,4 @@ actions:
     command: obsidian-git:pull
 
 ```
+

@@ -2,10 +2,10 @@
 	"nodes":[
 		{"id":"89ff144e4b545f5e","type":"file","file":"util/daily routine.md","x":-2340,"y":-2340,"width":400,"height":400},
 		{"id":"11b828a2c126da8d","type":"file","file":"util/tasks.md","x":-2340,"y":-2694,"width":400,"height":354},
-		{"id":"cf1dcb822a82563d","type":"file","file":"util/recent notes.md","x":-1940,"y":-2540,"width":250,"height":600},
 		{"id":"77892c79f09a2f60","type":"file","file":"util/welcome.md","x":-2340,"y":-2900,"width":400,"height":206},
-		{"id":"c4ef432acd3b2108","type":"file","file":"util/buttons.md","x":-1940,"y":-2900,"width":250,"height":360},
-		{"id":"a682c8e1ff298229","type":"file","file":"util/schedule.md","x":-1690,"y":-2900,"width":550,"height":960}
+		{"id":"c4ef432acd3b2108","type":"file","file":"util/buttons.md","x":-1940,"y":-2900,"width":250,"height":260},
+		{"id":"a682c8e1ff298229","type":"file","file":"util/schedule.md","x":-1690,"y":-2900,"width":550,"height":960},
+		{"id":"cf1dcb822a82563d","type":"file","file":"util/recent notes.md","x":-1940,"y":-2380,"width":250,"height":440}
 	],
 	"edges":[]
 }
