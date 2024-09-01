@@ -10,7 +10,6 @@ style: primary
 actions:
   - type: command
     command: periodic-notes:open-daily-note
-
 ```
 
 ```meta-bind-button

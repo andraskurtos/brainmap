@@ -1,8 +1,6 @@
 #daily 
 
 
-
-
 ## **notes created today:**
 ```dataview
 List
@@ -17,17 +15,22 @@ SORT file.ctime
 |      |      |       |
 
 ____ 
-## **general todo:**
-- [ ] vitamins morning
-- [ ] brush teeth morning
-- [ ] check email
-- [ ] allergy meds night
-- [ ] brush teeth night
+## **general routine todo:**
+- [ ] vitamins #morning
+- [ ] brush teeth #morning
+- [ ] skincare #morning
+- [ ] make bed #morning
+- [ ] check email #morning
+- [ ] eat lunch #day
+- [ ] shower #night
+- [ ] allergy meds #night
+- [ ] skincare #night
+- [ ] brush teeth #night
 
-**tasks today:**
+## **tasks today:**
 - [x] ?
 
-
+## **notes:**
 _____
 *past things to review:*
 
