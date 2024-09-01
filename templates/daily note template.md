@@ -1,4 +1,10 @@
-#daily 
+---
+created: ""
+tags:
+  - daily
+cssclasses:
+---
+
 
 
 ## **notes created today:**
@@ -32,35 +38,34 @@ ____
 
 ## **notes:**
 _____
-*past things to review:*
+###### past things to review:
 
 
 
 ---------
-*fleeting notes for the day:*
+###### fleeting notes for the day:
 
 
 
 
 _____
-*diary entry*:
+###### diary entry:
 
 
 
 
 ____
-*media consumed:*
+###### media consumed:
 
 
 
 
 
 ____
-*habits, health:*
-
+###### habits, health:
 
 
 
 
 _____
-*misc:*
+###### misc:

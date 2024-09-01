@@ -4,19 +4,19 @@
 - [ ]  
 
 
-*summary*:
+###### summary:
 
 
 ________________
-*what i learned:*
+###### what i learned:
 
 
 ______
-*next week?:*
+###### next week?:
 
 
 _______
-*misc:*
+###### misc:
 
 
 ______
