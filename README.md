@@ -8,4 +8,3 @@
 - [ ] Use daily, weekly and monthly notes for tasks
 - [ ] Import schedule into calendar
 
-asadas
