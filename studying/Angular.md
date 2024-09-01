@@ -9,8 +9,7 @@ cssclasses:
 ---
 
 # ANGULAR NOTES
-
-## [components](studying/202409020103 Angular Components):
+[[Angular Components]]
 - Building blocks of Angular applications
 - A component has 3 parts:
 	- TypeScript Class
