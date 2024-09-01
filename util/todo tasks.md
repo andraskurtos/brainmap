@@ -1,6 +1,6 @@
 ```dataview
 TASK
-FROM ""
+FROM #task
 WHERE !completed
 SORT created ASC
 LIMIT 10

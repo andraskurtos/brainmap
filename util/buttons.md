@@ -40,3 +40,33 @@ actions:
     command: periodic-notes:open-monthly-note
 
 ```
+
+```meta-bind-button
+label: PUSH NOTES
+icon: ""
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: primary
+actions:
+  - type: command
+    command: obsidian-git:commit
+  - type: command
+    command: obsidian-git:push2
+
+```
+
+```meta-bind-button
+label: PULL NOTES
+icon: ""
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: primary
+actions:
+  - type: command
+    command: obsidian-git:pull
+
+```
