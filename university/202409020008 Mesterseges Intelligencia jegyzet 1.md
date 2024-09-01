@@ -4,4 +4,4 @@ tags:
 cssclasses:
 ---
 
-# NEW NOTE
+# Mesterséges Intelligencia 1. előadás
