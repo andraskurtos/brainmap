@@ -7,4 +7,4 @@
 - [ ] Create Kanban to manage tasks
 - [ ] Use daily, weekly and monthly notes for tasks
 - [ ] Import schedule into calendar
-- [ ] 
+- [ ] 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
