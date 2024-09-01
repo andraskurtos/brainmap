@@ -1,6 +1,10 @@
 {
 	"nodes":[
-		{"id":"c4ef432acd3b2108","x":-1440,"y":-2440,"width":400,"height":400,"type":"file","file":"dashboard buttons.md"}
+		{"id":"77892c79f09a2f60","type":"file","file":"util/welcome.md","x":-2340,"y":-2900,"width":900,"height":206},
+		{"id":"11b828a2c126da8d","type":"file","file":"util/todo tasks.md","x":-2340,"y":-2694,"width":400,"height":754},
+		{"id":"cf1dcb822a82563d","type":"file","file":"util/recent notes.md","x":-1940,"y":-2694,"width":300,"height":754},
+		{"id":"b49595dd16b59552","type":"file","file":"util/pic of the day.md","x":-1640,"y":-2540,"width":500,"height":600},
+		{"id":"c4ef432acd3b2108","type":"file","file":"util/buttons.md","x":-1640,"y":-2900,"width":500,"height":360}
 	],
 	"edges":[]
 }

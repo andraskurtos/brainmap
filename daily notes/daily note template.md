@@ -8,25 +8,24 @@ WHERE file.cday = this.file.cday
 SORT file.ctime
 ```
 **general todo:**
-- [ ] vitamins morning
+- [x] vitamins morning
 - [x] brush teeth morning
-- [ ] allergy meds night
-- [ ] brush teeth night
+- [x] allergy meds night
+- [x] brush teeth night
 
 **tasks today:**
-- [x] create obsidian vault
+- [x] ?
 
 
 _____
 *past things to review:*
 
--
+
 
 ---------
 *fleeting notes for the day:*
 
-rozi lefeküdt rodeszsráccal xddd
-kiégek
+
 
 
 _____
