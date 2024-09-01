@@ -12,8 +12,7 @@ Angular components are the basic building blocks of Angular applications.
 
 Each component has 3 parts:
 - [[TypeScript]] Class
-- [HTML template](Angular HTML template)
-- 
+- [HTML template](HTML template)s
 - [[CSS]] styles
 
 ## Hello World!
@@ -38,7 +37,7 @@ import {Component} from '@angular/core';
 export class AppComponent {}
 ```
 
-The 'template' section is the HTML template, and the 'styles' section is the CSS styles inside the TypeScript class.
+The 'template' section is the [[HTML template]], and the 'styles' section is the CSS styles inside the TypeScript class.
 
 ## Component Class
 The component's logic and behavior is defined in the TypeScript class.

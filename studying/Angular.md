@@ -9,9 +9,6 @@ cssclasses:
 ---
 
 # ANGULAR NOTES
-[[Angular Components]]
-- Building blocks of Angular applications
-- A component has 3 parts:
-	- TypeScript Class
-	- HTML template
-	- CSS styles
+Angular is a web framework maintained by Google. It uses HTML, CSS and TypeScript for frontend development.
+
+The basic building blocks in angular are called [[Angular Components]].
