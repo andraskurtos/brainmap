@@ -1,16 +1,26 @@
-#daily #todo
+#daily 
 
-**notes created today:**
+
+
+
+## **notes created today:**
 ```dataview
 List
 FROM "brainmap"
-WHERE file.cday = this.file.cday
+WHERE file.cday = date(this.file.name)
 SORT file.ctime
 ```
+## **events:**
 
-**general todo:**
+| Time | Name | Place |
+| ---- | ---- | ----- |
+|      |      |       |
+
+____ 
+## **general todo:**
 - [ ] vitamins morning
 - [ ] brush teeth morning
+- [ ] check email
 - [ ] allergy meds night
 - [ ] brush teeth night
 
