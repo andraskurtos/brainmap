@@ -3,7 +3,7 @@ created: 20240901 23:53
 tags:
   - angular
   - cs
-cssclasses:
+cssclasses: []
 ---
 
 # Angular components
@@ -93,4 +93,6 @@ export class AppComponent {}
 ```
 
 In this example, we are referencing the UserComponent component from the AppComponent. For this, we need to import it in the `imports` section, then use the HTML tag `<app-user/>`.
+
+# heading
 
