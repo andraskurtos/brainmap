@@ -7,5 +7,7 @@
 		{"id":"a682c8e1ff298229","type":"file","file":"util/schedule.md","x":-1690,"y":-2900,"width":550,"height":960},
 		{"id":"cf1dcb822a82563d","type":"file","file":"util/recent notes.md","x":-1940,"y":-2380,"width":250,"height":440}
 	],
-	"edges":[]
+	"edges":[
+		{"id":"9a0104f70e5e8416","fromNode":"11b828a2c126da8d","fromSide":"bottom","toNode":"89ff144e4b545f5e","toSide":"top"}
+	]
 }
