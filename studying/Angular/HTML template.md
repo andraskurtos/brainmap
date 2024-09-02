@@ -7,10 +7,10 @@ tags:
 cssclasses:
 ---
 
-# Angular HTML templates
-HTML templates are one of three building blocks of Angular components. They are used mainly to control what is displayed on screen.
+# Angular [[HTML]] templates
+[[HTML]] templates are one of three building blocks of [[Angular]] components. They are used mainly to control what is displayed on screen.
 ## Referencing other components with Selector Property:
-You can use the `selector:` property of a component as an HTML tag inside a template to reference it. E.g. `<app-user / >`.
+You can use the `selector:` property of a component as an [[HTML tag]] inside a template to reference it. E.g. `<app-user / >`.
 
 ## Conditions
 You can express conditional displays in templates using the `@if` syntax.
@@ -29,7 +29,7 @@ class AppComponent {
 }
 ```
 
-This snippet will display 'Welcome back, Friend!' if the *isLoggedIn* property of the TypeScript class is *true*.
+This snippet will display 'Welcome back, Friend!' if the *isLoggedIn* property of the [[TypeScript]] class is *true*.
 
 ## For loops
 You can create forloops in templates using the `@for` syntax.
