@@ -5,12 +5,14 @@ tags:
   - ai
   - 5semester
   - lecture
+  - mi
 cssclasses:
 ---
 
 # Mesterséges Intelligencia 1. előadás
 
-## 1 - Tárgykövetelmények
+## 1 - [Tárgykövetelmények](MI tárgykövetelmények)
+
 
 #### Előadás:
 - Minden héten szerda 10:15-12:00
