@@ -11,7 +11,7 @@ cssclasses:
 
 # Mesterséges Intelligencia 1. előadás
 
-## 1 - [Tárgykövetelmények](MI tárgykövetelmények)
+## 1 - [Tárgykövetelmények](MItárgykövetelmények)
 
 
 #### Előadás:
