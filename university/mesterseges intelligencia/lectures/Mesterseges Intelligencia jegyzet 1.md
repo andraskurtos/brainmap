@@ -7,6 +7,8 @@ tags:
   - lecture
   - mi
 cssclasses:
+  - center-titles
+  - image-borders
 ---
 
 # Mesterséges Intelligencia 1. előadás
@@ -14,8 +16,10 @@ cssclasses:
 ## 1 - [[MI tárgykövetelmények|Tárgykövetelmények]]
 
 #### Előadás:
+
 - Minden héten szerda 10:15-12:00
 - Páratlan hetenként hétfő 14:15-16:00
+
 Kivéve:
 - szept 30 nincs előadás SCH QPA miatt
 - okt 23
@@ -28,9 +32,11 @@ MIT házi feladat portál: https://hf.mit.bme.hu
 Laborbeosztás, jelentkezés itt
 ZH eredmények is
 
+
 ___
 
 #### Követelmények:
+
 - 1 ZH
 - 7 Labor (1 labor 1 pont)
 - Összpontszám: **100 = ZH_1 (33p) + Labor (7p) + Vizsga (60p)**
@@ -45,6 +51,7 @@ ___
 	- 85+ *5*
 
 #### Labor infók:
+
 - Első labor: mindenkinek hozzárendelt időpont
 - Többi:
 	- jelenléti vagy online
@@ -60,6 +67,7 @@ ____
 ![[Pasted image 20240904123724.png]]
 
 ### Miért van szükségünk mesterséges intelligenciára?
+
 - segít megismerni az emberi kognitív folyamatokat
 - emberi szakértők kiegészítése, támogatása
 - emberi képességek támogatása, kiegészítése, kiterjesztése
@@ -72,6 +80,7 @@ ___
 
 
 #### Mérnöki szempontok:
+
 - megoldható és kivitelezhető problémák
 - hogyan elemezzük a problémákat, melyek MI alkalmazását igénylik?
 - hogyan specifikáljuk?
@@ -87,9 +96,10 @@ ___
 ______
 
 ### Lehetséges MI megközelítések
+
 Emberi módon cselekvő MI <-> Racionálisan gondolkozó MI
 
-**Nem feltétlenül az emberi vagy természetben elterjedt mód a legjobb, ha valamilyen célt el akarunk érni**
+##### **Nem feltétlenül az emberi vagy természetben elterjedt mód a legjobb, ha valamilyen célt el akarunk érni**
 
 - Emberi módon gondolkozó MI: **kognitív modellezés**
 	kognitív tudományok, biológia
@@ -127,7 +137,7 @@ ____
 - 1986 Neurális hálózatok újbóli megjelenése
 - 1988 Valószínűségi szakértői rendszerek
 - 1995 Gépi tanulás gyors fejlődése
-#### **Adatvezérelt MI:** (2005-15)
+#### **Adatvezérelt MI** (2005-15)
 #### **Autonóm tanulás alapú MI** (2012-20)
 #### **Nagy nyelvi modellek - AGI(?)** (2020-)
 Agi = Mesterséges Általános Intelligencia
@@ -148,18 +158,19 @@ ___
 ___
 
 ### Érdekességek:
-**IBM Grand Challenge** 
+### **IBM Grand Challenge** 
  - 1997: *Deep Blue* legyőzi Kasparovot sakkban
  - 1996-2006: *Blue Gene*, fehérje struktúra predikció
  - 2011: *Watson* beszédértés, következtetés, játék
-**Számítógépes látás (YOLO)**
+### **Számítógépes látás (YOLO)**
 - you only look once: valós idejű, teljeskörű objektumfelismerés
 - mobiltelefonon
-**Orvosi döntéstámogató és szakértői rendszerek**
-**Szépségverseny zsűri (Beauty AI)** - (EZ FIX RASSZISTA VOLT XD
+### **Egyebek**
+*Orvosi döntéstámogató és szakértői rendszerek*
+*Szépségverseny zsűri (Beauty AI)* - (EZ FIX RASSZISTA VOLT XD
 )
-**Festői stílus reprodukciója**
-**AI-art :(**
+*Festői stílus reprodukciója*
+*AI-art :(*
 
 
 ___
