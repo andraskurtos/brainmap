@@ -30,3 +30,4 @@ A *reflex [[Ágens|ágens]]* az aktuális érzékelés, esetleg a memória alapj
 A *tervkészítő ágensek* a cselekvések lehetséges következményeinek függvényében hozzák meg döntéseiket. Ehhez rendelkezniük kell egy modellel, ami leírja, a világ hogyan változik egyes cselekvések hatására. Egy *tesztelhető célfüggvény* segítségével meghatározza célját, és ennek függvényében dönt, figyelembe véve, hogy a világ milyen lehet, milyenné válhat.
 
 ![[Pasted image 20240904191336.png]]
+s
