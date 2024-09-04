@@ -37,8 +37,8 @@ Az *adatvezérelt rendszereket* tipikusan *3 rétegű architektúra* szerint ép
 
 *Ezen kívül az architektúrához kapcsolódik még:*
 
-- az [[adatbázis]]
-- a [[Külső Adatforrások|külső adatforrások]]
+- az [[Adatforrások az Adatvezérelt Rendszerekben#1 - ADATBÁZIS|adatbázis]]
+- a [[Adatforrások az Adatvezérelt Rendszerekben#2 - KÜLSŐ ADATFORRÁSOK|külső adatforrások]]
 - és a [[rétegfüggetlen szolgáltatások]].
 
 ---
