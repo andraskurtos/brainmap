@@ -11,7 +11,7 @@ cssclasses:
 ---
 # Üzleti logika réteg az Adatvezérelt Rendszerekben
 
-Az üzleti logika réteg adja az alkalmazás "lelkét". Az [[Adatforrások az Adatvezérelt Rendszerekben|adattárolás]], [[Adatelérési réteg|elérés]] és a [[Megjelenítési Réteg]] is mind azért van, hogy a logikai rétegben megadott funkcionalitásokat nyújthassuk.
+Az üzleti logika réteg adja az alkalmazás "lelkét". Az [[Adatforrások az Adatvezérelt Rendszerekben|adattárolás]], [[Adatelérési réteg|elérés]] és a [[Megjelenítési Réteg|megjelenítési réteg]] is mind azért van, hogy a logikai rétegben megadott funkcionalitásokat nyújthassuk.
 
 A pontos funkciókat annak függvényében alakítjuk ki, hogy milyen alkalmazásról van szó.
 

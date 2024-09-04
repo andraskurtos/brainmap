@@ -31,7 +31,7 @@ ___
 ### **Háromrétegű architektúra**
 Az *adatvezérelt rendszereket* tipikusan *3 rétegű architektúra* szerint építjük fel. Ez az architektúra megkülönbözteti az alkalmazás 3 fő komponenscsaládját / rétegét:
 
-- [[megjelenítési réteg]]
+- [[Megjelenítési Réteg|megjelenítési réteg]]
 - [[Üzleti Logika Réteg|üzleti logika réteg]]
 - [[adatelérési réteg]]
 
@@ -39,7 +39,7 @@ Az *adatvezérelt rendszereket* tipikusan *3 rétegű architektúra* szerint ép
 
 - az [[Adatforrások az Adatvezérelt Rendszerekben#1 - ADATBÁZIS|adatbázis]]
 - a [[Adatforrások az Adatvezérelt Rendszerekben#2 - KÜLSŐ ADATFORRÁSOK|külső adatforrások]]
-- és a [[rétegfüggetlen szolgáltatások]].
+- és a [[Rétegfüggetlen Szolgáltatások|rétegfüggetlen szolgáltatások]].
 
 ---
 
