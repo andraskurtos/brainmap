@@ -1,10 +1,11 @@
 ---
 title: Mesterséges Intelligencia EA - IB026
 allDay: false
-startTime: 16:15
-endTime: 18:00
-type: recurring
+startTime: 14:15
+endTime: 16:00
+type: single
 daysOfWeek: [M]
 startRecur: 2024-09-02
 endRecur: 2024-12-30
+date: 2024-09-02
 ---
