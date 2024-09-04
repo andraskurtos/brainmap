@@ -11,8 +11,8 @@ cssclasses:
 # Tárgykövetelmények - Mesterséges Intelligencia
 
 ## Előadás:
-- Minden héten szerda 10:15-12:00
-- Páratlan hetenként hétfő 14:15-16:00
+- Minden héten **szerda 10:15-12:00**
+- Páratlan hetenként **hétfő 14:15-16:00**
 Kivéve:
 - szept 30 nincs előadás SCH QPA miatt
 - okt 23

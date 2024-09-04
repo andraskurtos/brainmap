@@ -11,8 +11,7 @@ cssclasses:
 
 # Mesterséges Intelligencia 1. előadás
 
-## 1 - [Tárgykövetelmények](MItárgykövetelmények)
-
+## 1 - [[MI tárgykövetelmények|Tárgykövetelmények]]
 
 #### Előadás:
 - Minden héten szerda 10:15-12:00
