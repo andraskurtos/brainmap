@@ -20,7 +20,7 @@ cssclasses:
 
 ___
 
-### példa:
+### **példa:**
 - Az adat maga határozza meg a rajta végrehajtható műveleteket (Neptun vizsgajelentkezés).
 - Adatvezérelt alkalmazás pl a Neptun, Gmail.
 
@@ -59,5 +59,13 @@ Egy jó architektúrájú alkalmazás hosszú életciklus alatt is **karbantarth
 Általában a kód szervezése is *tükrözi a rétegek felépítését*. Az adott programozási környezet lehetőségeivel az egyes rétegeket *külön projektekbe, csomagokba szokás elhelyezni*, ez egyértelművé teszi az egymásra épülést is, hisz a csomagok közt csak *egyirányú hivatkozás lehetséges*.
 
 ![[Pasted image 20240904152616.png]]
+
+
+---
+### **Backend és Frontend**
+Más szemszögből nézve megkülönböztetünk *backend* és *frontend* részeket. A frontend nagyrészt a [[Megjelenítési Réteg|felhasználói felület]], illetve annak változatos megjelenítési formái (böngészős alkalmazás, natív mobil app, stb.), a felhasználó ezzel lép kapcsolatba. A backend a háttérben futó rendszer, a *szolgáltatási API-k*, az [[Üzleti Logika Réteg|üzleti logika réteg]], az [[Adatelérési réteg|adatelérés]], [[Adatforrások az Adatvezérelt Rendszerekben#1 - ADATBÁZIS|adatbázisok]].
+
+A frontend nem csak a felhasználó számítógépén jelenik meg, és a frontend technológia függvényéven előfordul, hogy a UI egy részét a backend készíti el. Ezt *szerver oldali renderelésnek* nevezik.
+
 ---
 *20240904*
