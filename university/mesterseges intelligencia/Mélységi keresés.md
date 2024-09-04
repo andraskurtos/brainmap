@@ -11,3 +11,12 @@ cssclasses:
 ---
 
 # MÉLYSÉGI KERESÉS (DFS)
+
+- A keresési fa egy bal oldali prefix részét fejti ki.
+- A teljes fát feldolgozhatja
+- Ha **m** véges, $O(b^m)$ időt vesz igénybe
+
+**Mennyi tárhelyet igényel a perem?**
+
+- 
+
