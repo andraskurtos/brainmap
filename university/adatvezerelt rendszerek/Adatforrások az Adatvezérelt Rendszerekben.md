@@ -1,6 +1,9 @@
 ---
 created: 20240901 23:53
-tags: 
+tags:
+  - 5semester
+  - datadriven
+  - adatvez
 cssclasses:
   - center-images
   - center-titles

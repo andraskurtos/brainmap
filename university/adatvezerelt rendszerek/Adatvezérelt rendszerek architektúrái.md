@@ -32,7 +32,7 @@ ___
 Az *adatvezérelt rendszereket* tipikusan *3 rétegű architektúra* szerint építjük fel. Ez az architektúra megkülönbözteti az alkalmazás 3 fő komponenscsaládját / rétegét:
 
 - [[megjelenítési réteg]]
-- [[üzleti logika réteg]]
+- [[Üzleti Logika Réteg|üzleti logika réteg]]
 - [[adatelérési réteg]]
 
 *Ezen kívül az architektúrához kapcsolódik még:*
