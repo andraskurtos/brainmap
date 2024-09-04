@@ -1,12 +1,11 @@
 {
 	"nodes":[
-		{"id":"94558c5b06685597","x":-2006,"y":-2509,"width":250,"height":60,"type":"text","text":""},
 		{"id":"89ff144e4b545f5e","type":"file","file":"util/daily routine.md","x":-2340,"y":-2340,"width":400,"height":400},
 		{"id":"11b828a2c126da8d","type":"file","file":"util/tasks.md","x":-2340,"y":-2694,"width":400,"height":354},
 		{"id":"77892c79f09a2f60","type":"file","file":"util/welcome.md","x":-2340,"y":-2900,"width":400,"height":206},
 		{"id":"c4ef432acd3b2108","type":"file","file":"util/buttons.md","x":-1940,"y":-2900,"width":250,"height":383},
 		{"id":"a682c8e1ff298229","type":"file","file":"util/schedule.md","x":-1690,"y":-2900,"width":550,"height":960},
-		{"id":"cf1dcb822a82563d","type":"file","file":"util/recent notes.md","x":-1940,"y":-2708,"width":250,"height":440}
+		{"id":"cf1dcb822a82563d","type":"file","file":"util/recent notes.md","x":-1940,"y":-2380,"width":250,"height":440}
 	],
 	"edges":[
 		{"id":"9a0104f70e5e8416","fromNode":"11b828a2c126da8d","fromSide":"bottom","toNode":"89ff144e4b545f5e","toSide":"top"}
