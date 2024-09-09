@@ -27,3 +27,13 @@ A probléma minden *n* állapotára ki kell tudnunk számolni. Kifejezi *n*-re a
 
 --> [[mohó keresés]]
 
+---
+
+## Elfogadható heurisztika
+
+A *h* heurisztika *elfogadható* (optimista), ha $$
+0 \leq h(n) \leq h^*(n)
+$$ahol $h^*(n)$ a valós költség a legközelebbi célállapothoz.
+
+Az elfogadható heurisztikák kialakítása az [[A keresés|A* keresés]] egyik lényegi pontja.
+
