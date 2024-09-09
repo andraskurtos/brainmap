@@ -89,7 +89,7 @@ ___
 	- tudás reprezentáció, menedzsment
 	- értékelés, következtetés
 	- tanulás
-	- keresés
+	- [[Keresés|keresés]]
 	- ...
 
 
