@@ -27,3 +27,27 @@ feltevések:
 - "A" előbb kerül ki a peremből, mint B
 
 ![[Pasted image 20240909183910.png]]
+
+Bizonyítás:
+
+- Tegyük fel, hogy "*B*" a peremen található
+- Továbbá, hogy "*A*" valamely "*n*" őse szintén a peremen található (vagy maga "*A*" is)
+- Állítás: "*n*" kifejtésére előbb kerül sor, mint "*B*" kifejtésére
+	1. f(n) <= f(A)
+	2. f(A) <= f(B)
+	3. "*n*" előbb kerül kifejtésre, mint "*B*"
+==> "*A*" minden őse előbb kerül kifejtésre, mint "*B*"
+==> "*A*" kifejtésre kerül "*B*" előtt
+==> **A* keresés optimális**
+
+---
+### **alkalmazásai**
+
+- videójátékok
+- útvonalkeresési problémák
+- erőforrástervezési problémák
+- robotmozgás tervezése
+- nyelvi elemzés
+- gépi fordítás
+- beszédfelismerés
+- ...
