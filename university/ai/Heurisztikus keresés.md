@@ -37,3 +37,8 @@ $$ahol $h^*(n)$ a valós költség a legközelebbi célállapothoz.
 
 Az elfogadható heurisztikák kialakítása az [[A keresés|A* keresés]] egyik lényegi pontja.
 
+---
+
+## Heurisztikák kialaktása
+
+Nehéz problémák optimális megoldásának legnehezebb része a megfelelő *elfogadható* heurisztika kialakítása. Az elfogadható heurisztikák gyakran egy *relaxált probléma megoldásai*, ahol további cselekvések lehetségesek. Esetenként nem elfogadható heurisztikák is hasznosak lehetnek.
