@@ -59,4 +59,4 @@ A személyi adatkezelő funkciók, mint például a naptár, a jegyzetek, a név
 - open C/c++
 - Qt, Qt quick
 - [[Java ME]]
-- Python
+- [[Python]]
