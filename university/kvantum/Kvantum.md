@@ -43,4 +43,3 @@ A kvantuminformatika és kvantumkommunikáció számos megoldást kínál a legk
 **Fő kérdéskör: a kvantumkommunikációs megoldások hogyan alkalmazhatóak a mérnöki rendszerekben a jelenlegi biztonság növelésének érdekében?**
 
 ---
-
