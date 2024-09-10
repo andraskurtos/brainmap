@@ -1,7 +1,15 @@
 ---
-created: 20240901 23:53
+aliases: 
 tags: 
 cssclasses:
+  - center-images
+  - center-titles
+  - markdown-preview-view
+created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 ---
+
+
+
+
 
 # NEW NOTE
