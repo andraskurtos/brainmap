@@ -169,4 +169,141 @@ Az elemek két fő típusa az *inline* elemek, melyek egymás mellé kerülnek, 
 	- befolyásolja az általa felvehető CSS tulajdonságok halmazát
 
 
-Az *inline elemek* nem reagálnak a szélesség, magasság és a függőleges padding / margó beállításokra. Reagálnak viszont a vízszintes rendezésre (`text-align`), sormagasság beállításra (`line-height`), és az azon belüli rendezésre (`vertical-align`). *Blokk elemekre* a `text-align, line-height, vertical-align` tulajdonságok nem hatnak, de *inline típusú* gyerekeik megöröklik.
+Az *inline elemek* nem reagálnak a szélesség, magasság és a függőleges padding / margó beállításokra. Reagálnak viszont a vízszintes rendezésre (`text-align`), sormagasság beállításra (`line-height`), és az azon belüli rendezésre (`vertical-align`). *Blokk elemekre* a `text-align`, `line-height`, `vertical-align` tulajdonságok nem hatnak, de *inline típusú* gyerekeik megöröklik.
+
+#### inline elemek blokkosítása
+
+Bármely *inline* elem *blokk* elemmé alakítható a `display` tulajdonság `block`-ra állításával. Ezen felül egyes CSS propertyk "kiszakítják" az inline elemeket a dokumentumfolyamból, effektíve blokkosítva őket (pl `float`, `position`). Így a `width`, `height` stb. beállíthatóvá válik rajtuk.
+
+---
+### Blokk elemek
+
+#### width
+
+Alapértelmezése `auto`, ennek hatására a blokk kitölti szülője szélességét. A legtöbb CSS mértékegységet megeszi, így pl `px`, `%`, `em`, `rem`, `vw`, `vh`...
+A `%` a szülő szélességének százalékában értendő, az `em` a szülő betűméretéhez, a `rem` a gyökér (`html`) betűméretéhez képest relatív. A `vw` és a `vh` a viewport aktuális méretéhez képest relatív.
+
+#### height
+
+A `width`-hez hasonlóan `auto` az alapértelmezése, és mindenféle CSS hosszúság beállítható rajta. DE: az `auto` jelentése itt a *tartalmazott elemek* megjelenítéséhez szükséges magasság, tehát nincs helykitöltés, mint a szélesség esetén. A `%` a szülő magasságának %-ában értendő, de ez *nem mindig adja a várt eredményt*.
+
+>[!warning]+ Problémák a %-os magassággal
+>A %-os magasság sajnos csak akkor működik, ha a szülő magassága nem `auto` vagy `%`, vagy ha `%`, akkor az ő szülőjére kell igaz legyen az előbbi. %-os magassághoz tehát a fában az elem fölött kell egy fix magasságnak lennie, anélkül, hogy `auto` félbeszakítaná.
+>Ha egyáltalán nem szeretnénk fix magasságot használni, egészen a `html` elemig fölfele mindennek kell legyen megadott magassága --> ezt pedig nagyon nehéz teljesíteni
+>
+>![[Pasted image 20240924215402.png]]
+
+
+#### margin és padding
+
+A *margó* a blokk köré, a *padding* a blokk külső körvonala és a tartalma közé helyez térközt. Ez egyszerűnek tűnik, de mindkettő váratlan mellékhatásokat tud okozni.
+
+![[Pasted image 20240924215537.png]]
+
+>[!warning]+ A margókban sem bízhatunk..
+>Ha vízszintes margók találkoznak, azok összeolvadnak, és csak a nagyobbik lesz látható.
+>
+>![[Pasted image 20240924215717.png]]
+>
+>**Ez nem bug, feature!! :(**
+>
+>-> Hogyan szabaduljunk meg tőle?
+>Akadályozzuk meg, hogy a margók összeérjenek, vezessünk be közéjük bordert, paddingot, vagy fura *"háziszabályokat"* pl: margót mindig lefele, paddingot csak felfele definiálunk.
+
+
+### Inline vagy Blokk elem?
+
+Az inlineban az a jó, hogy az elemek szépen egymás mellé kerülnek, és reagálnak a vertical-align propertyre. A blockban pedig, hogy játszhatunk a margókkal, paddinggal, méretekkel. *Nem lehetne mindkettőből kérni egy kicsit?*
+
+#### display: inline-blokk
+
+Itt az elem az inline flow része marad, de emellett blokk tulajdonságok is állíthatók rajta. Kiválóan alkalmas pl. egy menüben az elemek egymás mellé helyezésére. Nem "hülyíti meg" a környező elemeket, mint a `float`, és `vertical-align` is állítható rajta.
+
+```html
+<ul>
+	<li>
+		<a href="#">home</a>
+	</li>
+	<li>
+		<a href="#">about</a>
+	</li> 
+</ul>
+<main>
+	<img src="..." />
+</main>
+```
+```css
+ul { 
+	font-size: 0;
+}
+li {
+	font-size:1rem;
+	background:#cc3f85;
+	padding:1em 2em;
+	display:inline-block;
+}
+
+a {
+	text-decoration:none;
+	font-family:verdana;
+	color:white;
+}
+```
+
+![[Pasted image 20240924221231.png]]
+
+Mi inline-block alapból?
+- A `button` és a `select`, egyes böngészőkben az `input` is.
+- Az `img`-t a legtöbb böngésző `inline`-nak mutatja, de `inline-block`-szerűen viselkedik.
+- Mindezt a HTML nem definiálja, egyszerűen a böngésző alapértelmezett stíluslapjából jön.
+
+>[!important]+ 
+>Tehát minden elemnek, amit stílusozunk, már be van állítva minden CSS tulajdonság, vagy a CSS alapértelmezése, vagy a böngésző alap stíluslapja, vagy valamely más stíluslap által. Bármilyen hatást akarunk tehát elérni, tudnunk kell, *mit írunk felül*.
+
+
+## Stíluskaszkád
+
+>[!question]+ Honnan jönnek a stíluslapok?
+>
+>- böngésző default
+>- hivatkozás `\<link>` taggel
+>- hivatkozás `@import`-tal
+>- `<style>` tag
+>- `style` attribútum
+>
+>Ha pedig ugyanarra az elemre több szelektor is illik, és a megadott szabályok közül egy vagy több ugyanarra a tulajdonságra próbál hatni, akkor valamilyen rendszer szerint *el kell döntetnünk, melyik jusson érvényre.*
+
+### Mi alapján számítódik a súlyozás?
+
+
+#### 1. Fontosság:
+
+Fontos az ami `!important`, minden más nem fontos.
+
+```css
+.alert-message {color: red !important; }
+```
+
+Főleg a debug folyamat mellékhatásaként, vagy a bootstrap alapértelmezéseivel való bunyózás közben fordulhat elő, hogy ilyesmire vetemedünk. Kényelmes, egyszerű, de gyakran nem működik. De ha működik is, nem helyes, mert karbantarthatósági problémákat okozhatunk vele.
+
+>[!tip]- Házi szabályok az !important használatára
+>- Alapvetően nem-nem, soha!
+>	- Értsük meg, melyik szabályt nem tudjuk nélküle felülírni, és írjunk "erősebb" selectort, és/vagy
+>	- fontoljuk meg, szükséges-e, hogy az előző selector szabálya ennyire erős legyen, és próbáljuk meg azt gyengíteni
+>		- LESS vagy SCSS használatakor nagyon könnyű "véletlenül" túl erős szabályokat írni!
+>- Ha este 10 van és holnap release...
+>	- Ha ez a megoldja a problémát, csináljuk, de írunk ki róla egy taszkot, hogy ezt majd valaki csinálja meg rendesen.
+>	- TODO komment nem ér, mert az a világ végéig ott marad.
+
+
+#### 2. Származás
+
+A **fontosság** és a stíluslap származási helye együtt határozzák meg a szabály prioritását/erősségét. Növekvő sorrendben a böngésző alapértelmezett stíluslapja, normál szabályok a felhasználói stíluslapban, normál szabályok a szerzői stíluslapban, fontos szabályok a szerzői stíluslapban, fontos szabályok a felhasználói stíluslapban.
+
+#### 3. Specifikusság
+
+A fontossággal ellentétben ez nem tulajdonság beállítás, *selector szinten dől el*. Mindig a nagyobb specifikusságú selector lesz az erősebb, tehát ütköző beállítások esetén a specifikusabb selector által definiált érték érvényes.
+
+#### 4. Forrás sorrend
+
+Ha két deklarációnak azonos súlyú a forrása, és azonos a specifikussága, akkor a forrás sorrend dönt, vagyis egyszerűen az, hogy melyik stílust definiálták "lejjebb" a fájlban.
