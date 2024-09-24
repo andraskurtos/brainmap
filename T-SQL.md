@@ -251,5 +251,93 @@ Azt, hogy a `FETCH` utasítás sikeres volt-e, a `@@FETCH_STATUS` váltózó lek
 >Az *eljárás* és a *függvény* közt annyi a különbség, hogy az eljárásoknak nincs visszatérési értéke, a függvényeknek pedig van. További megkötés az MSSQL platformon, hogy a függvények csak olvashatják az adatbázist, de módosítást nem végezhetnek.
 
 
+Egy *tárolt eljárást* az alábbi szintaktikával hozhatunk létre:
+
+```sql
+CREATE [OR ALTER] PROC[EDURE] eljárás_név
+ [ { @paraméter adattípus } ] [ ,...n ]
+AS
+[BEGIN]
+	sql_utasítások [ ...n ]
+[END]
+```
+
+A `CREATE OR ALTER` létrehozza a tárolt eljárást, vagy ha már létezett, módosítja. Egy tárolt eljárást a `DROP PROCEDURE` utasítással lehet törölni.
 
 
+Egy *skalár függvényt* a következő módon tudunk létrehozni:
+
+```sql
+CREATE [OR ALTER] FUNCTION név
+( [ { @paraméter adattípus } ] [ ,...n ] )
+RETURNS adattípus
+[ AS ]
+BEGIN
+	utasítások
+	RETURN skalár_érték
+END
+```
+
+Egy *tábla függvényt* pedig így:
+
+```sql
+CREATE [OR ALTER] FUNCTION név
+( [ { @paraméter adattípus } ] [ ,...n ] )
+RETURNS TABLE
+[ AS ]
+RETURN select utasításs
+```
+
+----
+
+### Hibakezelés
+
+Hibák, például egy duplikált adat beszúrása esetén *célszerű lenne jelezni a hibát a hívó számára*. Erre szolgál a strukturált hibajelzés és kezelés. Hiba esetén a `throw` paranccsal dobhatunk hibát. Ezen parancs hatására a kód végrehajtása megszakad és a hívóhoz visszakerül a végrehajtás (ahol a hiba lekezelhető, avagy továbbdobható). A hibának van egy hibaszáma (50000 és 2147483647 között), egy szövege, és egy 0-255 közötti hiba állapot azonosító.
+
+Kivétel dobása: `THROW error_number, message, state`
+
+Kivételkezelés:
+
+```sql
+BEGIN TRY
+	utasítások
+END TRY
+BEGIN CATCH
+	utasítások/THROW
+END CATCH
+```
+
+----
+
+### Triggerek
+
+A triggerek speciális eszközök, amelyhez hasonlót máshol nemigen találunk. A triggerek *eseménykezelő tárolt eljárások*, melyek használatával az [[Adatbázis|adatbázisban]] történő különböző eseményekre tudunk feliratkozni és azok bekövetkeztekor kódot futtatni.
+
+>[!abstract]+
+>Az alábbiakban kifejezetten DML triggerekkel foglalkozunk. Ezek az adatmódosítás hatására lefutó triggerek. Léteznek más triggerek is, pl rendszereseményekre, ezekkel kapcsolatban lásd a hivatalos dokumentációt.
+
+
+#### DML triggerek
+
+>[!example] 
+>A triggerek segítségével több, nélkülük nagyon bonyolult feladatot meg tudunk oldani. Például egy **audit naplózás** feladatnál: ha egy adott táblában módosítás történik, rögzítsünk egy rekordot a napló táblába. Ezt akár C#/Java/Python kóddal is megvalósíthatnánk, azonban ezek megkerülése sokkal egyszerűbb lenne egy felhasználó számára.
+
+Naplózzuk tehát bármely termék törlését egy napló táblába:
+
+```sql
+
+-- Napló tábla létrehozás
+create table AuditLog([Description] [nvarchar](max) NULL)
+go
+
+-- Naplózó trigger
+create or alter trigger ProductDeleteLog
+	on product
+	for delete
+as
+insert into AuditLog(Description)
+select 'Product deleted: ' + convert(nvarchar, d.Name) from deleted d
+
+```
+
+A fenti parancsok hatására létrejön a trigger, és az adatbázis minden érintett eseménynél lefuttatja azt. 
