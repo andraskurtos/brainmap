@@ -31,6 +31,7 @@ Az *adatbázis szerveroldali programozásával* az eredetileg deklaratív [[SQL]
 >
 >Ha a logika azonban az adatbázisban van megvalósítva, sokkal nehezebb megkerülni azt. Ez abból is adódik, hogy a szerveroldali programozás *olyan eszközöket ad a kezünkbe, amelyek garantálják, hogy logikánk minden esetben végrehajtásra kerül*.
 
+A tárgy folyamán az [[MS SQL]] platformmal fogunk foglalkozni, mely a [[T-SQL]] nyelvet használja.
 
 ---
 
@@ -40,4 +41,16 @@ Az *adatbázis szerveroldali programozásával* az eredetileg deklaratív [[SQL]
 Ha az üzleti logikát az adatbázisban valósítjuk meg, a következő előnyökkel találkozunk:
 
 - Az adatbázis konzisztenciáért való felelőssége még egyértelműbbé válik. A [[relációs modell]] nagy hangsúlyt fektet a konzisztenciára, de nem minden konzisztenciafeltétel írható le vele közvetlenül.
-- Csökkenthető az adatbázisból kifelé irányuló adatforgalom. Az olyan esetekben, mikor az üzleti logika számára kérdeznénk le adatokat, kihagyható az adat utaztatása az [[Adatbázis]] 
+- Csökkenthető az adatbázisból kifelé irányuló adatforgalom. Az olyan esetekben, mikor az üzleti logika számára kérdeznénk le adatokat, kihagyható az adat utaztatása az [[Adatbázis|adatbázis]] és az [[Üzleti Logika Réteg|üzleti logika]] között. Ez nyilván biztonságosabb is, hiszen nem kerül feleslegesen adat a hálózatra.
+- Az adatbázisban megírt logika felfogható *interfészként* is, amely elrejti az adathozzáférés és módosítás részleteit a felhasználó elől. Ez segíti az *absztrakciót és a párhuzamos fejlesztést*.
+
+---
+
+## Hátrányai:
+
+Természetesen hátrányai is vannak:
+
+- *A használt nyelv platformfüggő*, ezért a megoldások nem vihetőek át egyik adatbázisrendszerből a másikba. Sőt, a programozói tudás sem vihető át könnyen. A szerveroldali eszköztárak szintaktikája jelentősen eltér, nem ugyanazt támogatják, ezért teljesen más eszköztárat és megközelítést igényelnek.
+- *Az adatbázis terhelése nő*, hiszen a szerver több feladatot lát el. Az adatbázisok egyébként is kritikus pontok az adatvezérelt rendszerekben, mert a klasszikus relációs adatbázisok nem támogatják jól a horizontális skálázást. Ha mégtöbb feladatot kap a szerver, hamar lassúvá válhat.
+- *A technológia ma már nem fejlődik tovább*. Nevezhetjük akár kifutó technológiának is, melyeket leginkább a régóta fejlesztett, *legacy* alkalmazásokban használnak. Új technológiai eszköztárat használó szoftverprojektekben ritkán jelenik meg.
+

@@ -1,6 +1,7 @@
 ---
 aliases:
   - MSSQL
+  - Microsoft SQL Server
 tags:
   - 5semester
   - adatvez
@@ -29,3 +30,4 @@ Az [[Adatbázis|adatbázis]] definíció szerint logikailag összefüggő adatok
 > vagy *strukturáltak*: XML, JSON.
 
 
+Az *MS SQL* a [[T-SQL]] nyelvet használja a [[Adatbázisok Szerveroldali Programozása|szerveroldali programozás]] megvalósítására.
