@@ -319,25 +319,79 @@ A triggerek speciális eszközök, amelyhez hasonlót máshol nemigen találunk.
 
 #### DML triggerek
 
+A triggerek segítségével több, nélkülük nagyon bonyolult feladatot meg tudunk oldani. 
+
 >[!example] 
->A triggerek segítségével több, nélkülük nagyon bonyolult feladatot meg tudunk oldani. Például egy **audit naplózás** feladatnál: ha egy adott táblában módosítás történik, rögzítsünk egy rekordot a napló táblába. Ezt akár C#/Java/Python kóddal is megvalósíthatnánk, azonban ezek megkerülése sokkal egyszerűbb lenne egy felhasználó számára.
+>Például egy **audit naplózás** feladatnál: ha egy adott táblában módosítás történik, rögzítsünk egy rekordot a napló táblába. Ezt akár C#/Java/Python kóddal is megvalósíthatnánk, azonban ezek megkerülése sokkal egyszerűbb lenne egy felhasználó számára.
+>Naplózzuk tehát bármely termék törlését egy napló táblába:
+>
+>```sql
+>
+>-- Napló tábla létrehozás
+>create table AuditLog([Description] [nvarchar](max) NULL)
+>go
+>
+>-- Naplózó trigger
+>create or alter trigger ProductDeleteLog
+>	on product
+>	for delete
+>as
+>insert into AuditLog(Description)
+>select 'Product deleted: ' + convert(nvarchar, d.Name) from deleted d
+>
+>```
+>A fenti parancsok hatására létrejön a trigger, és az adatbázis minden érintett eseménynél lefuttatja azt. 
 
-Naplózzuk tehát bármely termék törlését egy napló táblába:
 
-```sql
+#### Instead of trigger
 
--- Napló tábla létrehozás
-create table AuditLog([Description] [nvarchar](max) NULL)
-go
+A triggerek egy speciális fajtája az *instead of* trigger. Ilyen triggert táblára és nézetre is definiálhatunk. A táblára definiált instead of trigger, ahogy a neve is sugallja, a *végrehajtandó utasítás helyett* fut le. Tehát pl. törlés esetén a sorok nem kerülnek törlésre, helyette a triggerben definiálhatjuk, hogyan kell a műveletet végrehajtani. 
 
--- Naplózó trigger
-create or alter trigger ProductDeleteLog
-	on product
-	for delete
-as
-insert into AuditLog(Description)
-select 'Product deleted: ' + convert(nvarchar, d.Name) from deleted d
+>[!example]+
+>Tipikus felhasználása pl. ha egy *törlést nem akarunk valójában végrehajtani*, csak *töröltnek jelölni* a rekordokat (**soft delete**). 
+>```sql
+>
+>-- Soft delete flag oszlop a táblába 0 (azaz false) alapértelmezett értékkel
+>alter table Product
+>add [IsDeleted] bit NOT NULL CONSTRAINT DF_Product_IsDeleted >DEFAULT 0
+>go
+>-- Instead of trigger, azaz delete utasítás hatására a törlés nem hajtódik végre
+>-- helyette az alábbi kód fut le
+>
+>create or alter trigger ProductSoftDelete
+	>on Product
+	>instead of delete
+>as
+>update Product
+	>set IsDeleted=1
+	>where ID in (select ID from deleted)
+>
+>```
 
-```
 
-A fenti parancsok hatására létrejön a trigger, és az adatbázis minden érintett eseménynél lefuttatja azt. 
+Az **instead of** triggerek másik tipikus felhasználása a nézetek. A nézetbe nyilván nem szúrhatunk új adatot, hiszen az egy lekérdezés eredménye, egy **instead of** triggerrel azonban megadható, mit kell a "nézetbe szúrás" helyett végrehajtani.
+
+>[!example]+
+>Nézzünk erre egy példát. A nézetben a termék és áfa táblákból kapcsoljuk össze az adatokat úgy, hogy ne a hivatkozott áfa rekord azonosítója, hanem az áfa százaléka jelenjen meg a nézetben. Ebbe a nézetbe úgy tudunk beszúrni, ha a mögötte levő termékeket tároló táblába szúrunk be:
+>```sql
+>
+>-- Nézet definiálása
+>create view ProductWithVatPercentage
+>as select p.Id, p.Name, p.Price, p.Stock, v.Percentage
+>from Product p join Vat v on p.VATID=v.Id
+>
+>-- Instead of trigger a nézetre a beszúrás helyett
+>create or alter trigger ProductWithVatPercentageInsert
+>on ProductWithVatPercentage
+>instead of insert
+>as
+>	-- A beszúrás a Product táblába kerül, minden inserted rekordnak egy új sora keletkezik
+>	-- És közben kikeressük a százaléknak megfelelő áfa rekordot
+>	-- A megoldás nem teljes, mert nem kezeli, ha nincs még ilyen áfa rekord
+>	insert into Product(Name, Price, Stock, VATID, CategoryID)
+>	select i.Name, i.Price, i.Stock, v.ID, 1
+>		from inserted i join Vat v on v.Percentage = i.Percentage
+>-- A trigger kipróbálható a nézetbe való beszúrással
+>insert into ProductWithVatPercentage(Name, Price, Stock, Percentage) values ('Red ball', 1234, 22, 27)
+>
+>```
