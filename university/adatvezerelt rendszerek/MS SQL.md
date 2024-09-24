@@ -23,8 +23,9 @@ created: 2024-09-17 13:22
 
 Az [[Adatbázis|adatbázis]] definíció szerint logikailag összefüggő adatok rendezett gyűjteménye. Az [[Adat|adatok]] ebben a definícióban *ismert tények, melyek számítógépes adattárolón rögzíthetők*. 
 
-> [!example] 
+> [!example]- 
 > Az adatok lehetnek *hagyományosak*: szöveg, dátum, szám,
 > *multimédiások*: kép, hang, videó,
 > vagy *strukturáltak*: XML, JSON.
+
 
