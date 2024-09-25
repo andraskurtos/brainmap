@@ -228,14 +228,15 @@ kiir(osszeg); // 5
 
 JavaScriptben a függvény is teljesértékű típus, és mint olyan, megadható paraméterként. A paraméterként kapott függvényt meg tudjuk hívni, azonban figyelni kell, hogy tényleg függvény-e.
 
-```JavaScript
-function mind(tomb, fv) {
-	for (let i in tomb) {
-		fv( tomb[i] );
-	}
-}
-mind(napok, kiir);
-```
+>[!example]+ Példa
+>```JavaScript
+>function mind(tomb, fv) {
+>	for (let i in tomb) {
+>		fv( tomb[i] );
+>	}
+>}
+>mind(napok, kiir);
+>```
 
 ---
 
@@ -320,13 +321,57 @@ Ehhez számos eseményre tudunk feliratkozni, pl *click, keypress, focus, mouseo
 ### Inline eseménykezelő
 
 A [[HTML]]-ből közvetlenül inline fel tudunk iratkozni az adott elem egy-egy eseményére.
-```html
-<button onclick="alert('click')">Gomb</button>
-```
+
+>[!example]+ Példa
+>```html
+><button onclick="alert('click')">Gomb</button>
+>```
+
 Ez a megoldás egyszerű, hiszen a gomb létrejöttekor már fel is iratkoztunk a kattintás eseményre. Átláthatóság szempontjából rossz viszont, hiszen a HTML-ből állítjuk a gomb viselkedését.
 
 ### Oldal betöltődése esemény
 
-Eseményekzelőt csak akkor tudunk egy elemhez regisztrálni, ha az az elem már létezik.
+Eseményekzelőt csak akkor tudunk egy elemhez regisztrálni, ha az az elem már létezik. Szükséges tehát egy olyan esemény, ami azt jelzi, hogy a [[HTML]]-ek már betöltődtek. A window *onLoad* eseménye pont erre való.
+
+>[!example]+ Példa
+>```JavaScript
+>window.onload = function() {
+>	alert('Az oldal betöltődött!');
+>}
+>```
+
+### Eseménykezelő regisztrálása JS-ből
+
+Az onLoad lefutása után szabad csak beregisztrálni eseménykezelőt, mert előtte nem biztos, hogy létezik a [[HTML]] elem.
+
+```JavaScript
+// keressük meg a HTML elemet:
+var btn = document.querySelector('#myBtn');
+// Adjuk meg, hogy melyik eseménykezelőre melyik függvényt szeretnénk regisztrálni
+btn.onclick = function() {...}
+btn.onclick = kiir;
+```
+
+>[!hint]+ Több eseménykezelő regiszrálása
+>Az előző példával csak egy eseménykezelőt tudunk megadni, ha újat adunk meg, felülírjuk a korábbit. Ha több eseménykezelőt szeretnénk regisztrálni, a megoldás az `addEventListener()`.
+>```JavaScript
+>var btn = document.querySelector('#myBtn');
+>btn.addEventListener("click", modifyText);
+>```
+>
+>Az eseménykezelők a regisztráció sorrendjében egymás után futnak le.
+
+>[!question]+ Mit jelent a bubble?
+>Ha egy fában több elemben is *feliratkozunk mondjuk az onClick eseményre*, akkor először fentről lefelé megkeresi a böngésző, hogy *melyik elemre kattintottak*, meghívja az ott beregisztrált eseménykezelőt, majd ha lefutott, a gyökér elemig felgyűrűzik (**bubble up**). A `stopPropagation()`-al tudjuk leállani a felgyűrűzést.
+>
+>![[Pasted image 20240925131016.png]]
+
+---
+
+## Állapotkezelési megoldások
+
+
+
+
 
 
