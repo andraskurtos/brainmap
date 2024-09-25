@@ -113,3 +113,4 @@ Gyakran változó hozzárendelés költségeként reprezentálják ==> korlátoz
 > $n$ db változó esetén minden megoldás $n$ mélységben fekszik
 >              --> mi történik, ha a **mélységi keresést** használjuk?
 >   Elágazások száma $L$ mélységben $(L=0,1,2,\dots)$, ha minden változó $d$ számú értéket vehet fel (ez a változó tartományának mérete)
+

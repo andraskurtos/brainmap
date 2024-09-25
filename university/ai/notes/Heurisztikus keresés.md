@@ -25,7 +25,7 @@ Ehhez szükségünk van egy elképzelésre, hogy a cél merrefelé és nagyjáb�
 
 A probléma minden *n* állapotára ki kell tudnunk számolni. Kifejezi *n*-re a célig előrehaladás becsült költségét. Ha pontos, akkor elvben fölöslegessé teszi a keresést, ha nagyon pontatlan, akkor viszont semmit sem segít. *Minden problémára más, problémaspecifikus!*.
 
---> [[mohó keresés]]
+--> [[Mohó keresés]]
 
 ---
 
