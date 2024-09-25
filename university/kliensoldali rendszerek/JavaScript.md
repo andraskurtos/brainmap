@@ -147,7 +147,7 @@ console.log(loc); // ReferenceError: loc is not defined
 
 ### Logikai típusok
 
->[!tip] *JavaScriptben* minden bool-á alakítható!
+>[!tip]+ *JavaScriptben* minden bool-á alakítható!
 >![[Pasted image 20240925115353.png]]
 >```JavaScript
 >var b = !!'valami';
@@ -262,9 +262,11 @@ Böngészőben futtatott JavaScript kód esetén a `window` objektum *az oldalho
 >
 >--> Törekednünk kell arra, hogy elkerüljük a globális névtér szennyezését.
 >==> Mindig be kell zárnunk a változóinkat egy objektumba.
-
+>--> A [[Modul Tervezési Minta|modul tervezési mintával]] kódunkat minden mástól független
+ névtérbe csomagolhatjuk, elkerülve a globális névtér szennyezését.
+ >
 A `var` kulcsszóval deklarált változók function scopingot használnak, azaz a teljes függvényben elérhetőek. A `let` kulcsszósok azonban block scopingot használnak, tehát csak az adott {} blokkban érhetők el.
-
+ 
 ---
 
 ## DOM - Document Object Model
@@ -428,4 +430,164 @@ A méret korlátozására a böngészőknek kvótákat kell alkalmazniuk, és ha
 
 #### A DOM storage hiányosságai
 
-A DOM storage csak kis mennyiségű adat tárolására alkalmas és optimalizált, és csak string kulcs-érték párokat tud tárolni.
+A DOM storage csak kis mennyiségű adat tárolására alkalmas és optimalizált, és csak string kulcs-érték párokat tud tárolni. Az adatok között nem lehet keresni, és csak szinkron API van.
+
+---
+
+### Indexed Database API 3.0
+
+Célja nagy mennyiségű adat tárolása kliens oldalon + gyors keresés indexekkel. Fő felhasználási területe a gyorsítótárazás kliens oldalon, teljesen offline is működik.
+
+Az *Indexed Database API* aszinkron API, amiben kéréseket lehet definiálni, amik callback függvényeket hívnak meg siker és hiba esetén. Régen volt szinkron api is. Itt is kulcs-érték párokat tárolunk, de az *érték lehet összetett objektum*, a kulcs pedig az objektum tulajdonsága(i). Tranzakcionális modell.
+
+Mérete általában 10MB-2GB közötti, same origin policy vonatkozik rá. Nyelvfüggő rendezéseket nem támogat, nem tud szerver oldali [[Adatbázis|adatbázissal]] szinkronizálni, és a szabadszöveges keresés nem támogatott, nincs LIKE operátor (mint [[SQL]]-ben).
+
+---
+
+### History API
+
+A HTML5 részeként a WhatWG dolgozta ki, a navigációval kapcsolatos állapotok tárolására. A teljes oldalt nem frissítjük, de a böngésző Back-Forward gombjainak működnie kell. Korábbi megoldás erre az ún. #! (hashbang) URL-ek.
+
+---
+###
+
+>[!question]+ Hol tároljuk az állapotot?
+>
+>*Ha az állapot bookmarkolható:*
+>- URL-ben.
+>
+>*Ha szerver oldalon is szükség van az adatra:*
+>- URL, hidden field, cookie
+>
+>*Ha kis mennyiségű, egyszerű adat:*
+>- DOM Storage
+>
+>*Ha nagyobb mennyiségű adat, vagy bonyolultabb lekérdezések:*
+>- IndexedDB
+>
+>*Ha navigációval összefüggő állapotot kell tárolni*
+>- HistoryAPI
+>
+>**Biztonság** szempontjából nem szabad elfelejteni, hogy:
+>- a *tárolt adatokat bárki láthatja* --> titkosítani kell őket
+>- *bárki módosíthatja* --> integritásvédelemről manuálisan
+ gondoskodni kell
+ >
+ >**Megbízhatóság** szempontjából:
+ >- *az adatokat bárki törölheti* teljes egészében vagy részben --> fallback
+ >- a kvóta limitet elérhetjük
+ >- a felhasználó bármikor megnyithat több böngésző ablakot 
+ 
+---
+
+## A függvény, mint teljes értékű típus
+
+
+A JavaScriptben a függvények teljes értékű típusként viselkednek, ami további izgalmas lehetőségeket biztosít.
+### closure
+
+>[!example]+ Példa
+>```JavaScript
+>var kulso = function () {
+>	var x = 8;
+>	var belso = function () {
+>		alert(++x);
+>	};
+>	return belso;
+>};
+>
+>var b = kulso(); // a belső fv-t adja vissza
+>b(); // kiírja, hogy 9
+>```
+
+Függvények vannak egymásba ágyazva, de a külső függvény *elérhetővé teszi a külvilág számára a belső függvényt*. A belső függvény ilyenkor megőrzi azt az állapotot, ami létrehozása pillanatában volt. Amikor egy függvény egy belső függvényét láthatóvá teszi a külvilág számára, egy ún. **closure** jön létre, ami nem más, mint *az adott belső függvény, és a hozzá tartozó állapot együttvéve.*
+
+>[!tip]+ Névtelen függvények
+>A fenti példában a függvényt akár név nélkül is megadhatjuk:
+>```javascript
+>var kulso = function () {
+>	var x=8;
+>	return function () {
+>		alert(++x);
+>	}
+>};
+>var b = kulso();
+>b(); // 9
+>b(); // 10
+>```
+
+### self-executing functions
+
+Egy másik érdekes lehetőség JavaScriptben a függvények automatikus futtatása.
+
+>[!example]+ Példa
+>```JavaScript
+>var fv = function (nev) {
+>	alert('Szia ' +nev);
+>};
+>
+>fv('Világ');
+>``` 
+
+### a new és a this
+
+Az automatikus futtatás elhagyásával és a new operátor használatával osztály-szerű viselkedést is el tudunk érni.
+
+>[!example]+ Példa
+>```JavaScript
+>var MyClass = function () {
+>	var priValt = 3;
+>	var priFv = function () { alert('Privát!'); };
+>	return {
+>		pubValt: 5,
+>		pubFv: function () { alert('Publikus!'); };
+>	};
+>};
+>
+>var c = new MyClass();
+>c.pubFv();
+>alert(c.pubValt);
+>```
+
+>[!note]+ A *this* kulcsszó
+>A *this* kulcsszó JavaScriptben is létezik, és legtöbb esetben arra az objektumra mutat, amin a függvényt meghívjuk. Az alábbi esetben pl. a függvény a *window*-hoz tartozik, ezért a this a *window*-ra mutat.
+>```JavaScript
+>var F = function () {
+>	this.A = 1;
+>};
+>F();
+>alert(window.A);
+>```
+>
+>Ha az előző kódot kicsit módosítjuk, és használjuk a *new* operátort, megváltozik a viselkedés.
+>```javascript
+>var f = new F();
+>alert(window.A); // undefined
+>alert(typeof f); // object
+>alert(f.A); // 1
+>```
+>
+>A *new* operátor a megadott konstruktor függvény segítségével létrehoz egy új Object-et, *és beállítja a this-t erre az objektumra.* A *new* operátor ezzel az objektummal tér vissza.
+
+---
+
+## Osztályok
+
+Az ECMAScript6 lehetőséget ad oszályok létrehozására is, a `class` kulcsszó segítségével. Ez a szintaxis egy kicsivel közelebb áll az [[OO]] nyelvekhez, mint a korábban megismert.
+
+>[!example]+ Példa
+>```JavaScript
+>class Point {
+>	constructor(x,y) {
+>		this.x = x; this.y = y;
+>	}
+>	toString() {
+>			return '(' + this.x + ', ' + this.y + ')';
+>	}
+>}
+>var p = new Point(25,8);
+>console.log(p.toString()); // '(25,8)'
+>```
+
+
+
