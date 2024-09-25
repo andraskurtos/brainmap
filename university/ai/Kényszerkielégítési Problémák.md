@@ -83,8 +83,33 @@ A kényszerkielégítési problémák *speciális felfedező módszerek*.
 - fizikai állapotváltozók
 - pl. Hubble-űrteleszkóp megfigyeléseinek kezdő/vég-időpontja
 
-
+---
 ### ***Kényszerek alapján***
 
 *Unáris* kényszer: egyetlen változóra vonatkozik, pl. SA != zöld
-*Bináris* kényszer
+*Bináris* kényszer: két változó viszonyára vonatkozik, pl SA != WA
+*Magasabb rendű* kényszer: 3 vagy több változó viszonyára vonatkozik (pl. oszloponkénti változó korlátok betűrejtvényekben, Sudoku kényszerei).
+*Preferencia*-kényszer: Egy érték jobb(an preferált), mint egy másik, pl. a vörös jobb, mint a zöld
+Gyakran változó hozzárendelés költségeként reprezentálják ==> korlátozott optimalizációs problémák
+##
+>[!info] Kényszergráfok
+>A kényszergráf csomópontjai a változók, és élei a bináris kényszerek. Itt csak bináris *CSP*-k: egy-egy kényszer legfeljebb 2 változót köt össze.
+>
+>![[Pasted image 20240925193424.png]]
+
+## Kényszerkielégítési problémák megoldása
+
+
+>[!error]+ A probléma megfogalmazása
+>
+>**Kezdeti állapot**: összes változó-hozzárendelés üres {}
+>
+>**Operátor**: értéket hozzárendelni egy még nem lekötött változóhoz, úgy, hogy az eddigi hozzárendelésekkel ne ütközzön
+>                   -> *kudarc, ha nincs megengedett hozzárendelés*
+> 
+> **Célállapotteszt**: ha az aktuális hozzárendelés teljes, és minden kényszer teljesül
+> 
+> **Keresési fa**:
+> $n$ db változó esetén minden megoldás $n$ mélységben fekszik
+>              --> mi történik, ha a **mélységi keresést** használjuk?
+>   Elágazások száma $L$ mélységben $(L=0,1,2,\dots)$, ha minden változó $d$ számú értéket vehet fel (ez a változó tartományának mérete)
