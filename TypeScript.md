@@ -19,7 +19,7 @@ created: 2024-09-25 15:51
 A *TypeScript* egy ingyenes és open-source programnyelv a Microsoft által fejlesztve, amely a [[JavaScript|JavaScriptet]] egészíti ki típusossággal és valódi osztály alapú objektum-orientáltsággal. Gyakorlatilag típusos JavaScript, ahol a típusok opcionálisak, ezért minden [[JavaScript|JS]] egyben *TS* is, de amint beírunk egy típust valahova, már csak *TS*. 
 
 Tudásban a TypeScript == [[JavaScript]], azaz semmivel sem tud többet. Ha kivesszük a típusokat, sima [[JavaScript|JavaScriptet]] kapunk, ugyanúgy fog viselkedni a kód futásidőben. Az egyetlen különbség, hogy *van egy fordítási lépés*. TS esetén ez a lépés kiveszi a típusokat is.
-## [[TypeScript típusok|típusok]]
+## [[TypeScript Típusok & Modulok|típusok]]
 
 A típust TypeScriptben a változó neve után írjuk.
 

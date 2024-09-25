@@ -14,7 +14,7 @@ created: 2024-09-25 16:42
 
 
 
-# TypeScript típusok
+# TypeScript Típusok
 
 ## Alaptípusok
 
@@ -161,5 +161,74 @@ let x: Action<string> =
 	s => console.log(s);
 ```
 
+---
 
+## Strukturálisan típusos
+
+Két változó akkor azonos típusú, ha strukturálisan azonos a típusuk
+
+>[!example]+ Például:
+>```ts
+>type SoN = string | number
+>function FA()
+>{
+>	let a: SoN = 1;
+>	let b: number | string = a;
+>}
+>
+>```
+>
+>A típus neve nem számít.
+
+>[!tip]+ Ez igaz interfészekre és osztályokra is:
+>```ts
+>interface IA {
+>	a: string;
+>}
+>interface IB {
+>	a: string;
+>}
+>```
+>
+>Még függvények is követik a kompatibilitás elvét, trükkös esetekben is:
+>```ts
+>let x = ( a: string ) => {};
+>let y = ( a: string, b: string ) => {};
+>y = x; // OK
+>x = y; // Error
+>```
+
+
+ ----
+# TypeScript Modulok
+
+## Névterek
+
+Egy fordítási egységen belül:
+
+```ts
+namespace NS
+{
+	export class C
+	{
+	}
+}
+```
+
+Használata: `/// <reference path="x.ts"/>`
+Kód darabolása a cél --> Nagyon hasonló az osztály egységbe záráshoz.
+
+---
+
+## Modulok
+
+```ts
+module M
+{
+	export class C { }
+}
+```
+
+Ezt csak modul betöltővel lehet használni: `import {C} from 'my-class';`
+Fordításnál állíthatjuk, milyen kódot generáljon (CommonJS, RequireJS,...)
 
