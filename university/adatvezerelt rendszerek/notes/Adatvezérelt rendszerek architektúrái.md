@@ -33,7 +33,7 @@ Az *adatvezérelt rendszereket* tipikusan *3 rétegű architektúra* szerint ép
 
 - [[Megjelenítési Réteg|megjelenítési réteg]]
 - [[Üzleti Logika Réteg|üzleti logika réteg]]
-- [[adatelérési réteg]]
+- [[Adatelérési réteg]]
 
 *Ezen kívül az architektúrához kapcsolódik még:*
 

@@ -12,7 +12,7 @@ cssclasses:
 
 # Adatforrások az [[Adatvezérelt rendszerek architektúrái#Mi az *adatvezérelt* alkalmazás?|Adatvezérelt Rendszerekben]]
 ## 1 - ADATBÁZIS
-A leggyakoribb adatforrás az adatbázis. Ez lehet relációs, vagy akár NoSQL adatbázis is. Feladata az adatok *perzisztens* tárolása. Tipikusan egy *megbízható gyártótól származó szoftver*, amely egy külön kiszolgálón fut, az [[adatelérési réteg]] hálózaton keresztül éri el.
+A leggyakoribb adatforrás az adatbázis. Ez lehet relációs, vagy akár NoSQL adatbázis is. Feladata az adatok *perzisztens* tárolása. Tipikusan egy *megbízható gyártótól származó szoftver*, amely egy külön kiszolgálón fut, az [[Adatelérési réteg]] hálózaton keresztül éri el.
 
 ## 2 - KÜLSŐ ADATFORRÁSOK
 
