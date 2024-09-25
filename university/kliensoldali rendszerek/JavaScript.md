@@ -25,7 +25,7 @@ A JavaScriptet **Brendan Eich**, a Netscape mérnöke alkotta meg *Mocha*, majd 
 > - JScript -> A Microsoft által jogi problémák elkerülése végett más néven kiadott dialektus (1996)
 > - ECMAScript (1. változat 1996 június) -> szabványosított változat
 > - ActionScript -> MacroMedia (Adobe) Flash platform programozására kialakított dialektus
-> - TypeScript -> Microsoft által készített bővítmény, mely típusossággal és valódi osztály-alapú objektum orientáltsággal egészíti ki a JS-et.
+> - [[TypeScript]] -> Microsoft által készített bővítmény, mely típusossággal és valódi osztály-alapú objektum orientáltsággal egészíti ki a JS-et.
 
 ![[Pasted image 20240925111150.png]]
 

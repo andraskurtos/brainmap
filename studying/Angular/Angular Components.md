@@ -37,10 +37,10 @@ import {Component} from '@angular/core';
 export class AppComponent {}
 ```
 
-The 'template' section is the [[HTML template]], and the 'styles' section is the CSS styles inside the TypeScript class.
+The 'template' section is the [[HTML template]], and the 'styles' section is the CSS styles inside the [[TypeScript]] class.
 
 ## Component Class
-The component's logic and behavior is defined in the TypeScript class.
+The component's logic and behavior is defined in the [[TypeScript]] class.
 
 ```ts
 import {Component} from '@angular/core';
@@ -58,7 +58,7 @@ export class AppComponent {
 
 ```
 
-In the snippet above, we have added class property to the TS class, storing a string. The type can be omitted because of type interference in TypeScript.
+In the snippet above, we have added class property to the [[TypeScript|TS]] class, storing a string. The type can be omitted because of type interference in [[TypeScript]].
 
 To use a class property in the HTML template, we use the syntax `{{ property }}`. 
 

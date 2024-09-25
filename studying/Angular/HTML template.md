@@ -47,6 +47,6 @@ export class AppComponent {
 }
 ```
 
-This snippet loops through the list defined in the TS class and displays every os' name.
+This snippet loops through the list defined in the [[TypeScript|TS]] class and displays every os' name.
 
 
