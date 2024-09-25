@@ -370,6 +370,24 @@ btn.onclick = kiir;
 
 ## Állapotkezelési megoldások
 
+### Web Storage (DOM Storage)
+
+Probléma a cookie-kal: 
+- korlátozott méret
+- minden HTTP kérésben jelen van
+	- biztonság, teljesítmény gondok
+- több böngészőablakban egy időben nehezen használható
+
+--> megoldás: **Web Storage** ( más néven DOM storage ).
+
+A Web Storage kulcs-érték párok tárolására alkalmas, ahol a kulcs és az érték is csak string lehet. Minden más típusú objektumot a böngészők automatikusan stringre konvertálnak.
+
+A méret korlátozására a böngészőknek kvótákat kell alkalmazniuk, és ha azt elérik, a felhasználótól kérnek felhatalmazást több adat tárolására. A javasolt limit 5MB/origin.
+
+#### Web storage típusai
+
+- *Session storage* esetén az információk csak a böngésző/tab bezárásáig maradnak meg. Az informáicókat csak az adott böngészőablak érheti el.
+- *Local storage* esetén az adatok megőrződnek, amíg a felhasználó nem törli azokat. Így az adott domainhez tartozó összes oldal eléri a tárolt adatokat, azonban a felhasználó bármikor kitörölheti --> készen kell rá állni.
 
 
 
