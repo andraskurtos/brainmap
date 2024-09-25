@@ -70,3 +70,9 @@ A típust TypeScriptben a változó neve után írjuk.
 >
 >![[Pasted image 20240925161328.png]]
 
+## OOP TS-ben
+
+TypeScriptben támogatottak az osztályok, interfészek, absztrakt osztályok, az öröklés, a láthatóság módosítása, az osztályszintű változók/függvények, és az enum típusok, string literálok, unió és metszettípusok. Nem támogatott azonban a valódi metódus overloading, a valódi többszörös öröklés, és típusonként több konstruktor/azonos nevű függvény létrehozása.
+
+*A legtöbb keretrendszer nem osztály alapú*, mert régen nem voltak osztályok. Komponens alapú fejlesztés, ahol öröklés helyett kompozíciót használunk. TS-től a típusosságot kérjük, osztályokkal külön nem foglalkozunk.
+
