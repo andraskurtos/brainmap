@@ -81,4 +81,85 @@ Public, protected, private működik, de *csak fordítási időben*.
 `readonly`, `static`, `abstract` kulcsszavak
 accessors: `get`, `set`.
 
+>[!important] this!
+>A *TS* nem oldja meg teljesen a *this* problémát, de segít rajta.
+>Nekünk kell megoldani --> minden callbacknél használjuk az arrow function szintaktikát:
+>```ts
+>setInterval( () =>
+>{
+>	// itt a this azonos a külsővel
+>}, 1000);
+>```
+
+---
+
+## Type Guards
+
+A fordító követi a kód logikáját.
+
+```ts
+function toS(x: string | number) {
+	if (typeof x === "string")
+		return x;	
+	else
+		return x.toFixed();
+}
+```
+
+Működik `instanceof` esetén is.
+
+----
+
+## Paraméteres típusok - Generics
+
+Használhatunk előre nem ismert típusokat osztályokban és függvényekben is. Több paraméter is lehetséges. Itt a fordító látja, mivel használjuk, nem kell megadni, mint C#-ban vagy C++-ban.
+
+```ts
+function concat<T>( a: T, b: T) {
+	return a.toString() + b.toString();
+}
+concat(1, "2"); // Error
+```
+
+Kényszerekkel:
+
+```ts
+interface HasLength
+{
+	length: number;
+}
+
+function getTotalLength<T extends HasLength>(a: T, b: T)
+{
+	return a.length + b.length;
+}
+```
+
+---
+
+## Interfészek - interface kulcsszó
+
+- Objektum tulajdonság
+- Objektum függvény
+- Objektum konstruktor függvény
+- Függvény
+- Indexer
+
+```ts
+interface HasLenth<T>{
+	new(): T,
+	length: number;
+	getLength(): number;
+}
+interface Indexable {
+	[key: string]: string;
+}
+interface Action<T>{
+	(param1: T);
+}
+let x: Action<string> =
+	s => console.log(s);
+```
+
+
 
