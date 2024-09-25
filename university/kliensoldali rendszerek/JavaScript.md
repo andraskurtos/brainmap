@@ -384,12 +384,47 @@ A Web Storage kulcs-érték párok tárolására alkalmas, ahol a kulcs és az �
 
 A méret korlátozására a böngészőknek kvótákat kell alkalmazniuk, és ha azt elérik, a felhasználótól kérnek felhatalmazást több adat tárolására. A javasolt limit 5MB/origin.
 
+>[!tldr] Cookie vs Storage
+>![[Pasted image 20240925141620.png]]
+
+
 #### Web storage típusai
 
 - *Session storage* esetén az információk csak a böngésző/tab bezárásáig maradnak meg. Az informáicókat csak az adott böngészőablak érheti el.
 - *Local storage* esetén az adatok megőrződnek, amíg a felhasználó nem törli azokat. Így az adott domainhez tartozó összes oldal eléri a tárolt adatokat, azonban a felhasználó bármikor kitörölheti --> készen kell rá állni.
 
+>[!tip]+ Local Storage használata
+>
+>Elem hozzáadása:
+>- `localStorage.setItem('myCat','Tom');`
+>
+>Elem kiolvasása:
+>- `const cat = localStorage.getItem('myCat');`
+>
+>Elem törlése:
+>- `localStorage.removeItem('myCat');`
+>
+>Összes elem törlése:
+>- `localStorage.clear();`
+
+>[!example]+ Session Storage példa
+>```JavaScript
+>// Input mező keresése a HTML-ben ID alapján
+>let field = document.getElementById("field");
+>
+>// Ha a mező korábbi állapotát már elmentettük.
+>if (sessionStorage.getItem("autosave")) {
+>	// Mező értékének visszaállítása
+>	field.value = sessionStorage.getItem("autosave");
+>}
+>	
+>// Feliratkozás a mező értékének változására
+>field.addEventListener("change" , function() {
+>	// Érték mentése a session storage-ba.
+>	sessionStorage.setItem("autosave" , field.value);
+>});
+>```
 
 
-
+#### A DOM storage hiányosságai
 
