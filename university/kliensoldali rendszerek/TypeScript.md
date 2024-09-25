@@ -76,3 +76,36 @@ TypeScriptben támogatottak az osztályok, interfészek, absztrakt osztályok, a
 
 *A legtöbb keretrendszer nem osztály alapú*, mert régen nem voltak osztályok. Komponens alapú fejlesztés, ahol öröklés helyett kompozíciót használunk. TS-től a típusosságot kérjük, osztályokkal külön nem foglalkozunk.
 
+----
+
+## Aszinkron programozás
+
+Egyre több API használ promise-t, ami egy osztály, ami *támogat több feliratkozót, hívás-válasz mintát* (mint egy függvényhívás, de pl ismétlődő eseményekre nem alkalmas), *egységes hibakezelést* (van benne try-catch), és *láncolást* `(.then(valami).then(más)`).
+
+A sima callbackhez képest kényelmesebb, hiszen *mindennek azonos az interfésze*, nem kell tudni, melyik paraméter a callback, és *azonos a hibakezelés is*. Nem tökéletes, ugyanis a kód még mindig callbackekben van.
+
+>[!example]+ Egy példa a setTimeout Promise-ra alakítására
+>```ts
+>function delay( ms: number )
+>{
+>	return new Promise(( resolve, reject) =>
+>		setTimeout( resolve, ms ) );
+>}
+>```
+>-> Visszaadunk egy Promise-t
+>-> Elindítunk egy timert
+>-> Amikor lejár, meghívjuk a resolve-ot, ami meghív minden .then-t ami rá van téve.
+
+>[!info]+ async, await
+>Ha egy függvény Promise-t ad vissza, beírhatunk elé egy `await`-et, feltéve, hogy `async` függvényben vagyunk.
+>
+>```ts
+>async function fa()
+>{
+>	await delay(500);
+>	console.log("hello");
+>}
+>```
+>
+>Az `await` utáni kód a `.then`-be kerül fordításkor
+
