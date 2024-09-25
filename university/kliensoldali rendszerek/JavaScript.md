@@ -428,3 +428,4 @@ A méret korlátozására a böngészőknek kvótákat kell alkalmazniuk, és ha
 
 #### A DOM storage hiányosságai
 
+A DOM storage csak kis mennyiségű adat tárolására alkalmas és optimalizált, és csak string kulcs-érték párokat tud tárolni.
