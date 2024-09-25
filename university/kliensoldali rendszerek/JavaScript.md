@@ -589,5 +589,28 @@ Az ECMAScript6 lehetőséget ad oszályok létrehozására is, a `class` kulcssz
 >console.log(p.toString()); // '(25,8)'
 >```
 
+>[!tip]+ Backtick
+>A fenti példában a *toString()*-et átláthatóbban is megírhatjuk az alábbi módon:
+>```javascript
+>return `(${this.x}, ${this.y})`;
+>```
+>Így nincs szükség a sztring összefűzésekre.
+
+>[!warning]+ Fontos a sorrend!
+>Míg a függvényeknél megtehetjük, hogy korábban hívjuk meg, mint deklaráljuk, mert a deklarálást kiemeli a kódból, az osztályokra ez nem igaz.
+>
+>```javascript
+>foo();      // Működik!
+>function foo() { alert("hi"); } 
+>
+>new Foo();
+>// ReferenceError: can't access lexical declaration 'Foo' before initialization
+>class Foo {}
+>```
+
+### Származtatás
+
+Arra is lehetőségünk van, hogy osztályok származzanak egymásból. Ezt az `extends` kulcsszóval érhetjük el, [[Java|Javahoz]] hasonlóan. Az ősosztály függvényeit szintén hasonlóan, a *super.függvény*, a konstruktorát pedig a *super()* segítségével hívhatjuk meg.
+
 
 
