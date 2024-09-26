@@ -31,10 +31,10 @@ A *visszalépéses keresés* egy [[Neminformált keresés|neminformált keresés
 >- Általános, tárgyterület-független heurisztikákkal növelhetjük a hatékonyságot
 >- [[Visszalépéses Keresés#Szűrés|Szűrés]]:
 >	- Ki tudjuk korán szűrni a kudarcra ítélt megoldásokat?
->- Sorrendezés:
+>- [[Visszalépéses Keresés#Sorrendezés|Sorrendezés]]:
 >	- **Változók sorrendezése**: Melyik változóhoz rendeljünk értéket a következő lépésben?
 >	- **Értékek sorrendezése**: Melyik értéket rendeljük hozzá először a változóhoz?
->- Struktúra:
+>- [[Visszalépéses Keresés#Struktúra|Struktúra]]:
 >	- Ki tudjuk használni a probléma struktúráját?
 
 ---
@@ -49,3 +49,47 @@ Az **előretekintő ellenőrzés** minden egyes alkalommal, amikor egy X változ
 >[!warning]+ Korlátai
 >- Az előretekintő ellenőrzés ugyan sok inkonzisztenciát észrevesz, de *nem mindet*.
 >- Ráadásul nem látja jól előre a kudarcokat.
+
+---
+
+### élkonzisztencia ellenőrzés
+
+Az **élkonzisztencia ellenőrzés** alkalmazhatő *előfeldolgozó lépésként* a [[Keresés|keresés]] megkezdése előtt, vagy a keresési folyamat minden egyes hozzárendelését követően, *terjesztési lépésként*. Előbb tárja fel a problémákat, mint az [[Visszalépéses Keresés#előretekintő ellenőrzés|előretekintő ellenőrzés]]. 
+
+>[!summary]+ Élkonzisztenica 
+>$X\to Y$ él konzisztens akkor és csak akkor, ha $X$ minden $x$ értékére $\exists Y$-nak valamilyen megengedett $y$ értéke.
+>
+>==> terjesszük el az [[Él|él]] konzisztenciáját a kényszergráf összes élére, biztosítsuk az összes él konzisztenciáját!
+>==> Ha $X$ tartományból törlünk egy élet, $X$ szomszédjait újra ellenőrizzük!
+
+
+---
+
+## Sorrendezés
+
+### A *legkevesebb fennmaradó érték* ötlete
+
+A legkisebb számú megengedett értékkel rendelkező változóval kezdjünk, illetve folytassunk ==> **lokálisan kicsi az elágazási tényező!**
+
+Ez a legkevesebb fennmaradó érték heurisztika (*minimum remaining values, MRV*)
+
+### *Fokszám heurisztika* ötlete
+
+Az MRV [[Heurisztikus keresés#Keresési heurisztika|heurisztika]] semmit sem segít abban, hogy melyik változóval kezdjünk, ha mindnek ugyanannyi megengedett értéke van kiinduláskor.
+A *későbbi választások* elágazási tényezőjét csökkentheti, ha azt a változót választjuk, amely a legtöbbször szerepel a még hozzárendeletlen változókra vonatkozó kényszerekben.
+
+### *Legkevésbé korlátozó érték* ötlete
+
+Előnyben részesítjük azt az **értéket**, amely a legkevesebb választást zárja ki a kényszergráfban a szomszédos változóknál.
+
+---
+
+## Struktúra
+
+>[!question]+ Miben segíthet a CSP struktúrája?
+>
+>CSP [[Gráf|gráfja]]: független komponensek
+>
+>CSP fa [[Gráf|gráf]]: megoldás könnyű, változószámban lineáris
+>
+>1. válasszunk egy levelet gyökérnek, majd sorrendezzük a változókat (élek irányítása)
