@@ -1,13 +1,17 @@
 ---
-created: ""
-tags:
-  - daily
+aliases: 
+tags: daily
 cssclasses:
+  - center-images
+  - center-titles
+  - markdown-preview-view
+created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 ---
 
 
 
 ## **notes created today:**
+
 ```dataview
 List
 FROM "brainmap"
@@ -22,21 +26,24 @@ SORT file.ctime
 
 ____ 
 ## **general routine todo:**
-- [ ] vitamins #morning
-- [ ] brush teeth #morning
-- [ ] skincare #morning
-- [ ] make bed #morning
-- [ ] check email #morning
-- [ ] eat lunch #day
-- [ ] shower #night
-- [ ] allergy meds #night
-- [ ] skincare #night
-- [ ] brush teeth #night
+
+- [ ] vitamins
+- [ ] brush teeth
+- [ ] skincare 
+- [ ] make bed
+- [ ] check email
+- [ ] eat lunch 
+- [ ] shower 
+- [ ] allergy meds
+- [ ] skincare
+- [ ] brush teeth
 
 ## **tasks today:**
+
 - [x] ?
 
 ## **notes:**
+
 _____
 ###### past things to review:
 

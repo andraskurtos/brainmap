@@ -31,6 +31,7 @@ A cél és a megoldandó probléma megfogalmazása után tehát az [[Ágens|áge
 
 ---
 ### MILYEN A JÓ KERESÉSI ELJÁRÁS?
+
 1. <u>Teljesség</u> (*completeness*): ha van megoldás, biztosan megtalálja.
 2. <u>Időigény</u> (*time complexity*): mennyi idő a megoldás megtalálása?
 3. <u>Tárigény</u> (*space complexity*): mennyi tárhely kell?
@@ -58,14 +59,15 @@ END
 
 ---
 ## KERESÉSI STRATÉGIÁK
+
 - Mire vagyunk képesek? (saját modell)
 - Milyen körülöttünk a környezet? (cél-, és távolsági modellek)
 
---> **Nem informált keresések** (gyenge vagy vak keresések)
+--> **[[Neminformált Keresés|Neminformált keresések]]** (gyenge vagy vak keresések)
 - tudjuk: hogy néz ki a célállapot
 - egyáltalán nem: milyen költségű a célállapotba vezető út.
 
---> **Informált keresések** (heurisztikus keresések)
+--> **[[Infomrált Keresés|Informált keresések]]** (heurisztikus keresések)
 - tudjuk: hogy néz ki a célállapot
 - jó becslésünk van arra, hogy: milyen költségű lehet a célállapotba vezető út.
 

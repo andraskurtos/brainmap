@@ -14,7 +14,7 @@ cssclasses:
   - markdown-preview-view
 created: 2024-09-25 18:40
 ---
-
+	
 
 
 
@@ -130,13 +130,13 @@ Egy-egy csomópontban csakis egy változó hozzárendelése történhet meg:
 
 >[!info]+
 >Alapvető nem informált algoritmus (keresés CSP) problémák megoldására:
->*visszalépéses keresés* (backtracking search), azaz:
+>*[[Visszalépéses Keresés|visszalépéses keresés]]* (backtracking search), azaz:
 >**mélységi keresés**
 >- minden szinten egyetlen egy változó-hozzárendeléssel
 >- ha sérül valamelyik kényszer, visszalép
 >(egyszer sérült kényszer mélyebben nem jöhet helyre)
 
->[!summary]+ Visszalépéses keresés algoritmus
+>[!summary]+ [[Visszalépéses Keresés|Visszalépéses keresés]] algoritmus
 >
 >![[Pasted image 20240926151827.png]]
 
@@ -149,9 +149,9 @@ Egy-egy csomópontban csakis egy változó hozzárendelése történhet meg:
 >
 >- A [[Csomópont|csomópontokat]] lentről felfelé, balról jobbra járjuk be
 >- Vajon a jelenlegi hozzárendelés kudarcra van ítélve?
->- A naiv visszalépéses keresés túl későn veszi észre a problémát
+>- A naiv [[Visszalépéses Keresés|visszalépéses keresés]] túl későn veszi észre a problémát
 
->[!success]+ A visszalépéses keresés hatékonyságának növelése
+>[!success]+ A [[Visszalépéses Keresés|visszalépéses keresés]] hatékonyságának növelése
 >
 >- Általános, tárgyterület-független heurisztikákkal növelhetjük a hatékonyságot
 >- Szűrés:
