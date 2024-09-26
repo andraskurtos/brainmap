@@ -160,6 +160,16 @@ Egy-egy csomópontban csakis egy változó hozzárendelése történhet meg:
 >	- **Változók sorrendezése**: Melyik változóhoz rendeljünk értéket a következő lépésben?
 >	- **Értékek sorrendezése**: Melyik értéket rendeljük hozzá először a változóhoz?
 >- Struktúra:
->	- Ki tudjuk használni a probléma struktúráját?
+>	- Ki tudjuk használni a probléma struktúráját
 
+### CSP problémák megoldása lokális kereséssel
 
+>[!summary]+ CSP problémák megoldása lokális kereséssel
+>
+>**Kiindulás**: teljes állapotleírás = minden változónak van értéke (esetleg megsértett, nem teljesült kényszerekkel)
+>
+>**Operátorok**: megváltoztatják a változók hozzárendelését, hogy csökkenjen a sérült kényszerek száma
+>
+>![[Pasted image 20240926182125.png]]
+>
+>

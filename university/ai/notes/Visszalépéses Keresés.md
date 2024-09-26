@@ -93,3 +93,9 @@ Előnyben részesítjük azt az **értéket**, amely a legkevesebb választást 
 >CSP fa [[Gráf|gráf]]: megoldás könnyű, változószámban lineáris
 >
 >1. válasszunk egy levelet gyökérnek, majd sorrendezzük a változókat (élek irányítása)
+>2. élkonzisztencia-nyesés gyerekektől a szülőik felé
+>3. értékek hozzárendelése a gyökér csomóponttól kezdve
+>
+>![[Pasted image 20240926181844.png]]
+
+
