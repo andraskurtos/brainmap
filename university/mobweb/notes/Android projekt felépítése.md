@@ -41,3 +41,57 @@ A *.apk* állomány leginkább a [[Java]] világban megszokott .jar-hoz hasonlí
 ## Android alkalmazások telepítése
 
 A Play-ből az alkalmazások egy .apk állományban, vagy App Bundle-ben kerülnek letöltésre. A telepítésére nem a Play alkalmazás, hanem az úgynevezett *PackageManagerService* felelős. A *PackageManagerService* akkor is látható, ha más úton töltjük le az .apk állományt. Az alkalmazások telepíthetőek a készülék memóriájára, és bizonyos körülmények közt külső SD kártyára is.
+
+>[!hint]+ Android Logcat
+>
+> - Rendszer Debug Kimenet
+> - Beépített rendszerüzenetek is monitorozhatók
+> - Beépített Log osztály
+> - `Log.i("MyActivity", "Pozíció: " + position);`
+> - Átirányítható fájlba is: *>adb logcat>textfile.txt*
+
+
+---
+
+## [[Android]] alkalmazás komponensek
+
+### [[Android]] alkalmazás felépítése
+
+Egy [[Android]] alkalmazás egy vagy több alkalmazás komponensből épül fel:
+- Activity-k
+- Service-k
+- Content Provider-ek
+- Broadcast Reciever-ek
+
+![[Pasted image 20240926190835.png]]
+
+
+Minden komponensnek különböző szerepe van az alkalmazáson belül, és bármely komponens önállóan aktiválódhat, akár egy másik alkalmazás is aktiválhatja őket. Az alkalmazást leíró *manifest* állománynak deklarálnia kell a következőket:
+ - Alkalmazás komponensek listája
+ - Szükséges minimális [[Android]] verzió
+ - Szükséges hardware konfiguráció
+A nem forráskód jellegű erőforrásoknak (képek, szövegek, nézetek) rendelkezésre kell állnia különböző nyelvű és képernyőméretű telefonokon.
+
+---
+
+#### Activity-k:
+
+Különálló nézettel és saját UI-al rendelkeznek. Egy alkalmazást sok független Activity alkot. Egy Activity akár más alkalmazásból is indítható, nem csak abból, amihez tartozik.
+
+>[!example]+ Például:
+>Emlékeztető alkalmazásnál 3 Activity:
+>- ToDo lista
+>- Új ToDo felvétele
+>- ToDo részletek
+>  
+>  Kamera alkalmazás el tudja indítani a ToDo felvétele Activityt, és a képet hozzárendelni az emlékeztetőhöz
+
+Az `android.app.Activity` osztályból származik le.
+
+---
+
+### Service-k
+
+A Service komponens egy hosszabb ideig a háttérben futó feladatot jelképez, nincs felhasználói felülete. Például egy letöltő alkalmazás fut a háttérben, amíg egy másik programmal játszunk. Más komponens (*Activity*) elindíthatja, vagy csatlakozhat (*bind*) hozzá vezérelni.
+
+Az `android.app.Service` osztályból öröklődik.
