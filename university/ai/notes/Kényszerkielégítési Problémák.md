@@ -93,7 +93,7 @@ A kényszerkielégítési problémák *speciális felfedező módszerek*.
 Gyakran változó hozzárendelés költségeként reprezentálják ==> korlátozott optimalizációs problémák
 ##
 >[!info] Kényszergráfok
->A kényszergráf csomópontjai a változók, és élei a bináris kényszerek. Itt csak bináris *CSP*-k: egy-egy kényszer legfeljebb 2 változót köt össze.
+>A kényszer[[Gráf|gráf]] [[Csomópont|csomópontjai]] a változók, és [[Él|élei]] a bináris kényszerek. Itt csak bináris *CSP*-k: egy-egy kényszer legfeljebb 2 változót köt össze.
 >
 >![[Pasted image 20240925193424.png]]
 
@@ -113,4 +113,53 @@ Gyakran változó hozzárendelés költségeként reprezentálják ==> korlátoz
 > $n$ db változó esetén minden megoldás $n$ mélységben fekszik
 >              --> mi történik, ha a **mélységi keresést** használjuk?
 >   Elágazások száma $L$ mélységben $(L=0,1,2,\dots)$, ha minden változó $d$ számú értéket vehet fel (ez a változó tartományának mérete)
+>   $b=(n-L)d$, (mert $L$ változó már értéket kapott)
+>   azaz $n!*d^n$ levélcsomópont
+>   (miközben $d^n$ hozzárendelés van)
+>   
+>   *(pl 8 betűs betűrejtvény, $n=8,\space d=10, \space\text{levelek száma }4\cdot10^{12}$)*
+
+---
+## [[Keresés]]
+
+Itt a változó-hozzárendelés **kommutatív**, azaz például
+(WA = **vörös**) majd (NT=**zöld**) $\equiv$ (NT=**zöld**), majd (WA=**vörös**)
+
+Egy-egy csomópontban csakis egy változó hozzárendelése történhet meg:
+--> $b=d$ és a fának $d^n$ levele van.
+
+>[!info]+
+>Alapvető nem informált algoritmus (keresés CSP) problémák megoldására:
+>*visszalépéses keresés* (backtracking search), azaz:
+>**mélységi keresés**
+>- minden szinten egyetlen egy változó-hozzárendeléssel
+>- ha sérül valamelyik kényszer, visszalép
+>(egyszer sérült kényszer mélyebben nem jöhet helyre)
+
+>[!summary]+ Visszalépéses keresés algoritmus
+>
+>![[Pasted image 20240926151827.png]]
+
+
+>[!danger]+ Néhány gyengeség
+>
+>- Tekintsük az itt látható részleges hozzárendelést
+>  
+>![[Pasted image 20240926152015.png]]
+>
+>- A [[Csomópont|csomópontokat]] lentről felfelé, balról jobbra járjuk be
+>- Vajon a jelenlegi hozzárendelés kudarcra van ítélve?
+>- A naiv visszalépéses keresés túl későn veszi észre a problémát
+
+>[!success]+ A visszalépéses keresés hatékonyságának növelése
+>
+>- Általános, tárgyterület-független heurisztikákkal növelhetjük a hatékonyságot
+>- Szűrés:
+>	- Ki tudjuk korán szűrni a kudarcra ítélt megoldásokat?
+>- Sorrendezés:
+>	- **Változók sorrendezése**: Melyik változóhoz rendeljünk értéket a következő lépésben?
+>	- **Értékek sorrendezése**: Melyik értéket rendeljük hozzá először a változóhoz?
+>- Struktúra:
+>	- Ki tudjuk használni a probléma struktúráját?
+
 

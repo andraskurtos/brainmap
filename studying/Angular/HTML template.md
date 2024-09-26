@@ -7,7 +7,7 @@ tags:
 cssclasses:
 ---
 
-# Angular [[HTML]] templates
+# [[Angular]] [[HTML]] templates
 [[HTML]] templates are one of three building blocks of [[Angular]] components. They are used mainly to control what is displayed on screen.
 ## Referencing other components with Selector Property:
 You can use the `selector:` property of a component as an [[HTML tag]] inside a template to reference it. E.g. `<app-user / >`.
