@@ -26,7 +26,26 @@ A *visszalépéses keresés* egy [[Neminformált keresés|neminformált keresés
 >
 >![[Pasted image 20240926151827.png]]
 
+>[!success]+ A [[Visszalépéses Keresés|visszalépéses keresés]] hatékonyságának növelése
+>
+>- Általános, tárgyterület-független heurisztikákkal növelhetjük a hatékonyságot
+>- [[Visszalépéses Keresés#Szűrés|Szűrés]]:
+>	- Ki tudjuk korán szűrni a kudarcra ítélt megoldásokat?
+>- Sorrendezés:
+>	- **Változók sorrendezése**: Melyik változóhoz rendeljünk értéket a következő lépésben?
+>	- **Értékek sorrendezése**: Melyik értéket rendeljük hozzá először a változóhoz?
+>- Struktúra:
+>	- Ki tudjuk használni a probléma struktúráját?
+
+---
+
+## Szűrés
+
+### előretekintő ellenőrzés
 
 
+Az **előretekintő ellenőrzés** minden egyes alkalommal, amikor egy X változó értéket kap, minden, az X-hez kényszerrel kapcsolt, lekötetlen Y-t megvizsgál, és Y tartományából *törli* az X számára választott értékkel *inkonzisztens értékeket*.
 
-
+>[!warning]+ Korlátai
+>- Az előretekintő ellenőrzés ugyan sok inkonzisztenciát észrevesz, de *nem mindet*.
+>- Ráadásul nem látja jól előre a kudarcokat.
