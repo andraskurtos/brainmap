@@ -172,4 +172,9 @@ Egy-egy csomópontban csakis egy változó hozzárendelése történhet meg:
 >
 >![[Pasted image 20240926182125.png]]
 >
->
+>**Algoritmus**: Amíg nincs megoldás,
+>- **Változó kiválasztása**: véletlen módon, bármely konfliktusban lévő változót
+>- **Új érték választása**: *min-konfliktus heursztika* - azt az értéket állítjuk be, amely a legkevesebb számú korlátot sérti.
+
+
+

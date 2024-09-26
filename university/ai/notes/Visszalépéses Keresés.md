@@ -98,4 +98,3 @@ Előnyben részesítjük azt az **értéket**, amely a legkevesebb választást 
 >
 >![[Pasted image 20240926181844.png]]
 
-

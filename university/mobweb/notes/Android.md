@@ -55,7 +55,7 @@ A virtuális gép akár teljesen elrejti a linux által használt fájlrendszert
 - fejlesztő eszközök
 - emulátor kezelő
 - frissítési lehetőség
-- java, kotlin
+- [[java]], [[kotlin]]
 
 ---
 
