@@ -39,3 +39,6 @@ created: 2024-09-28 09:34
 >
 >- **Stílus:** Az a vezetési filozófia és hozzáállás, amelyet a vezetők alkalmaznak a szervezet irányításában.
 
+>[!example]+ Mi a balanced score card? 
+>
+>
