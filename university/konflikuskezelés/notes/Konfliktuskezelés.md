@@ -59,3 +59,22 @@ created: 2024-09-28 09:34
 >- Elkerülő
 >- Problémamegoldó
 
+>[!question]+ Konfliktusok fázisai
+>
+> 1. lappangási fázis
+>   
+> 2. manifesztációs fázis
+>   
+> 3. jelzési fázis
+>  
+> 4. artikulációs fázis
+>    
+> 5. polarizációs fázis
+> 
+> 6. izolációs fázis
+>    
+> 7.
+
+
+Üzleti tojások - **érdekalapú konfliktusról**
+
