@@ -41,4 +41,20 @@ created: 2024-09-28 09:34
 
 >[!example]+ Mi a balanced score card? 
 >
+>- Pénzügyi teljesítmény
+>- Innováció
+>- Vevők
+>- Működési folyamatok
+>  
+>  ![[Pasted image 20240928102116.png]]
+>  
+>![[Pasted image 20240928102153.png]] 
+ 
+>[!question]+ Milyen konfliktuskezelési módszereket ismersz?
 >
+>- Győztes
+>-vesztes
+>- Kompromisszumkereső
+>- Alkalmazkodó
+>- Elkerülő
+>- Problémamegoldó
