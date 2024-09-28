@@ -53,8 +53,9 @@ created: 2024-09-28 09:34
 >[!question]+ Milyen konfliktuskezelési módszereket ismersz?
 >
 >- Győztes
->-vesztes
+>- Vesztes
 >- Kompromisszumkereső
 >- Alkalmazkodó
 >- Elkerülő
 >- Problémamegoldó
+
