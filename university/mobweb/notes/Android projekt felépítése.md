@@ -95,3 +95,9 @@ Az `android.app.Activity` osztályból származik le.
 A Service komponens egy hosszabb ideig a háttérben futó feladatot jelképez, nincs felhasználói felülete. Például egy letöltő alkalmazás fut a háttérben, amíg egy másik programmal játszunk. Más komponens (*Activity*) elindíthatja, vagy csatlakozhat (*bind*) hozzá vezérelni.
 
 Az `android.app.Service` osztályból öröklődik.
+
+---
+
+### Content providerek
+
+A Content provider (tartalom szolgáltató) komponens feladata egy megosztott adatforrás kezelése
