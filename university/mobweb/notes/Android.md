@@ -37,7 +37,7 @@ A Google az Android képében egy nyílt forráskódú, rugalmas és könnyen al
 
 Távolról tekintve a platform felépítése egyszerű és világos. A *narancssárga* Linux Kernel tartalmazza a hardver által kezelendő eszközök meghajtóprogramjait. Ezeket azon cégek készítik el, akik az Android platformot használni szeretnék, hiszen a gyártónál jobban nem ismeri senki az eszközbe integrált perifériákat. Ezen kívül a Linux kernel még a memóriakezelés, az ütemezés és az alacsony energiafogyasztást elősegítő teljesítmény-kezelés.
 
-A linux kernelen futnak a *lila* részben található programkönyvtárak / szolgáltatások, mint például libc, SSL, SQLite, stb.
+A linux kernelen futnak a *lila* részben található programkönyvtárak / szolgáltatások, mint például libc, SSL, [[SQLite]], stb.
 
 Részben ezekre épül a *sárga* egységben található *virtuális gép*.
 Ez nem kompatibilis a Sun virtuális gépével, teljesen más utasításkészlettel rendelkezik, és más bináris programot futtat. A Java programok nem egy-egy .class állományba kerülnek fordítás után, hanem egy nagyobb, *Dalvik Executable* formátumba, amelynek kiterjesztése .dex, és általában kisebb, mint a forrásul szolgáló .class állományok, mivel a Java fájlban található konstansokat csak egyszer fordítja bele a fordító.
