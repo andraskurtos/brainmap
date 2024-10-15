@@ -20,7 +20,7 @@ created: 2024-09-26 18:50
 
 # Android Projekt Felépítése
 
-sajt
+
 ## Az [[Android]] .apk állomány
 
 A *.apk* állomány leginkább a [[Java]] világban megszokott .jar-hoz hasonlítható, de vannak jelentős eltérések. Az apk tömörített állomány, mely tipikusan a következő tartalommal rendelkezik:
