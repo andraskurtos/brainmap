@@ -98,6 +98,26 @@ Az `android.app.Service` osztályból öröklődik.
 
 ---
 
-### Content providerek
+### Content Provider-ek
 
-A Content provider (tartalom szolgáltató) komponens feladata egy megosztott adatforrás kezelése
+A Content provider (tartalom szolgáltató) komponens feladata egy megosztott adatforrás kezelése. Az adat tárolódhat fájlrendszerben, [[SQLite]] adatbázisban, weben, vagy egyéb perzisztens adattárban. A Content provideren át más alkalmazások is hozzáférhetnek az adatokhoz, vagy akár módosíthatják is őket.
+
+Az `android.content.ContentProvider` osztályból származik le és kötelezően felül kell definiálni a szükséges API hívásokat.
+
+---
+
+### Broadcast Reciever-ek
+
+A Broadcast Reciever komponens a rendszerszintű eseményekre reagál. Alkalmazás is indíthat broadcastot, ha jelezni akarja, hogy valamilyen művelettel végzett. Nem rendelkeznek saját felülettel, inkább valami figyelmeztetést írnak ki a *status bar*-ra, vagy elindítanak egy másik komponenst.
+
+Az `android.content.BroadcastReciever` osztályból származik le; az esemény egy Intent formájában érhető el.
+
+---
+
+## A Manifest állomány
+
+A *Manifest állomány* az alkalmazás leírója, mely definiálja az alkalmazás komponenseit egy *XML állományban*. Komponens indítása előtt a rendszer a manifest állományt ellenőrzi, hogy definiálva van-e benne a kért komponens. Alkalmazás telepítésekor ellenőrzi a rendszer.
+
+>[!summary]+ Manifest állomány tartalma
+>
+>
