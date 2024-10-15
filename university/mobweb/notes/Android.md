@@ -133,3 +133,10 @@ public class HelloWorldActivity extends Activity {
 	
 }
 ```
+
+
+***Egyéb android tematikájú szócikkek:***
+```dataview
+List
+FROM [[Android]]
+```
