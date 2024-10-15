@@ -60,4 +60,9 @@ A rendszer felelőssége meghívni ezeket a függvényeket, de a fejlesztő fele
 >	}
 >} 
 >``` 
-
+>
+>- *onCreate()*: Activity létrejön és beállítja a megfelelő állapotokat (layout, munkaszálak, stb.)
+>- *onDestroy()*: Minden lefoglalt erőforrás felszabadítása
+>- *onStart()*: Az Activity látható, a vezérlők is. Például BroadcastRecieverekre feliratkozás, amik módosítják a UI-t.
+>- *onStop()*: Az Activity nem látható, például BroadcastRecieverekről leiratkozás
+>- *onRestart()*:
