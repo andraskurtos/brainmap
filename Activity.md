@@ -65,4 +65,7 @@ A rendszer felelőssége meghívni ezeket a függvényeket, de a fejlesztő fele
 >- *onDestroy()*: Minden lefoglalt erőforrás felszabadítása
 >- *onStart()*: Az Activity látható, a vezérlők is. Például BroadcastRecieverekre feliratkozás, amik módosítják a UI-t.
 >- *onStop()*: Az Activity nem látható, például BroadcastRecieverekről leiratkozás
->- *onRestart()*:
+>- *onRestart()*: Az Activity leállítása (*onStop()*) majd újraindítása után hívódik meg, még az indítás (*onStart()*) előtt.
+>- *onResume()*: Az Activity láthatóvá válik és előtérben van, a felhasználó eléri a vezérlőket és tudja kezelni azokat.
+>- *onPause()*: Az Activity háttérbe kerül, de valamennyire látszik a háttérben, például egy másik Activity pop-up jelleggel előjön, vagy sleep állapotba kerül a készülék
+
