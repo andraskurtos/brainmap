@@ -74,7 +74,7 @@ A nem forráskód jellegű erőforrásoknak (képek, szövegek, nézetek) rendel
 
 ---
 
-#### Activity-k:
+#### [[Activity]]-k:
 
 Különálló nézettel és saját UI-al rendelkeznek. Egy alkalmazást sok független Activity alkot. Egy Activity akár más alkalmazásból is indítható, nem csak abból, amihez tartozik.
 
@@ -140,4 +140,8 @@ Egy android alkalmazás nem csak forráskódból áll, hanem erőforrásokból i
 >- Ezzel az azonosítóval lehet hivatkozni bárhol az erőforrásra
 >  Az azonosítók az *R.java* állományban tárolódnak (soha ne módosítsuk!)
 
->[]
+>[!tip]+ Az erőforráshasználat előnyei
+>
+>Az egyik legnagyobb előnye, hogy a készülék képességeihez lehet igazítani az erőforrásokat. A könyvtárak után "minősítő"-ket írhatunk, amellyel megadjuk, hogy mely tulajdonságokat teljesülése esetén vegye a rendszer ebből a könyvtárból az erőforrásokat.
+>Többnyelvűség támogatására is jó: *strings.xml, res/values/, res/values-fr/, res/values-hu-land/*
+
