@@ -82,3 +82,5 @@ Fájlok elérése  2.2 verziótól fölfele:
 ```kotlin
 val filesDir = getExternalFilesDir(int type)
 ```
+
+Médiatípusonként különböző alapkönyvtárak vannak definiálva, így az azokat lejátszó/kezelő appoknak nem kell az egész lemezt végigkeresniük. Indexelésüket a MediaScanner osztály végzi.
