@@ -1,6 +1,10 @@
 ---
-aliases: 
-tags: 
+aliases:
+  - activity
+tags:
+  - 5semester
+  - mobweb
+  - uni
 cssclasses:
   - center-images
   - center-titles
@@ -68,4 +72,56 @@ A rendszer felelőssége meghívni ezeket a függvényeket, de a fejlesztő fele
 >- *onRestart()*: Az Activity leállítása (*onStop()*) majd újraindítása után hívódik meg, még az indítás (*onStart()*) előtt.
 >- *onResume()*: Az Activity láthatóvá válik és előtérben van, a felhasználó eléri a vezérlőket és tudja kezelni azokat.
 >- *onPause()*: Az Activity háttérbe kerül, de valamennyire látszik a háttérben, például egy másik Activity pop-up jelleggel előjön, vagy sleep állapotba kerül a készülék
+
+>[!tip]+ Activity váltás
+>
+>Életciklus-callback függvények meghívási sorrendje:
+>1. **A** Activity *onPause()* függvénye
+>2. **B** Activity *OnCreate*, *onStart* és *onResume* függvénye
+>3. **A** Activity onStop() függvénye, mivel már nem látható
+>
+>>[!warning]+
+>>Ha **B** Activity valamit adatbázisból olvas ki, amit az **A** ment el, akkor ez a mentés **A** Activity *onPause* kell megtörténjen, hogy a **B** aktuális legyen, mire megjelenik.
+
+---
+
+## Activity backstack
+
+Egy feladat végrehajtásához tipikusan a felhasználó több Activity-t használ. A rendszer az Activity-ket ún. *Back Stack*-en tárolja. Az előtérben lévő Activity van a BackStack tetején. Ha a felhasználó átvált egy másik Activity-re, akkor eggyel lejjebb kerül a BackStacken, és a következő lesz legfelül. Visszagomb esetén legfelülről veszi ki az Activityt a rendszer.
+
+
+---
+
+## Activity vezérlés
+
+Legtöbb esetben az alapértelmezett BackStack kielégíti az igényeinket, néha azonban szükség lehet az alapértelmezett viselkedés felülírására. Ha például a vissza hatására mindig egy kezdő Activity-re szeretnénk visszatérni, törölnünk kell a BackStacket. Az alapértelmezett viselkedés felülírását a [[Android projekt felépítése#A Manifest állomány|Manifest állományban]] az `<activity>`-ben, vagy a *startActivity* fv paramétereként valósíthatjuk meg. Amennyiben ezt módosítsuk, mindenképpen teszteljük az alkalmazást navigálás és [[Felhasználói Élmény|felhasználói élmény]] szempontjából.
+
+>[!summary]+ Az activity tag attribútumai:
+>- taskAffinity: melyik taskhoz tartozik
+>- launchMode: indítási mód
+>- allowTaskReparenting: új taskhoz kerül át
+>- clearTaskOnLaunch: minden Activity-t töröl a taskból
+>- alwaysRetainTaskState: a rendszer kezelje-e a Task állapotát?
+>- finishOnTaskLaunch: le kell-e állítani az Activity-t, ha a felhasználó kilép a Task-ból.
+
+>[!summary]+ *startActivity* függvény paraméterértékei:
+>- FLAG_ACTIVITY_NEW_TASK
+>- FLAG_ACTIVITY_CLEAR_TOP
+>- FLAG_ACTIVITY_SINGLE_TOP
+
+---
+
+## Új Activity indítása
+
+```kotlin
+fun runSecondActivity() {
+	val myIntent: Intent = Intent()
+	myIntent.setClass(this@MainActivity, SecondActivity::class.java)
+
+	myIntent.putExtra("KEY_DATA", "Hi there!")
+	startActivity(myIntent)
+}
+```
+
+---
 
