@@ -28,4 +28,5 @@ A *SharedPreferences* alaptípusok tárolására alkalmas kulcs-érték páronk�
 - ***MODE_PRIVATE***: csak a saját alkalmazásunk érheti el
 - ***MODE_WORLD_READABLE***: csak a saját alkalmazásunk írhatja, bárki olvashatja
 - ***MODE_WORLD_WRITABLE***: bárki írhatja és olvashatja
-A SharedPreferences megőrzi tartalmát az alkalmazás vagy a telefon újraindítása esetén is. Ideális olyan adatok tárolására, melyek primitív típussal könnyen reprezentálhatók.
+A SharedPreferences megőrzi tartalmát az alkalmazás vagy a telefon újraindítása esetén is. Ideális olyan adatok tárolására, melyek primitív típussal könnyen reprezentálhatók ()
+
