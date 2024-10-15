@@ -120,4 +120,24 @@ A *Manifest állomány* az alkalmazás leírója, mely definiálja az alkalmazá
 
 >[!summary]+ Manifest állomány tartalma
 >
+>- Az alkalmazást tartalmazó java package - *egyedi azonosítóként szolgál*
+>- Engedélyek, amelyekre az alkalmazásnak szüksége van
+>- Futtatáshoz szükséges minimum API szint
+>- Hardware és software funkciók, amit az alkalmazás használ
+>- Külső API könyvtárak
+
+---
+
+## Erőforrások kezelése
+
+Egy android alkalmazás nem csak forráskódból áll, hanem erőforrásokból is, úgy mint *képek*, *hanganyagok*, stb. Emellett erőforrások az [[XML]]-ben definiált felületek is: *elrendezés*, *animáció*, *menü*, *szín*, *stílus*. Erőforrásokkal sokkal rugalmasabban változtatható az alkalmazás. Minden erőforráshoz a rendszer automatikusan azonosítót generál, amin keresztül elérhető a forráskódból.
+
+>[!example]+ Erőforráshivatkozás példa
 >
+>- TFH készítettünk egy *logo.png*-t, és elmentettük a *res/drawable/* könyvtárba
+>- Az SDK eszköz előállít egy egyedi erőforrást hozzá mentés után automatikusan.
+>- Az azonosító: *R.drawable.logo*
+>- Ezzel az azonosítóval lehet hivatkozni bárhol az erőforrásra
+>  Az azonosítók az *R.java* állományban tárolódnak (soha ne módosítsuk!)
+
+>[]
