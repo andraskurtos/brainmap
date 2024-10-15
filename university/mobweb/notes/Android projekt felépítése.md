@@ -58,7 +58,7 @@ A Play-ből az alkalmazások egy .apk állományban, vagy App Bundle-ben kerüln
 ### [[Android]] alkalmazás felépítése
 
 Egy [[Android]] alkalmazás egy vagy több alkalmazás komponensből épül fel:
-- Activity-k
+- [[Activity]]-k
 - Service-k
 - Content Provider-ek
 - Broadcast Reciever-ek
@@ -76,10 +76,10 @@ A nem forráskód jellegű erőforrásoknak (képek, szövegek, nézetek) rendel
 
 #### [[Activity]]-k:
 
-Különálló nézettel és saját UI-al rendelkeznek. Egy alkalmazást sok független Activity alkot. Egy Activity akár más alkalmazásból is indítható, nem csak abból, amihez tartozik.
+Különálló nézettel és saját [[Felhasználói Felület (Android)|UI]]-al rendelkeznek. Egy alkalmazást sok független [[Activity]] alkot. Egy [[Activity]] akár más alkalmazásból is indítható, nem csak abból, amihez tartozik.
 
 >[!example]+ Például:
->Emlékeztető alkalmazásnál 3 Activity:
+>Emlékeztető alkalmazásnál 3 [[Activity]]:
 >- ToDo lista
 >- Új ToDo felvétele
 >- ToDo részletek
@@ -92,7 +92,7 @@ Az `android.app.Activity` osztályból származik le.
 
 ### Service-k
 
-A Service komponens egy hosszabb ideig a háttérben futó feladatot jelképez, nincs felhasználói felülete. Például egy letöltő alkalmazás fut a háttérben, amíg egy másik programmal játszunk. Más komponens (*Activity*) elindíthatja, vagy csatlakozhat (*bind*) hozzá vezérelni.
+A Service komponens egy hosszabb ideig a háttérben futó feladatot jelképez, nincs felhasználói felülete. Például egy letöltő alkalmazás fut a háttérben, amíg egy másik programmal játszunk. Más komponens (*[[Activity]]*) elindíthatja, vagy csatlakozhat (*bind*) hozzá vezérelni.
 
 Az `android.app.Service` osztályból öröklődik.
 

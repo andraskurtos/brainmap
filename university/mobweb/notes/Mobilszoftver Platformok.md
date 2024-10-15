@@ -121,7 +121,7 @@ Apple újdonsága volt: Központilag kontrollált app terjesztés, app modellek
 
 Rengeteg elérhető irodalom és dokumentáció.
 
-Speciális UX ötlet: multi-touch gesztúrák, közvetlen manipulálás. OSX-el közös alapok, de speciális UI.
+Speciális UX ötlet: multi-touch gesztúrák, közvetlen manipulálás. OSX-el közös alapok, de speciális [[Felhasználói Felület (Android)|UI]].
 
 ---
 

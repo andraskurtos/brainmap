@@ -13,7 +13,7 @@ created: 2024-10-15 12:31
 ---
 # Activity
 
-Az *Activity* tipikusan egy képernyő, amin a felhasználó valamilyen műveletet végezhet (login, beállítások, térkép nézet, stb.). Az Activity leginkább egy ablakként képzelhető el. Az ablak vagy teljes képernyős, vagy pop-up jelleggel jelenik meg. Egy alkalmazás tipikusan több Activity-ből áll, amik lazán csatoltak. A legtöbb esetben létezik egy fő Activity, ahonnét a többi elérhető. Bármely Activity indíthat újabbakat, de tipikusan a fő Activity jelenik meg az alkalmazás indításakor.
+Az [[Android]] *Activity* tipikusan egy képernyő, amin a felhasználó valamilyen műveletet végezhet (login, beállítások, térkép nézet, stb.). Az Activity leginkább egy ablakként képzelhető el. Az ablak vagy teljes képernyős, vagy pop-up jelleggel jelenik meg. Egy alkalmazás tipikusan több Activity-ből áll, amik lazán csatoltak. A legtöbb esetben létezik egy fő Activity, ahonnét a többi elérhető. Bármely Activity indíthat újabbakat, de tipikusan a fő Activity jelenik meg az alkalmazás indításakor.
 
 ---
 
@@ -67,7 +67,7 @@ A rendszer felelőssége meghívni ezeket a függvényeket, de a fejlesztő fele
 >
 >- *onCreate()*: Activity létrejön és beállítja a megfelelő állapotokat (layout, munkaszálak, stb.)
 >- *onDestroy()*: Minden lefoglalt erőforrás felszabadítása
->- *onStart()*: Az Activity látható, a vezérlők is. Például BroadcastRecieverekre feliratkozás, amik módosítják a UI-t.
+>- *onStart()*: Az Activity látható, a vezérlők is. Például BroadcastRecieverekre feliratkozás, amik módosítják a [[Felhasználói Felület (Android)|UI]]-t.
 >- *onStop()*: Az Activity nem látható, például BroadcastRecieverekről leiratkozás
 >- *onRestart()*: Az Activity leállítása (*onStop()*) majd újraindítása után hívódik meg, még az indítás (*onStart()*) előtt.
 >- *onResume()*: Az Activity láthatóvá válik és előtérben van, a felhasználó eléri a vezérlőket és tudja kezelni azokat.
