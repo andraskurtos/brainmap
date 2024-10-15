@@ -11,10 +11,6 @@ cssclasses:
 created: 2024-10-15 14:26
 ---
 
-
-
-
-
 # Jetpack Compose
 
 A *Jetpack Compose* egy modern toolkit UI készítéshez, amelyben a fejlesztő [[Kotlin]] kódban leírhatja a UI paramétereit, és a [[Compose Alapelvek|Compose]] motor generálja a [[Felhasználói Felület (Android)|felületet]]. Könnyű a UI frissítése az alkalmazás állapota alapján, valamint [[Erőforrások|erőforrásokat]] ugyanúgy használhat.

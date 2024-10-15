@@ -11,7 +11,7 @@ cssclasses:
   - markdown-preview-view
 created: 2024-10-15 15:07
 ---
-
+w
 
 # Compose Alapelvek
 
