@@ -171,8 +171,28 @@ created: 2024-10-15 20:37
 > 
 > C) előbb x aztán z:
 > $$
-> Z(-\frac{\ket{0}-\ket{1}}{\sqrt{ 2 }})=
+> Z\left( -\frac{\ket{0}-\ket{1}}{\sqrt{ 2 }} \right)=-\frac{\ket{0} +\ket{1} }{\sqrt{ 2 }} = -\ket{+} 
 > $$
+> 
+> D) előbb z aztán x:
+> $$
+> X(\ket{+})=X(\frac{\ket{0} +\ket{1}}{\sqrt{ 2 }})=\ket{+} 
+> $$
+
+>[!question]- 22.Adott a következő két állapot: $\ket{\phi_{0}}=e^{j 3\pi} \frac{\ket{0}+e^{j\pi}\ket{1}}{\sqrt{2}}$ és $\ket{\phi_{1}}=\frac{\frac{e^{2j\pi}\ket{0}}+\ket{1}}{\sqrt{ 2 }}$. Ortogonálisak?
+>Egyszerűsítsünk:
+>1: $e^{j 2\pi}=1, \space e^{j 3 \pi}=-1$ -->
+>	$$
+> \ket{\phi_{0}} = -\frac{\ket{0} +\ket{1} }{\sqrt{ 2 }}=-\frac{1}{\sqrt{ 2 }}(\ket{0} +\ket{1} )
+>$$
+>2: $$
+> \ket{\phi_{1}}=\frac{\ket{0}+\ket{1}  }{\sqrt{ 2 }} 
+>$$
+>belső szorzat:
+>$$
+>\braket{ \phi_{0} | \phi_{1} } = -
+>$$
+
 
 >[!question]- 23. Hogy néz ki a mérés posztulátuma projektív mérés esetén?
 >A mérés posztulátuma azt írja le, hogyan változik egy kvantumrendszer állapota méréskor. és milyen valószínűséggel kapjuk meg a mérési eredményeket. A Hermitikus operátor sajátállapotaihoz tartoznak projektorok $P_{i}$. Ezek az operátorok az egyes mérési kimenetelekhez tartozó projektív mérésekhez tartoznak.
