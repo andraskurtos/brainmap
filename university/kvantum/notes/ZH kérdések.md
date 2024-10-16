@@ -159,4 +159,22 @@ created: 2024-10-15 20:37
 >Tehát a két állapot egymásba alakítható Hadamard kapukkal. Ez azt jelenti, hogy az első állapot a $\ket{00}$ és a $\ket{11}$ bázisállapotok szuperpozíciója, míg a második állapot ugyanez az összefonódott állapot a $\ket{+}$ és $\ket{-}$ bázisában kifejezve.
 
 >[!question]- 23. Hogy néz ki a mérés posztulátuma projektív mérés esetén?
->A mérés posztulátuma azt írja le, hogyan változik egy kvantumrendszer állapota méréskor.
+>A mérés posztulátuma azt írja le, hogyan változik egy kvantumrendszer állapota méréskor. és milyen valószínűséggel kapjuk meg a mérési eredményeket. A Hermitikus operátor sajátállapotaihoz tartoznak projektorok $P_{i}$. Ezek az operátorok az egyes mérési kimenetelekhez tartozó projektív mérésekhez tartoznak.
+>
+>Annak a valószínűsége, hogy a kvantumállapot $\ket{\psi}$ a $\ket{m_{i}}$ sajátállapotra projektálódik:
+> $$
+> P(m_{i}|\psi)=\braket{ \psi|P_{i} | \psi } = |\braket{  m_{i}|\psi}|^{2}
+>$$ 
+
+>[!question]- 24. Mikor használhatunk projektív mérést?
+>Projektív mérést alkalmazunk, mikor egy kvantumrendszer állapotát mérni szeretnénk, és biztosak akarunk lenni abban, hogy a mérés után jól meghatározott állapotba kerül. A mérési operátor sajátállapotai adják meg a lehetséges kimeneteket. Alkalmazható kvantumszámításban, összefonódás mérésében, és általában a kvantumrendszerek diszkrét mérési kimeneteleihez.
+
+>[!question]- 25. Hogyan konstruáljuk a mérési operátorokat projektív mérés esetén?
+>A projektív mérési operátorokat az alábbi módon konstruáljuk:
+>- kiválasztjuk a mérési operátort, ami Hermitikus
+>- megtaláljuk a mérési operátor sajátállapotait és sajátértékeit.
+>- minden sajátértékhez projektort rendelünk, amely a megfelelő sajátállapotba vetíti a rendszert.
+>- A mérés után a rendszer állapotát ezen projektorok segítségével vetítjük, és meghatározzuk a mérési valószínűségeket.
+
+>[!question]- 26. . Miért lehet elegendő a projektív mérés elvégzése akkor is, ha nem ortogonálisak a megmérendő vektorok?
+>
