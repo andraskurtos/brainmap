@@ -158,6 +158,22 @@ created: 2024-10-15 20:37
 >$$
 >Tehát a két állapot egymásba alakítható Hadamard kapukkal. Ez azt jelenti, hogy az első állapot a $\ket{00}$ és a $\ket{11}$ bázisállapotok szuperpozíciója, míg a második állapot ugyanez az összefonódott állapot a $\ket{+}$ és $\ket{-}$ bázisában kifejezve.
 
+>[!question]- 21.Adott a következő kvantumállapot: $\ket{\psi_{1}}=\frac{\ket{0}-\ket{1}}{\sqrt{ 2 }}$ alkalmazzuk rá:
+>A) A pauli X bitflip kaput
+> $$
+> X\left( \frac{\ket{0}-\ket{1}}{\sqrt{ 2 }} \right)=\frac{\ket{1} -\ket{0} }{\sqrt{ 2 }}= -\frac{\ket{0} -\ket{1} }{\sqrt{ 2 }}=-\ket{\psi_{1}} 
+> $$
+> 
+> B) A pauli z kaput:
+> $$
+> Z\left( \frac{\ket{0}-\ket{1}}{\sqrt{ 2 }} \right)=\frac{\ket{0} +\ket{1} }{\sqrt{ 2 }}=\ket{+} 
+> $$
+> 
+> C) előbb x aztán z:
+> $$
+> Z(-\frac{\ket{0}-\ket{1}}{\sqrt{ 2 }})=
+> $$
+
 >[!question]- 23. Hogy néz ki a mérés posztulátuma projektív mérés esetén?
 >A mérés posztulátuma azt írja le, hogyan változik egy kvantumrendszer állapota méréskor. és milyen valószínűséggel kapjuk meg a mérési eredményeket. A Hermitikus operátor sajátállapotaihoz tartoznak projektorok $P_{i}$. Ezek az operátorok az egyes mérési kimenetelekhez tartozó projektív mérésekhez tartoznak.
 >
@@ -177,4 +193,17 @@ created: 2024-10-15 20:37
 >- A mérés után a rendszer állapotát ezen projektorok segítségével vetítjük, és meghatározzuk a mérési valószínűségeket.
 
 >[!question]- 26. . Miért lehet elegendő a projektív mérés elvégzése akkor is, ha nem ortogonálisak a megmérendő vektorok?
->A projektív mérés ele
+>A projektív mérés elegendő lehet akkor is, ha nem ortogonálisak a vektorok, mert a mérés során nem feltétlenül szükséges minden állapot teljes megkülönböztetése. A nem ortogonális állapotok részleges vagy valószínűségi információt nyújthatnak, és bizonyos kvantumprotokollokban előnyös lehet, ha a megfigyelő nem tudja teljes bizonyossággal megkülönböztetni az állapotokat.
+
+>[!question]- 27. Mi az a kvantuminterferometer?
+>A kvantuminterferométerek olyan eszközök, melyek a kvantummechanikai interferencia jelenségét használják fel a kvantumrészecskék állapotainak és viselkedésének vizsgálatára. Az interferencia minta alapján rendkívül érzékeny mérések végezhetők, így ezek az eszközök fontos szerepet játszanak a kvantumkommunikációban, és precíziós mérési technológiákban.
+
+>[!question]- 29. Mit mond ki a No Cloning Theorem (Nincs másolás tétel?)
+>Egy nem ismert kvantumállapotot lehetetlen tökéletesen lemásolni. Matematikailag azt jelenti, hogy nem létezik olyan unitér transzformáció, amely a $\ket{\psi}$ állapotból és egy másik $\ket{0}$ állapotból két $\ket{\psi}$ állapotot hozna létre.
+
+>[!question]- 30. Tudunk-e másolatot készíteni ismeretlen állapotról?
+>Nem, egy ismeretlen kvantumállapotról nem lehet tökéletes másolatot készíteni. Ezt a No Cloning Theorem (Nincs másolás tétel) írja le.
+
+>[!question]- 31. Tudunk-e másolatot készíteni ismert állapotról?
+>Igen, mert ha egy kvantumállapotot teljesen ismerünk, akkor azt bármilyen számú példányban reprodukálhatjuk, hiszen az állapotot már ismerjük és újra előállíthatjuk.
+
