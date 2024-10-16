@@ -177,4 +177,4 @@ created: 2024-10-15 20:37
 >- A mérés után a rendszer állapotát ezen projektorok segítségével vetítjük, és meghatározzuk a mérési valószínűségeket.
 
 >[!question]- 26. . Miért lehet elegendő a projektív mérés elvégzése akkor is, ha nem ortogonálisak a megmérendő vektorok?
->
+>A projektív mérés ele
