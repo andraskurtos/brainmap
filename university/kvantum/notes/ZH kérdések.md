@@ -46,7 +46,7 @@ created: 2024-10-15 20:37
 \end{bmatrix}
 >$$
 
->[!question] 5. Mit értünk belső szorzat alatt? Számolja ki két megadott vektor belső szorzatát!
+>[!question]- 5. Mit értünk belső szorzat alatt? Számolja ki két megadott vektor belső szorzatát!
 >A kvantummechanikában a belső szorzat segítségével számolható ki
  két kvantumállapot közti hasonlóság, vagy az állapotok "vetülete" egymásra. A belső szorzatot gyakran használják vektorok ortogonalitásának vagy normájának meghatározására. A széleskörű alkalmazhatóság kulcsa az a megfigyelés, hogy ha a két összeszorzandó vektor koordinátáival adott:
 > $a=[a_{1},a_{2},\dots,a_{n}]$ és $b=[b_{1},b_{2},\dots,b_{n}]$ akkor a skaláris szorzatuk éppen:
@@ -182,17 +182,13 @@ created: 2024-10-15 20:37
 >[!question]- 22.Adott a következő két állapot: $\ket{\phi_{0}}=e^{j 3\pi} \frac{\ket{0}+e^{j\pi}\ket{1}}{\sqrt{2}}$ és $\ket{\phi_{1}}=\frac{\frac{e^{2j\pi}\ket{0}}+\ket{1}}{\sqrt{ 2 }}$. Ortogonálisak?
 >Egyszerűsítsünk:
 >1: $e^{j 2\pi}=1, \space e^{j 3 \pi}=-1$ -->
->	$$
-> \ket{\phi_{0}} = -\frac{\ket{0} +\ket{1} }{\sqrt{ 2 }}=-\frac{1}{\sqrt{ 2 }}(\ket{0} +\ket{1} )
->$$
->2: $$
-> \ket{\phi_{1}}=\frac{\ket{0}+\ket{1}  }{\sqrt{ 2 }} 
->$$
+>	$\ket{\phi_{0}} = -\frac{\ket{0} +\ket{1} }{\sqrt{ 2 }}=-\frac{1}{\sqrt{ 2 }}(\ket{0} +\ket{1} )$
+>2: $\ket{\phi_{1}}=\frac{\ket{0}+\ket{1}  }{\sqrt{ 2 }}$
 >belső szorzat:
 >$$
->\braket{ \phi_{0} | \phi_{1} } = -
+>\braket{ \phi_{0} | \phi_{1} } = -\frac{1}{2}(\braket{ 0 | 0 } +\braket{ 0 | 1 } + \braket{ 1 | 0 } +\braket{ 1 | 1 } )= -\frac{1}{2}\cdot2=-1
 >$$
-
+>A két állapot nem ortogonális.
 
 >[!question]- 23. Hogy néz ki a mérés posztulátuma projektív mérés esetén?
 >A mérés posztulátuma azt írja le, hogyan változik egy kvantumrendszer állapota méréskor. és milyen valószínűséggel kapjuk meg a mérési eredményeket. A Hermitikus operátor sajátállapotaihoz tartoznak projektorok $P_{i}$. Ezek az operátorok az egyes mérési kimenetelekhez tartozó projektív mérésekhez tartoznak.
