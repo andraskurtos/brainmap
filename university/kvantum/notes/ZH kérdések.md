@@ -147,3 +147,16 @@ created: 2024-10-15 20:37
  
  >[!question]- 18. Kvantuminformatika és kvantumkommunikációs szemszögből milyen előnyei és hátrányai vannak az összefonódásnak?
  >**Előnyök:** kvantumkriptográfia, biztonság, kvantumteleportáció, a kvantumszámítógépek több számítási műveletet hajtanak végre párhuzamosan
+ 
+ >[!question]- 19. Milyen kapcsolat van a |0⟩ és a |+⟩ állapot között?
+ >A Hadamard kapu az, ami átalakítja a $\ket{0}$ állapotot $\ket{+}$ állapottá, és fordítva. A Hadamard kapu szuperpozícióba hozza a bitet.
+ 
+ >[!question]- 20. Milyen kapcsolat van a $\frac{\ket{00}+\ket{11}}{\sqrt{ 2 }}$ és a $\frac{\ket{++}+\ket{--}}{\sqrt{ 2 }}$ állapotok között?
+ >Ha mindkét qubitre alkalmazzuk a Hadamard trafót, akkor a bázistrafó a következőképpen alakul:
+ > $$
+> H\otimes H(\frac{\ket{00}+\ket{11}  }{\sqrt{2}})= \frac{\ket{++}+\ket{--}  }{\sqrt{ 2 }}
+>$$
+>Tehát a két állapot egymásba alakítható Hadamard kapukkal. Ez azt jelenti, hogy az első állapot a $\ket{00}$ és a $\ket{11}$ bázisállapotok szuperpozíciója, míg a második állapot ugyanez az összefonódott állapot a $\ket{+}$ és $\ket{-}$ bázisában kifejezve.
+
+>[!question]- 23. Hogy néz ki a mérés posztulátuma projektív mérés esetén?
+>A mérés posztulátuma azt írja le, hogyan változik egy kvantumrendszer állapota méréskor.
