@@ -303,5 +303,9 @@ context.SaveChanges()
 - Az EF minden általa ismert entitást "követ"
 - Az entitások a memóriában az alábbi állapotokban lehetnek:
 	- Unchanged, Added, Modified, Deleted
-- A SaveChanges metódus az entitásokat a fenti állapotoknak megfel
+- A SaveChanges metódus az entitásokat a fenti állapotoknak megfelelően menti az adatbázisba
+	- generálja a szükséges SQL-t
+- SaveChanges vagy lekérdezés után minden entitás Unchanged állapotban van.
+
+
 
