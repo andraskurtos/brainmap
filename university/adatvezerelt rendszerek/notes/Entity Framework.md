@@ -260,4 +260,48 @@ protected override void OnModelCreating(ModelBuilder mb) {
 ### Új entitások beszúrása és mentése
 
 1. Új entitás létrehozása
-2. 
+	- `var newEntity = new Class()`
+	- a kulcs még üres, adatbázisan nem jött létre semmi!
+2. Az *entitás DbContexthez rendelése*
+	- `DbContext.DbSet.Add(newEntity)`
+	- Vagy egy másik entitáson keresztül:
+	  `someEntity.Property = newEntity`
+3. `DbContext.SaveChanges`
+4. EF lefuttatja az *INSERT SQL*-t
+5. Az elsődleges kulcsok és külső kulcsok bekerülnek a DbContext-hez tartozó entitásokba
+	- **newEntity.Id innentől érvényes**
+
+### Entitások módosítása
+
+- Tulajdonság/Hivatkozás módosítása
+- A változást a DbContext nyilvántartja
+- SaveChanges meghívásával a változások átvezetődnek az adatbázisba
+
+```c#
+var course = context.Course.Single(q => q.Neptun== "VIAUAC01");
+var aut = context.Department.Single( q => q.Code== "AUT");
+course.Name = "Adatvezérelt rendszerek";
+course.Department = aut;
+context.SaveChanges();
+```
+
+### Entitások törlése
+
+- Csak betöltött entitást tudunk explicit törölni
+	- Illetve kaszkádosítás miatt a DB törli a kapcsolódó entitásokat magától
+- DbSet.Remove(...)
+- SaveChanges hívás
+
+```c#
+var c = context.Course.Single(q=>q.Neptun=="VIAUAC01");
+context.Course.Remove(c);
+context.SaveChanges()
+```
+
+### Entitásállapot és SaveChanges
+
+- Az EF minden általa ismert entitást "követ"
+- Az entitások a memóriában az alábbi állapotokban lehetnek:
+	- Unchanged, Added, Modified, Deleted
+- A SaveChanges metódus az entitásokat a fenti állapotoknak megfel
+
