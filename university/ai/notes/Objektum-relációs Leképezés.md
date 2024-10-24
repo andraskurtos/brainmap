@@ -278,3 +278,14 @@ Módosítás előtt a változtatásokat ellenőriznünk kell, majd a rekordok ta
 
 >[!summary]+ Ütközéskezelési stratégiák:
 >- Az első író nyer.
+>- Az utolsó író nyer.
+>- Összevetjük a módosított mezők halmazát
+>	--> konzisztenciát meg kell őrizni!
+>- Az esetek túlnyomó részében nem egyetlen táblát érintenek a változtatások.
+
+>[!warning]+ Ütközésdetektálás
+>- Többrétegű alkalmazás esetén az adat kikerül a UI rétegbe, és az adatbáziskapcsolat bezárul.
+>- Módosítási kérés esetén valahonnan *meg kell tudnunk*, mi volt a rekord eredeti állapota/verziója
+>- A szerver állapotmentes -> a UI-nak kell eltárolni az eredeti adat információit
+>- --> ***módosul az API***
+
