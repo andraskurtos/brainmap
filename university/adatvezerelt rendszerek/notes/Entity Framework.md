@@ -109,8 +109,12 @@ class MyDbContext : DbContext
 >- Nincs dizájner, kód határozza meg a leképezést
 >- Konvenciók:
 >	- Id/OsztálynévID - elsődleges kulcs
-
-
+>- Annotációk:
+>	- ComponentModel.DataAnnotations névtér
+>	- Kulcs, oszlopnév, szöveg hossz, stb
+>- DbModelBuilder API
+>	- Programozottan
+>	- OnModelCreating felüldefiniálásával, ModelBuilder használatával
 
 
 
