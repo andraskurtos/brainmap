@@ -218,4 +218,14 @@ var blogs = context.Blogs.OrderBy(
 
 ### Index
 
+Alapértelmezetten minden külső kulcsként használt mezőhöz létrejön index. Csak API-al lehet megadni.
 
+```c#
+protected override void OnModelCreating(ModelBuilder mb) {
+	mb.Entity<Blog>()
+		.HasIndex(b => b.Url)
+		.IsUnique();
+	mb.Entity<Person>()
+		.HasIndex(p=>new)
+}
+```
