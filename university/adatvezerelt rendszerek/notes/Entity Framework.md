@@ -85,8 +85,33 @@ class MyDbContext : DbContext
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
 		modelBuilder.Entity<Product>()
-			.Property(b => b.Name)
+			.Property(b => b.Name).IsRequired();
+		modelBuilder.Entity<Product>()
+			.HasOne(p => p.Category).WithMany(c=>c.Products);
 	}
 }
 ```
+
+>[!tip]+ Navigation Property
+>"Adatbázis join automatikusan"
+>
+> ```sql
+> from p in db.Products
+> 	join c in db.Categories on p.CategoryId equals c.Id
+> select c.Name
+> ```
+> helyett:
+>```sql
+>from p in db.Products select p.Category.Name
+>```
+
+>[!success]+ Code First Megközelítés
+>- Nincs dizájner, kód határozza meg a leképezést
+>- Konvenciók:
+>	- Id/OsztálynévID - elsődleges kulcs
+
+
+
+
+
 
