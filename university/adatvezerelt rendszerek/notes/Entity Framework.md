@@ -246,3 +246,10 @@ protected override void OnModelCreating(ModelBuilder mb) {
 
 >[!summary]+ DbContext szerepe
 >A DbContext az adatbáziselérés központi osztálya. Nyilvántartja az entitásokat és a rajtuk végzett változtatásainkat, majd a SaveChanges() függvénnyel menti ezeket az [[Adatbázis|adatbázisba]]. Életciklusa rövid, ezért kézi létrehozásnál **using**-al használjuk, DI keretrendszerben pedig Transient/Request scope segítségével. A SaveChanges() tipikusan tranzakcionális, emiatt a DbContext értelmezhető **unit of work** minta megvalósításként is.
+>
+> - Nem szálbiztos
+> - Példányosítása nyitott DB kapcsolatot jelent tipikusan
+> - Nem arra tervezték, hogy sok objektumot hatékonyan kezeljen
+> - Egyetlen funckió lefutásához példányosítjuk, majd elengedjük.
+> 	-> nincs konkurenciaprobléma, nincs sok objektum, kapcsolat minimális ideig van nyitva
+
