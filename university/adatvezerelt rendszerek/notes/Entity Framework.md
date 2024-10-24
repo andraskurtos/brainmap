@@ -378,3 +378,17 @@ foreach(var p in q) {
 }
 ```
 
+---
+
+## Entitás típusok
+
+## POCO Proxy
+
+Ez az alapértelmezett típus, konfigban kapcsolható ki. Jelentése *Plain Old CLR Object*, tehát nincs alaposztálya. Automatikus változáskövetéssel, navigációval és lazy loading támogatással jön.
+
+>[!warning]+ Követelmények:
+>- publikus, nem abstract és nem sealed osztály
+>- public/protected paraméter nélküli konstruktor
+>- property get: public, non sealed, virtual
+
+- Sallangmentes osztályok
