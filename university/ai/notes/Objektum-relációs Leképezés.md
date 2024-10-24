@@ -262,5 +262,18 @@ Ezek a tulajdonságok nem kötődnek példányhoz, az egész osztályra jellemz�
 
 Az osztályszintű konstansokat is hasonlóan kezeljük.
 
-
 ---
+
+## Konkurenciakezelés
+
+A konkurenciakezelésre sajnos nincsen/ritkán van jó megoldás. Használhatunk *pesszimista konkurenciakezelést*, ( azt feltételezzük, hogy "biztos más is módosít"), ilyenkor a  módosított adatokhoz kizárólagos hozzáférést nyújtunk, zárolással, tranzakcióizolálással, várakoztatással. Vagy használhatunk optimista konkurenciakezelést is, ("más úgysem módosít"). Ha mégis, detektáljuk az ütközéseket, és feloldjuk őket.
+
+### Pesszimista konkurenciakezelés
+
+Ha van fenntartott kapcsolat az adatbázissal, a rekordokat zároljuk. Ezt az adatbázistranzakciók biztosítják. Ha nem tudunk kapcsolatot fenntartani az adatbázissal, pl. egy [[Adatvezérelt rendszerek architektúrái#**Háromrétegű architektúra**|háromrétegű alkalmazásban]], akkor az [[Üzleti Logika Réteg|üzleti logikai rétegben]] kell megoldani. Meg kell valósítani a kölcsönös kizárást, skálázhatóságot, és az eldobott sessionöket kezelni kell.
+
+### Optimista konkurenciakezelés
+
+Módosítás előtt a változtatásokat ellenőriznünk kell, majd a rekordok tartalma alapján döntést kell hoznunk. Ilyenkor vagy a rekord verzióját vizsgálhatjuk, ami adatbázis séma módosítással jár, vagy a teljes tartalmát. Ekkor meg kell őrizni a módosítás előtti tartalmat, amihez az [[Üzleti Logika Réteg|üzleti logika]] i entitásokban plusz tartalom szükséges. A módosító SQL parancsot megfelelően kell megírni, ezt az [[Adatelérési réteg|adatelérési réteg]] tipikusan segíti.
+
+>[!summary]+ Ütközéskezelési stratégiák
