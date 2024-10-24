@@ -392,3 +392,5 @@ Ez az alapértelmezett típus, konfigban kapcsolható ki. Jelentése *Plain Old 
 >- property get: public, non sealed, virtual
 
 - Sallangmentes osztályok
+- Változáskövetés
+	- Automatikus
