@@ -226,6 +226,11 @@ protected override void OnModelCreating(ModelBuilder mb) {
 		.HasIndex(b => b.Url)
 		.IsUnique();
 	mb.Entity<Person>()
-		.HasIndex(p=>new)
+		.HasIndex(p=>new {p.FirstName, p.LastName});
 }
 ```
+
+[NotMapped] - nem leképezett típus, property
+
+### Leképezés nézetekre
+
