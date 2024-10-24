@@ -43,4 +43,4 @@ Az EF nem rendelkezik közvetlen ismeretekkel az adatbázismotorról, és annak 
 
 ## Database First leképezés
 
-*Database First* leképezés esetén rendelkezünk egy meglévő adatbázissal, melyet tetszőleges DB eszközzel elkészítettünk.
+*Database First* leképezés esetén rendelkezünk egy meglévő adatbázissal, melyet tetszőleges DB eszközzel elkészítettünk. A kódot ez alapján generáljuk,
