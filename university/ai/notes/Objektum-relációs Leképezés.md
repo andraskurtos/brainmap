@@ -19,9 +19,11 @@ Az O/R leképezés feladata az üzleti objektumok leképezése relációs adatmo
 
 >[!warning]+ Problémák:
 >- Eltérő koncepciók
->- Öröklődés
->- Shadow információk
->- Kapcsolatok leképezése
+>- [[Objektum-relációs Leképezés#Öröklés|Öröklődés]]
+>- [[Objektum-relációs Leképezés#Shadow információk|Shadow információk]]
+>- [[Objektum-relációs Leképezés#Kapcsolatok|Kapcsolatok leképezése]]
+
+
 
 ## Alapötlet
 
@@ -39,7 +41,7 @@ Ezzel is adódnak azonban problémák.
 >  ![[Pasted image 20241024131758.png]]
 
 ---
-## Leképezések
+## Problémák
 
 
 ### Shadow információk
@@ -185,9 +187,9 @@ Kapcsolatok:        \
 - Aggregáció       |  
 - Kompozíció       |
 Típusok:             > --> Referenciális integritás
-- Egy-egy          |
-- Egy-több         |
-- Több-több       /
+- [[Objektum-relációs Leképezés#Egy-egy kapcsolat|Egy-egy]]         |
+- [[Objektum-relációs Leképezés#Egy-több kapcsolat|Egy-több]]         |
+- [[Objektum-relációs Leképezés#Több-több kapcsolat|Több-több]]       /
 
 Irány:           \
 - egyirányú      > --> nem képezhető le
@@ -202,8 +204,29 @@ Külső kulcs az egyik adattáblába, ez azonban az egy több lehetőséget mag�
 
 Külső kulcs az egy-re.
 
-#### Több-
+#### Több-több kapcsolat:
 
+Közvetlenül nem leképezhető, kapcsolótáblát használunk.
+
+#### Kardinalitások:
+
+Mindkét oldal kötelezőt nem célszerű leképezni. Elindulási probléma [[adatbázis]] szinten. Számolás [[Adatelérési réteg|adatréteg]] szinten: 0, 1, több.
+
+>[!abstract]- Rekurzió
+>Másnéven reflexió, olyan kapcsolat, melynek kezdő és végpontja ugyanaz az entitás. Hasonlóan kezeljük a többi kapcsolathoz, több-több leképezésben kicsi eltéréssel.
+>
+>![[Pasted image 20241024135654.png]]
+>
+>![[Pasted image 20241024135705.png]]
+
+>[!summary]+ Konklúzió:
+>A relációs adatmodell nem tud minden kapcsolati kényszert ellenőrizni, amit az OO megközelítés elő tud írni. Példáuk egy-egy helyett egy-több előfordulhat, egy-több alesetei nem validálhatók. Erre különböző megoldásaink lehetnek, ellenőrizhetjük őket az [[Üzleti Logika Réteg|üzleti logikában]], [[T-SQL#Triggerek|triggerrel]], vagy adatbázismotor-specifikus kényszerekkel.
+
+---
+
+## Egyéb problémák
+
+### Rendezett gyűj
 
 
 
