@@ -234,3 +234,4 @@ protected override void OnModelCreating(ModelBuilder mb) {
 
 ### Leképezés nézetekre
 
+Az osztál
