@@ -356,4 +356,25 @@ SavePoint: nevesített pont, ameddig visszagörgethetjük a tranzakciót, és v�
 
 ### Lekérdezés
 
-*Lekérdezéshez* egy DbContext példányra van szükség. Ez *listát vezet* az újonnan felvett és törölt entitásokról, *nyilvántartja* az objektumon történt változásokat, és a lekérdezett entitásokat. További lekérdezéseknél figyelembe veszi a módosításokat. Mikor a lekérdezett objektumokat nem akarjuk módosítani, használjuk az ***AskNoTracking()***-et, ilyenkor állapotkövetés nélkül kérjük 
+*Lekérdezéshez* egy DbContext példányra van szükség. Ez *listát vezet* az újonnan felvett és törölt entitásokról, *nyilvántartja* az objektumon történt változásokat, és a lekérdezett entitásokat. További lekérdezéseknél figyelembe veszi a módosításokat. Mikor a lekérdezett objektumokat nem akarjuk módosítani, használjuk az ***AskNoTracking()***-et, ilyenkor állapotkövetés nélkül kérjük az entitásokat.
+
+>[!example]+ Példa: Budapesti telephelyű vevők
+> ```sql
+> from c in db.Customers
+> where c.MainSite.Address.City == "Budapest"
+> select c;
+> ``` 
+
+### Navigáció
+
+A kapcsolódó entitások is elérhetőek a navigációs propertyken keresztül:
+
+```c#
+var q = from p in db.Products
+		where p.Price == db.Products.Max(pp => pp.Price)
+		select p;
+foreach(var p in q) {
+	Console.WriteLine(p.Category?.Name);
+}
+```
+
