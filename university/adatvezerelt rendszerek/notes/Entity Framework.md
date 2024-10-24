@@ -253,3 +253,11 @@ protected override void OnModelCreating(ModelBuilder mb) {
 > - Egyetlen funckió lefutásához példányosítjuk, majd elengedjük.
 > 	-> nincs konkurenciaprobléma, nincs sok objektum, kapcsolat minimális ideig van nyitva
 
+---
+
+## Műveletek
+
+### Új entitások beszúrása és mentése
+
+1. Új entitás létrehozása
+2. 
