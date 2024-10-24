@@ -18,6 +18,7 @@ ___
 ![[Pasted image 20240904162816.png]]
 
 ## Data Access Components
+
 Az adatbázisok eléréséhez szükséges funkcionalitásokat valósítják meg. Elrejtik a komplexitást, ami az adatbázis kezeléséből adódik, és a felsőbb réteg számára *egyszerűen használható szolgáltatásként nyújtják az adattárolást*.
 
 Ide tartozik pl. az SQL parancsok kezelése, és az adatbázis modelljének leképezése az [[Üzleti Logika Réteg|üzleti logika]] számára kényelmesen használható módon.
