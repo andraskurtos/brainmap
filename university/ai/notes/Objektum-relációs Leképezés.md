@@ -117,3 +117,4 @@ Az *öröklődés* modellezésének fajtái:
 ### 3 - Összes osztály leképezése táblába
 
 - Osztályhierarchiát követik a táblák
+- Szülő-gyerek viszon
