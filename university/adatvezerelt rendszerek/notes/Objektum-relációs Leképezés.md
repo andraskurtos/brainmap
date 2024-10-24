@@ -19,3 +19,4 @@ Az O/R leképezés feladata az üzleti objektumok leképezése relációs adatmo
 >- Shadow információk
 >- Kapcsolatok leképezése
 
+## Alapötlet
