@@ -117,4 +117,52 @@ Az *öröklődés* modellezésének fajtái:
 ### 3 - Összes osztály leképezése táblába
 
 - Osztályhierarchiát követik a táblák
-- Szülő-gyerek viszon
+- Szülő-gyerek viszony leképezése idegen kulccsal
+- Példányazonosító
+
+![[Pasted image 20241024133254.png]]
+
+>[!success]+ Előnyök:
+>- Könnyű megérteni
+>- Könnyű módosítani a szülő osztályok struktúráját
+
+>[!danger]+ Hátrányok:
+>- Összetett [[adatbázis]] séma
+>- Egy példány adatai több táblában vannak
+>	- Összetettebb lekérdezések
+>	- Szükséges join --> lassabb
+
+>[!question]+ Mikor használjuk?
+>- Komplex hierarchia esetén
+>- Változó struktúra esetén
+
+---
+
+### 4 - leképezés általános struktúrába
+
+- Metadata driven megoldás
+- Általános séma
+	- Tetszőleges hierarchia leírható
+	- Független konkrét osztályoktól
+		- Osztály hierarchia --> metaadat
+		- Osztály példányok --> Attribútumok manifesztálódása
+
+![[Pasted image 20241024133844.png]]
+
+>[!success]+ Előnyök:
+>- Flexibilis
+>- "Bármi" leírható benne
+
+>[!error]+ Hátrányok:
+>- Elsőre nehéz "megemészteni"
+>- Nehéz "összeszedni" egy objektum példány adatait
+>- Nagy adatmennyiség esetén nem hatékony
+
+>[!question]+ Mikor használjuk?
+>- Komplex alkalmazások
+>- "Minden változhat" akár futási időben is.
+
+---
+
+>[]
+
