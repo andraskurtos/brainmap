@@ -320,5 +320,40 @@ Az entitás állapotával működő megoldás gyakran kényelmetlen és lassú. 
 db.Persons.Where(p=>p.Name.StartsWith("Ro")).ExecuteDelete();
 ```
 
-Update esetén a feltétel mellett meg kell adni, melyik
+Update esetén a feltétel mellett meg kell adni, melyik tulajdonságot mire írjuk át.
 
+```c#
+db.Persons.Where(p=>p.Name.StartsWith("Rozsa")).ExecuteUpdate(
+	p=>p
+		.setProperty(p=>p.Name, p=>"Rózsa"+p.Name.Substring(5))
+		.setProperty(p=>p.Age, p=>p.Age+1));
+```
+
+### Tranzakciók
+
+#### Alapértelmezett viselkedés
+
+A SaveChanges egy nagy tranzakcióban fut, ezért minden változtatás, amit összegyűjtöttünk a DbContext példányban, vagy egyszerre érvényre jut, vagy nem. Akár több BLL művelet is gyűjtheti egy DbContext példányba a változtatásokat, egymásról nem tudva, végül egyetlen ponton dől el, hogy mindet sikerül-e betenni az adatbázisba.
+
+#### Transaction API
+
+Adatbázison indítható tranzakció
+
+```c#
+using (var transaction = db.Database.BeginTransaction())
+{
+	...
+}
+```
+
+Tranzakció objektumon lehet kommitálni és abortálni
+
+```c#
+transaction.Commit();
+```
+
+SavePoint: nevesített pont, ameddig visszagörgethetjük a tranzakciót, és véglegesíthetjük az addigi műveleteket.
+
+### Lekérdezés
+
+*Lekérdezéshez* egy DbContext példányra van szükség. Ez *listát vezet* az újonnan felvett és törölt entitásokról, *nyilvántartja* az objektumon történt változásokat, és a lekérdezett entitásokat. További lekérdezéseknél figyelembe veszi a módosításokat. Mikor a lekér
