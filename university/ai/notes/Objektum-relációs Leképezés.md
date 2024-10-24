@@ -226,7 +226,8 @@ Mindkét oldal kötelezőt nem célszerű leképezni. Elindulási probléma [[ad
 
 ## Egyéb problémák
 
-### Rendezett gyűj
+### Rendezett gyűjtemények
+Ilyen például az előadás
 
 
 
