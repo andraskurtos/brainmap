@@ -3,8 +3,8 @@ aliases:
 tags:
   - 5semester
   - adatvez
-  - ai
   - datadriven
+  - uni
 cssclasses:
   - center-images
   - center-titles
