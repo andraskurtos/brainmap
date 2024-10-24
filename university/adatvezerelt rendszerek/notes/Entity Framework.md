@@ -234,4 +234,15 @@ protected override void OnModelCreating(ModelBuilder mb) {
 
 ### Leképezés nézetekre
 
-Az osztál
+Az osztályok nézetekre is leképezhetők, így a nézet típusosan elérhető. Ha nézetre és táblára is leképezzük, az EF a nézetet használja a lekérdezésekhez, és a táblát a módosításokhoz.
+
+```c#
+protected override void OnModelCreating(ModelBuilder mb) {
+	mb.Entity<Blog>()
+		.ToView("blogsView", schema: "blogging");
+}
+```
+
+
+>[!summary]+ DbContext szerepe
+>A DbContext az adatbáziselérés központi osztálya. Nyilvántartja az entitásokat és a rajtuk végzett változtatásainkat, majd a SaveChanges() függvénnyel menti ezeket az [[Adatbázis|adatbázisba]]. Életciklusa rövid, ezért kézi létrehozásnál **using**-al használjuk, DI keretrendszerben pedig Transient/Request scope segítségével. A SaveChanges() tipikusan tranzakcionális, emiatt a DbContext értelmezhető **unit of work** minta megvalósításként is.
