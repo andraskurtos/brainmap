@@ -164,5 +164,5 @@ Az *öröklődés* modellezésének fajtái:
 
 ---
 
->[]
+>[!abstract]+ T
 
