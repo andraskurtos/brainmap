@@ -125,7 +125,22 @@ class MyDbContext : DbContext
 Táblák, mezők, típusok, kényszerek
 
 ```c#
-[Table(b)]
+[Table("blogs", Schema="blogging")]
+class Blog
+{
+	[Column("blog_id")]
+	public int BlogId {get;set;}
+	[Column(TypeName="varchar(200)")]
+	public string Url {get;set;} = "";
+	
+}
+
+public class Blog 
+{
+	public int BlogId {get;set;}
+
+	[Re]
+}
 ```
 
 
