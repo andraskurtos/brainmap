@@ -155,6 +155,8 @@ class Blog
 > 3.  `[DatabaseGenerated(DatabaseGeneratedOption.Computed)]` 
 insert közben
 
+### Több kapcsolat két entitás közt
+
 Ha több kapcsolat lenne két entitás között, explicit megadjuk, melyik micsoda.
 
 ```c#
@@ -174,10 +176,46 @@ public class User {
 }
 ```
 
+### Több-több kapcsolat
+
 Több-több kapcsolat esetén két osztály gyűjteményekkel hivatkozik egymásra, ilyenkor automatikusan létrejön a kapcsolótábla. A relációt reprezentáló entitás testreszabható.
 
 ```c#
 public class Post {
-	public ICollection<Tag> Tags {get;} = 
+	public ICollection<Tag> Tags {get;} = new List<Tag>();
+}
+
+public class Tag {
+	public ICollection<Post> Posts {get;} = new List<Post>();
 }
 ```
+
+### Shadow properties
+
+A *shadow property*-k olyan tulajdonságok, amik nem jelennek meg az entitásosztályon propertyként. Fluent API-al deklarálhatók.
+
+```c#
+class BlogContext : DbContext
+{
+	public DbSet<Blog> Blogs {get;set;}
+	public DbSet<Post> Posts {get;set;}
+
+	protected override void OnModelCreating(ModelBuilder mb) {
+		mb.Entity<Blog>()
+			.Property<DateTime>("LastUpdated");
+	}
+}
+```
+
+Automatikusan létrejönnek, ha egy kapcsolat csak referenciaként jelenik meg, de nincs külső kulcs az osztályon. Csak a *ChangeTracker*-en keresztül kezelhetőek, tipikusan infrastruktúrához tartozó tulajdonságok vagy funkciók. Lekérdezésekben felhasználhatók.
+
+```c#
+context.Entry(myBlog).Property("LastUpdated").CurrentValue=DateTime.Now
+var blogs = context.Blogs.OrderBy(
+	b=>EF.Property<DateTime>(b, "LastUpdated")
+);
+```
+
+### Index
+
+
