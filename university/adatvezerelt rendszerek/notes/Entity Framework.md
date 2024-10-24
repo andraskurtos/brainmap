@@ -133,14 +133,45 @@ class Blog
 	[Column(TypeName="varchar(200)")]
 	public string Url {get;set;} = "";
 	
-}
-
-public class Blog 
-{
-	public int BlogId {get;set;}
-
-	[Re]
+	[Required]
+	[MaxLength(500)]
+	public string Url {get;set;}="";
 }
 ```
 
+>[!warning]+ Azonosító generálása
+>1. Nincs generálás - manuálisan adjuk meg
+>2. Csak új entitás létrehozásakor
+>3. Entitás létrehozásakor és módosításakor
+>
+>Generálás módja SQL szerver esetén:
+>	\> int, Guild: automatikusan generálódik a DB-ben
+>    \> byte[] concurrency tokenként automatikusan rovwersion lesz és automatikusan generálódik
+>    \> DateTime: külön kell megadni, pl FluentApival.
+>
+>Annotációk:
+> 1.  `[DatabaseGenerated(DatabaseGeneratedOption.None)]`
+> 2.  `[DatabaseGenerated(DatabaseGeneratedOption.Identity)]`
+> 3.  `[DatabaseGenerated(DatabaseGeneratedOption.Computed)]` 
+insert közben
+
+Ha több kapcsolat lenne két entitás között, explicit megadjuk, melyik micsoda.
+
+```c#
+public class Post {
+	public int AuthorUserId {get;set;}
+	public User? Author {get;set;}
+
+	public int ContributorUserId {get;set;}
+	public User? Contributor {get; set;}
+}
+
+public class User {
+	[InverseProperty("Author")]
+	public List<Post> AuthoredPosts {get;} = new();
+	[InverseProperty("Contributor")]
+	public List<Post> Contributed
+í
+}
+```
 
