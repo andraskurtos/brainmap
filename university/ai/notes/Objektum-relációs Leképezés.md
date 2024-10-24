@@ -39,14 +39,16 @@ Ezzel is adódnak azonban problémák.
 >  ![[Pasted image 20241024131758.png]]
 
 ---
+## Leképezések
 
-## Shadow információk
+
+### Shadow információk
 
 A *shadow információk* szükségesek a perzisztencia megvalósításához. Ilyenek például a kulcsok, időbélyegek, verziószámok, stb. Az üzleti objektumba helyezni őket nem szükséges, de mégis kezelni kell valahogyan.
 
 ---
 
-## Öröklés
+### Öröklés
 
 Az *öröklődés* modellezésének fajtái:
 
@@ -62,7 +64,7 @@ Az *öröklődés* modellezésének fajtái:
 >
 >![[Pasted image 20241024132257.png]]
 
-### 1 - egy táblába való leképezés
+#### 1 - egy táblába való leképezés
 
 - Összes attribútum felsorolása a hierarchiát bejárva
 - Típus azonosítás
@@ -89,7 +91,7 @@ Az *öröklődés* modellezésének fajtái:
 
 ---
 
-### 2 - Valós osztályok leképezése táblába
+#### 2 - Valós osztályok leképezése táblába
 
 - Osztályonként egy tábla
 - Osztály összes attribútumának eltárolása
@@ -114,7 +116,7 @@ Az *öröklődés* modellezésének fajtái:
 
 ---
 
-### 3 - Összes osztály leképezése táblába
+#### 3 - Összes osztály leképezése táblába
 
 - Osztályhierarchiát követik a táblák
 - Szülő-gyerek viszony leképezése idegen kulccsal
@@ -138,7 +140,7 @@ Az *öröklődés* modellezésének fajtái:
 
 ---
 
-### 4 - leképezés általános struktúrába
+#### 4 - leképezés általános struktúrába
 
 - Metadata driven megoldás
 - Általános séma
@@ -164,5 +166,42 @@ Az *öröklődés* modellezésének fajtái:
 
 ---
 
->[!abstract]+ T
+>[!abstract]- Többszörös öröklés
+>Ma már nem nagyon támogatott, de pl. C++-ban igen. Itt is ugyanazok a technológiák használhatók, az általános megoldásban benne vannak.
+>
+>![[Pasted image 20241024134315.png]]
+
+---
+#### Melyiket használjuk?
+
+A fenti tervezési szempontok gyakran másodlagosak. Gondoljuk át, milyen lekérdezéseket, műveleteket hajtunk végre, milyen gyakorisággal, hogy mekkora mennyiségű adattal dolgozunk, milyen ezek eloszlása. Akár tesztelhetjük és mérhetjük is a különböző alternatívák hatékonyságát.
+
+---
+
+### Kapcsolatok
+
+Kapcsolatok:        \
+- Asszociáció      |
+- Aggregáció       |  
+- Kompozíció       |
+Típusok:             > --> Referenciális integritás
+- Egy-egy          |
+- Egy-több         |
+- Több-több       /
+
+Irány:           \
+- egyirányú      > --> nem képezhető le
+- kétirányú     /
+
+
+#### Egy-egy kapcsolat:
+
+Külső kulcs az egyik adattáblába, ez azonban az egy több lehetőséget magában hordja.
+
+#### Egy-több kapcsolat:
+
+Külső kulcs az egy-re.
+
+
+
 
