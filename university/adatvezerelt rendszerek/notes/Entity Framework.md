@@ -43,4 +43,43 @@ Az EF nem rendelkezik közvetlen ismeretekkel az adatbázismotorról, és annak 
 
 ## Database First leképezés
 
-*Database First* leképezés esetén rendelkezünk egy meglévő adatbázissal, melyet tetszőleges DB eszközzel elkészítettünk. A kódot ez alapján generáljuk,
+*Database First* leképezés esetén rendelkezünk egy meglévő adatbázissal, melyet tetszőleges DB eszközzel elkészítettünk, és kódot ez alapján generáljuk. A navigáció neveit utána meg kell adni/átírni, valamint esetenként további változtatásokat kell hozni (pl öröklés, stb.).
+
+Ha az adatbázis módosul, megpróbálja megtartani a fent említett kézi változtatásokat, de ez nem mindig sikerül (provider függő).
+
+## Model First leképezés
+
+*Model First* leképezés esetén valamilyen designerben megtervezzük az entitásmodellt, ami generál egy adatbázis inicializáló scriptet. Frissítésnél a tervet módosítjuk, és új scriptet generálunk. Ilyenkor vagy a teljes adatbázist eldobjuk, és létrehozunk egy újat, vagy inkrementális scripttel dolgozunk. Az adatbázis generálása után a C# kódot is legeneráljuk.
+
+## Code First
+
+A *Code First* leképezés esetén adatbázist generálunk C# kód alapján, vagy C# kódunkat létező adatbázissal illesztjük össze. A modell és a leképezés is C# nyelven íródik.
+
+Termék entitás osztálya:
+
+```c#
+public partial class Product
+{
+	public int Id {get;set;}
+	public string? Name {get;set;}
+	public double? Price {get;set;}
+	public int? Stock {get;set;}
+	public int? Vatid {get;set;}
+	public int? CategoryId {get;set;}
+	public string? Description {get;set;}
+	public virtual Category? Category {get;set;}
+	public virtual ICollection<OrderItem> OrderItems {get;} = 
+		new List<OrderItem>();
+	
+}
+```
+
+Adatbázis környezet:
+
+```c#
+class MyDbContext : DbContext
+{
+	public DbSet<
+}
+```
+
