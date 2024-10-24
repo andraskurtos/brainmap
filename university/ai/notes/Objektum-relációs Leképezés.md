@@ -227,7 +227,40 @@ Mindkét oldal kötelezőt nem célszerű leképezni. Elindulási probléma [[ad
 ## Egyéb problémák
 
 ### Rendezett gyűjtemények
-Ilyen például az előadás
+
+Sorrendezést adó attribútumra van szükség, hogy sorrendhelyesen olvashassuk fel (order by). Sorrend változásának hatására több rekordot is módosítanunk kell, vagy hézagos lesz a kiosztás. Elem törlésénél nem fontos újraindexelni.
+
+---
+
+### Osztályszintű tulajdonságok
+
+Ezek a tulajdonságok nem kötődnek példányhoz, az egész osztályra jellemzők. Ilyenkor több lehetőségünk is van:
+
+- *Minden tulajdonságot külön táblába teszünk:*
+	- sok kicsi tábla
+	- átláthatatlan
+	- de: gyors!
+	  
+- *Minden tulajdonság ugyanabban a táblában, külön oszlopokban:*
+	- gyors
+	- egyszerű
+	- konkurencia
+	  
+- *Osztályonként egy tábla, az értékek külön oszlopokban*
+	- gyors
+	- sok kicsi tábla
+	- áttekinthetetlen
+	  
+- *Általános megoldás:*
+	- minden tulajdonság új rekord
+		- osztály
+		- tulajdonságnév
+		- érték
+	- **Adatkonverziót meg kell oldani, vagy több oszlop**
+	- Egyszerű bővíthetőség
+		- Új tulajdonság -> új rekord
+
+Az osztályszintű konstansokat is hasonlóan kezeljük.
 
 
-
+---
