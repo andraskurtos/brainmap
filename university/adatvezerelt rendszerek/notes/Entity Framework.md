@@ -356,4 +356,4 @@ SavePoint: nevesített pont, ameddig visszagörgethetjük a tranzakciót, és v�
 
 ### Lekérdezés
 
-*Lekérdezéshez* egy DbContext példányra van szükség. Ez *listát vezet* az újonnan felvett és törölt entitásokról, *nyilvántartja* az objektumon történt változásokat, és a lekérdezett entitásokat. További lekérdezéseknél figyelembe veszi a módosításokat. Mikor a lekér
+*Lekérdezéshez* egy DbContext példányra van szükség. Ez *listát vezet* az újonnan felvett és törölt entitásokról, *nyilvántartja* az objektumon történt változásokat, és a lekérdezett entitásokat. További lekérdezéseknél figyelembe veszi a módosításokat. Mikor a lekérdezett objektumokat nem akarjuk módosítani, használjuk az ***AskNoTracking()***-et, ilyenkor állapotkövetés nélkül kérjük 
