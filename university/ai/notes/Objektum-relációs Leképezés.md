@@ -276,4 +276,5 @@ Ha van fenntartott kapcsolat az adatbázissal, a rekordokat zároljuk. Ezt az ad
 
 Módosítás előtt a változtatásokat ellenőriznünk kell, majd a rekordok tartalma alapján döntést kell hoznunk. Ilyenkor vagy a rekord verzióját vizsgálhatjuk, ami adatbázis séma módosítással jár, vagy a teljes tartalmát. Ekkor meg kell őrizni a módosítás előtti tartalmat, amihez az [[Üzleti Logika Réteg|üzleti logika]] i entitásokban plusz tartalom szükséges. A módosító SQL parancsot megfelelően kell megírni, ezt az [[Adatelérési réteg|adatelérési réteg]] tipikusan segíti.
 
->[!summary]+ Ütközéskezelési stratégiák
+>[!summary]+ Ütközéskezelési stratégiák:
+>- Az első író nyer.
