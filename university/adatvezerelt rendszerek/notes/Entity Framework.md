@@ -116,6 +116,16 @@ class MyDbContext : DbContext
 >	- Programozottan
 >	- OnModelCreating felüldefiniálásával, ModelBuilder használatával
 
+---
 
+## Modellépítés
+
+![[Pasted image 20241024212055.png]]
+
+Táblák, mezők, típusok, kényszerek
+
+```c#
+[Table(b)]
+```
 
 
