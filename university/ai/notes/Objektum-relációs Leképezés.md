@@ -55,3 +55,5 @@ Az *öröklődés* modellezése a következőképpen történik:
 3. *Minden osztály* leképezése saját táblába
 4. Osztályok és hierarchia szintek *általános leképezése*
 
+>[!example]+ Példa:
+>
