@@ -48,7 +48,7 @@ A *shadow információk* szükségesek a perzisztencia megvalósításához. Ily
 
 ## Öröklés
 
-Az *öröklődés* modellezése a következőképpen történik:
+Az *öröklődés* modellezésének fajtái:
 
 1. Hierarchia leképezése egy *közös táblába*
 2. Minden *valós osztály* leképezése saját táblába (akikből objektumok képződhetnek)
@@ -56,4 +56,64 @@ Az *öröklődés* modellezése a következőképpen történik:
 4. Osztályok és hierarchia szintek *általános leképezése*
 
 >[!example]+ Példa:
+>- Absztrakt Person osztály
+>- Több implementáció
+>- Új funkciót építünk az alkalmazásba -> új leszármazott *Executive*
 >
+>![[Pasted image 20241024132257.png]]
+
+### 1 - egy táblába való leképezés
+
+- Összes attribútum felsorolása a hierarchiát bejárva
+- Típus azonosítás
+	- Egy oszlopban kódolt értékkel
+	- vagy IsCustomer, IsEmployee, stb oszlopokkal.
+- Bővítés kezelése: új attribútumok felvitele
+
+![[Pasted image 20241024132502.png]]
+
+>[!success]+ Előnyei:
+>- Egyszerű
+>- Könnyű új osztályt bevezetni a hierarchiába
+>- Objektum példány szerepének változása könnyen követhető
+
+>[!error]+  Hátrányai:
+>- Helypazarlás
+>- Egy osztály változása miatt az összes tárolása megváltozik
+>- Komplex struktúra esetén nehezen áttekinthető
+>- A kötelezőségi kényszer nem valósítható meg az adatbázisban
+
+>[!question]+ Mikor használjuk?
+>- Tervezési idejű tényező
+>- Egyszerű hierarchiák esetén
+
+---
+
+### 2 - Valós osztályok leképezése táblába
+
+- Osztályonként egy tábla
+- Osztály összes attribútumának eltárolása
+- Példányazonosító
+- Változás követése
+	- Új osztály --> új tábla
+	- Attribútum változás --> hierarchia szint mentén végig kell vinni
+
+>[!success]+ Előnyök:
+>- Átláthatóbb
+>- Jobban illeszkedik az objektum modellhez
+>- Gyors adatelérés
+
+>[!error]+ Hátrányok:
+>- Osztály módosítása több táblát is érinthet
+>- Több szerepet betöltő példányok kezelése
+>- Employee --> Executive
+>- Employee és Customer
+
+>[!question]+ Mikor használjuk?
+>-  Ritkán változó struktúrák esetén
+
+---
+
+### 3 - Összes osztály leképezése táblába
+
+- Osztályhierarchiát követik a táblák
