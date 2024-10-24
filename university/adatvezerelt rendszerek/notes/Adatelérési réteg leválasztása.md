@@ -36,6 +36,28 @@ A leválasztás tipikusan egy interfész kialakítása útján történik. Ezen 
 
 ## Repository tervezési minta
 
-Entitásonként vagy entitáscsoportonként fogalmazunk meg repositorykat, valamint 1 általános repository-t, egy generikus osztály képében. Ezt a repository-t tipikusan interféssz
+Entitásonként vagy entitáscsoportonként fogalmazunk meg repositorykat, valamint 1 általános repository-t, egy generikus osztály képében. Ezt a repository-t tipikusan interfésszel használjuk, és üzleti entitásokkal dolgozik. Minden adatbázis specifikus rész ide van bezárva. CRUD műveleteket valósít meg.
 
+```java
+class ProductRepository : IProductRepo { 
+	List List() { /*...*/ }
+	Product FindById(int Id) { /*...*/ }
+	void Add(Product entity) { /*...*/ }
+	void Delete(Product entity) { /*...*/ }
+	void Update(Product entity) { /*...*/ } 
+}
+```
 
+>[!summary]+ Jellemzői:
+>- Absztrakció az adatréteg fölött
+>- Specifikus hely, ahol az adatok elérésének módját módosítani kell.
+>- Adattáblák helye
+>- Könnyen cserélhető másik megvalósításra
+>- Elrejti a részleteket
+>- Több alternatív megvalósítás
+
+>[!example]+ Repository funkciók a gyakorlatban:
+> - Entitások hozzáadása és elvétele
+> - Az interfész táblákat, gyűjteményeket használ
+> - Tranzakciókezelés/lezárás nem itt van
+> - Lekérdezések a kívánt kritériumoknak megfelelően
