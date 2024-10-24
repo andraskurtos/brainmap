@@ -320,3 +320,5 @@ Az entitás állapotával működő megoldás gyakran kényelmetlen és lassú. 
 db.Persons.Where(p=>p.Name.StartsWith("Ro")).ExecuteDelete();
 ```
 
+Update esetén a feltétel mellett meg kell adni, melyik
+
