@@ -36,6 +36,6 @@ A leválasztás tipikusan egy interfész kialakítása útján történik. Ezen 
 
 ## Repository tervezési minta
 
-Entitásonként vagy entitáscsoportonként fogalmazunk meg repositorykat, valamint 1 általános repository-t, egy generikus osztály képében. Ez a 
+Entitásonként vagy entitáscsoportonként fogalmazunk meg repositorykat, valamint 1 általános repository-t, egy generikus osztály képében. Ezt a repository-t tipikusan interféssz
 
 
