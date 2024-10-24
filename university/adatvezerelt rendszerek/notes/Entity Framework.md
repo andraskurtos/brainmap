@@ -170,8 +170,14 @@ public class User {
 	[InverseProperty("Author")]
 	public List<Post> AuthoredPosts {get;} = new();
 	[InverseProperty("Contributor")]
-	public List<Post> Contributed
-í
+	public List<Post> ContributedToPosts {get;} = new();
 }
 ```
 
+Több-több kapcsolat esetén két osztály gyűjteményekkel hivatkozik egymásra, ilyenkor automatikusan létrejön a kapcsolótábla. A relációt reprezentáló entitás testreszabható.
+
+```c#
+public class Post {
+	public ICollection<Tag> Tags {get;} = 
+}
+```
