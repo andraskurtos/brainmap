@@ -202,6 +202,8 @@ Külső kulcs az egyik adattáblába, ez azonban az egy több lehetőséget mag�
 
 Külső kulcs az egy-re.
 
+#### Több-
+
 
 
 
