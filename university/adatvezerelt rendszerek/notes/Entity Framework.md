@@ -308,4 +308,15 @@ context.SaveChanges()
 - SaveChanges vagy lekérdezés után minden entitás Unchanged állapotban van.
 
 
+### Bulk Update / Delete
+
+Az entitás állapotával működő megoldás gyakran kényelmetlen és lassú. Be kell olvasni az adatokat memóriába, dbContextet rávezetni a kívánt változtatásokra, amiket egyesével végrehajt.
+
+- DbSet.ExecuteDelete/ExecuteUpdate
+	- Egyetlen táblán tudnak dolgozni
+- Az entitások szűrhetők
+
+```c#
+db.Persons.Where(p=>p.Name.StartsWith("Ro")).ExecuteDelete();
+```
 
