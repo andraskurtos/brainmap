@@ -491,7 +491,7 @@ Az entitás kikerül a DBContext alkalmazástartományából, és átkerül egy 
 1. Adatbázis nyitás
 2. Entitások *lekérdezése* és átadása a *kliensnek*
 3. Adatbázis zárás, dbContext törlődik
-4. 
+
 ...
 
 1. *Kliens* átadja az adatokat, állapot: **Unchanged**
@@ -502,3 +502,35 @@ Az entitás kikerül a DBContext alkalmazástartományából, és átkerül egy 
 	- Delete?
 4. Mentés: SaveChanges
 5. Adatbázis zárás, dbContext törlődik
+
+>[!warning]+ Ütközésfelismerés
+>1. több kliens megkapja az entitásokat
+>2. az adatbáziskapcsolat lebomlik
+>3. minden kliens módosít
+>4. az egyik elmenti az adatbázisba
+>5. a másik kliens is írná az adatbázist
+>6. **Észre vesszük-e, hogy volt közben módosítás?**
+
+>[!tip]+ Ütközésfelismerés EF-el
+>
+>Ellenőrizzük, hogy nem változott-e meg az adatbázis tartalma azóta, hogy mi elkértük az eredeti entitást.
+>
+>- **Concurrency** tokenek használatával
+>	- Bármelyik saját property lehet ilyen
+>	- Ezeket a propertyket fogja összehasnolítani a rendszer
+>- **Timestamp** segítségével
+>	- Az adatbázis automatikusan megnöveli minden módosítás során
+>	- Adatbázis motor/provider függő
+>
+>
+>Minden **UPDATE** és **DELETE** parancs tartalmaz egy **WHERE** feltételt, ami ellenőrzi, hogy a rekord nem változott-e meg a legutolsó lekérdezés óta
+>	- A dbContext ismeri az entitás eredeti értékeit, azok segítségével generálta az **UPDATE** parancsot is
+
+>[!summary]+ Ütközéskezelés
+>1. **DbUpdateConcurrencyException** kivételt kapunk
+>	- Az Entries tartalmazza az ütköző entitások listáját
+>2. Lekérdezhetjük az adatbázis aktuális állapotát (pl NoTracking opcióval)
+>3. Ismerni fogjuk
+>	- A menteni kívánt adatokat
+>	- Az adatbázis jelenlegi tartalmát
+>	- Az általunk korábban le
