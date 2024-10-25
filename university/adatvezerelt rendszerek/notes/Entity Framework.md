@@ -567,7 +567,7 @@ A *migrációs pont* az **adatbázis séma pillanatképe** egy időpillanatban. 
 > [!tip] Migráció -> parancssor
 > - Migrációs fájlok létrehozása:
 >   
-> ```c#
+> ```csharp
 > dotnet ef migrations add InitialCreate
 > ```
 > 
@@ -582,4 +582,11 @@ A *migrációs pont* az **adatbázis séma pillanatképe** egy időpillanatban. 
 >
 >>[!warning]+ Ellenőrzés!
 >>A migrációs lépéseket mindig le kell ellenőrizni!
->>- Például egy oszlop átnevezése törlés és lét
+>>- Például egy oszlop *átnevezése* **törlés és létrehozás lesz**, az EF magától nem tudja kitalálni, hogy azt az információt meg kell őrizni.
+>>```c#
+>>migrationBuilder.RenameColumn(
+>>	name: "Name",
+>>	table: "Customers",
+>>	newName: "FullName"
+>>);
+>>```
