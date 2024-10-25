@@ -63,4 +63,39 @@ A *nyelvi modell* eldönti, hogy egy adott füzér a nyelv része-e, vagy gener�
 >- tulajdonságok
 >	- karakterfüzérek (betűk, szavak, stb) számossága
 >	- szófaj, morfológia, jelentés, ...
->	- szókapcsolatok, nyelvtan, módszerek, ...
+>	- szókapcsolatok, nyelvtan, mondatszerkezetek, ...
+
+### Természetes nyelvek statisztikai tulajdonságai
+
+Alapkérdések:
+- hány különböző szó fordul elő a szövegben?
+- adott méretű szöveggyűjtemény a szöveg mekkora részét fedi le?
+- mekkora méretű korpusz kell a lefedés meghatározásához?
+
+>[!summary]+ [[Zipf-törvény]]
+>$$
+>f\cdot r=\text{konstans}
+>$$
+>
+ahol:
+> $r\space-$ a szó gyakoriság-sorrendbeli rangja
+> $f\space-$ a szó gyakorisága
+> 
+> ![[Pasted image 20241025190858.png]]
+
+>[!summary]+ Kollokáció
+>A kollokáció a szavak együttes előfordulása, melynek a szavakon túlmutató jelentőssége lehet.
+>
+>pl: édes néném, bakot lő
+
+>[!warning]+ Szó kontextusa
+>Szó környezetében előforduló szavak vizsgálata, ez is fontos lehet, például [[homonimák]] kezelésére (*vár*).
+
+## NLP Pipeline
+
+Avagy hogyan építjük fel az NLP modellt?
+
+1. A forrásszöveg lényegtelen, zavaró részeinek eltávolítása
+2. Részegységekre (bekezdések, mondatok) bontás
+3. Elemi egységekre (szavak) bontás
+4. Irreleváns tokenek eltávolítása
