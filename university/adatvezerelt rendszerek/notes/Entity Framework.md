@@ -582,4 +582,4 @@ A *migrációs pont* az **adatbázis séma pillanatképe** egy időpillanatban. 
 >
 >>[!warning]+ Ellenőrzés!
 >>A migrációs lépéseket mindig le kell ellenőrizni!
->>- Például egy oszlop átneve
+>>- Például egy oszlop átnevezése törlés és lét
