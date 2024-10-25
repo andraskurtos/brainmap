@@ -462,3 +462,41 @@ Megvalósítás: proxy osztályok, minden tagnak virtuálisnak kell lennie, stb.
 >A lazy loading túl sokszor fordul az adatbázishoz.
 >![[Pasted image 20241025165707.png]]
 
+### Közvetlen SQL lekérdezések
+
+Egyszerű lekérdezés: 
+
+```c#
+var blogs = context.Blogs
+				.FromSql($"SELECT * FROM dbo.Blogs")
+				.ToList();
+```
+
+Paraméterezve, tárolt eljárás hívása:
+
+```c#
+var user = "johndoe";
+
+var blogs = context.Blogs
+	.FromSql($"EXECUTE dbo.GetMostPopularBlogsForUser {user}")
+	.ToList();
+```
+
+## Állapotkövetés [[Adatvezérelt rendszerek architektúrái|többrétegű alkalmazásokban]]
+
+Az entitás kikerül a DBContext alkalmazástartományából, és átkerül egy másik tierbe, fizikai rétegbe. Ilyenkor a DBContext példány megszűnik, az állapotkövetés már nem bízható rá. A változásokat tehát tudtára kell hozni.
+
+### Többrétegű működés:
+
+1. Adatbázis nyitás
+2. Entitások *lekérdezése* és átadása a *kliensnek*
+3. Adatbázis zárás, dbContext törlődik
+...
+1. *Kliens* átadja az adatokat, állapot: **Unchanged**
+2. Adatbázis nyitva, dbContext üres
+3. Entitások elhelyezése dbContextben:
+	- Attach? -> állapot: Unchanged/Added
+	- Update? -> állapot: Modified, Added
+	- Delete?
+4. Mentés: SaveChanges
+5. Adatbázis zárás, dbContext törlődik

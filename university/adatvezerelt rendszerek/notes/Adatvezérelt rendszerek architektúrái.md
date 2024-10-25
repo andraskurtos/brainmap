@@ -63,9 +63,16 @@ Egy jó architektúrájú alkalmazás hosszú életciklus alatt is **karbantarth
 
 ---
 ### **Backend és Frontend**
+
 Más szemszögből nézve megkülönböztetünk *backend* és *frontend* részeket. A frontend nagyrészt a [[Megjelenítési Réteg|felhasználói felület]], illetve annak változatos megjelenítési formái (böngészős alkalmazás, natív mobil app, stb.), a felhasználó ezzel lép kapcsolatba. A backend a háttérben futó rendszer, a *szolgáltatási API-k*, az [[Üzleti Logika Réteg|üzleti logika réteg]], az [[Adatelérési réteg|adatelérés]], [[Adatforrások az Adatvezérelt Rendszerekben#1 - ADATBÁZIS|adatbázisok]].
 
 A frontend nem csak a felhasználó számítógépén jelenik meg, és a frontend technológia függvényéven előfordul, hogy a UI egy részét a backend készíti el. Ezt *szerver oldali renderelésnek* nevezik.
 
 ---
-*20240904*
+![[Pasted image 20241025170036.png]]
+
+---
+
+## Állapotkövetés
+
+Az [[Entity Framework]] többrétegű rendszerekben való állapotkövetéséről az [[Entity Framework#Többrétegű alkalmazásokban|alábbi]] szócikknél találsz információkat.

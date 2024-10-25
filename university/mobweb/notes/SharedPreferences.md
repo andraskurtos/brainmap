@@ -8,9 +8,9 @@ aliases:
   - Shared preferences
 tags:
   - 5semester
-  - mobweb
   - android
   - uni
+  - mobweb
 cssclasses:
   - center-images
   - center-titles
