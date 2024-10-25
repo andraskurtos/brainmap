@@ -95,7 +95,7 @@ ahol:
 
 Avagy hogyan építjük fel az NLP modellt?
 
-1. A forrásszöveg lényegtelen, zavaró részeinek eltávolítása
+1. **Tisztítás** - A forrásszöveg lényegtelen, zavaró részeinek eltávolítása
 2. Részegységekre (bekezdések, mondatok) bontás
 3. Elemi egységekre (szavak) bontás
 4. Irreleváns tokenek eltávolítása
