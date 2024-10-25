@@ -96,6 +96,24 @@ ahol:
 Avagy hogyan építjük fel az NLP modellt?
 
 1. **Tisztítás** - A forrásszöveg lényegtelen, zavaró részeinek eltávolítása
-2. Részegységekre (bekezdések, mondatok) bontás
-3. Elemi egységekre (szavak) bontás
-4. Irreleváns tokenek eltávolítása
+2. **Szegmentálás** - Részegységekre (bekezdések, mondatok) bontás
+3. **Tokenizálás** - Elemi egységekre (szavak) bontás
+4. **Szűrés** Irreleváns tokenek eltávolítása (túl gyakori, jelentéshez nem tartozó szavak, feladat szempontjából lényegtelen tokenek)
+5. **Modellépítés** - Konkordancia, gyakoriságvektor, valószínűségi modellek, stb. (feladattól függően számos további lépést igényelhet)
+
+A modellt nagy korpusz összegyűjtése után építjük meg, a karakterek, szavak, kifejezések sorozatait megvizsgálva, amelyek gyakoriságából következtetünk a valószínűségekre.
+
+
+>[!summary]+ Szózsák (bag of words) modell
+>- megfigyelés: adott kategóriába milyen szavak tartoznak
+>- adott szóhalmaz esetén kategória valószínűsége
+>- $$
+> P(\text{Kategória}|\text{szó}_{1:N})=\alpha \cdot P(\text{Kategória})\prod_{j}P(\text{szó}_{j}|\text{Kategória})
+> $$ 
+
+>[!summary]+ n-gram modellek (unigram, bigram, trigram)
+>- megfigyelés: szavak n hosszúságú sorozata
+>- egy sorozat valószínűsége:
+>- $$
+>P(  \text{szó}_{1:n}=\prod_{j}P(\text{szó}_{j}|\text{szó}_{1:j-1}))
+>$$
