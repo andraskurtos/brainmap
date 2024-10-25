@@ -18,3 +18,4 @@ A statisztikai nyelvi modellekben statisztikai eszközökkel próbáljuk értelm
 
 ## A keresési index további felhasználásai
 
+Az index egy gyakorisági tényezővel kiegészítve
