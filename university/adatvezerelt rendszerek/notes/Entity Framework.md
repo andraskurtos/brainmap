@@ -12,7 +12,6 @@ cssclasses:
 created: 2024-10-24 20:45
 ---
 
-
 # Entity Framework
 
 Az *entity framework* egy [[Objektum-relációs Leképezés|ORM]] rendszer, amely lehetővé teszi a *logikai* ([[Adatelérési réteg|adatbázis]]) és a *fogalmi* ([[Üzleti Logika Réteg|üzleti logika]]) modellek szétválasztását. Segítségével függetleníthetjük alkalmazásunkat az adatbázismotortól.
@@ -534,4 +533,27 @@ Az entitás kikerül a DBContext alkalmazástartományából, és átkerül egy 
 >	- A menteni kívánt adatokat
 >	- Az adatbázis jelenlegi tartalmát
 >	- Az általunk korábban lekérdezett adatokat
+>
+>
+>**Stratégiák:**
+>
+>1. Az első író nyer
+>2. Az utolsó író nyer
+>3. Felhasználóra bízzuk
+>4. Összevetjük a módosított mezők halmazát
+>5. Az esetek egy részében nem egyetlen táblát érintenek a változások, hanem több rekordot!
 
+### Migráció
+
+>[!summary]+ Definíció
+>Az adatbázis sémájának változtatása az alkalmazásban levő adatmodellt követve
+
+1. Felépítés üres adatbázisból: Create/Delete
+2. Adatbázis tartalmának megőrzése: **migráció**
+
+#### Létrehozás/Törlés
+
+- **EnsureCreated** és **EnsureDeleted** metódusok
+	- Megfelelő jogosultságra van szükség
+	- Fejlesztési ciklusban
+- **GenerateCreateScript**: SQL
