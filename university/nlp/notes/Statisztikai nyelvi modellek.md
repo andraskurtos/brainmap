@@ -144,3 +144,17 @@ Elérhető eszközök:
 ## A Statisztikai modellek javítása
 
 >[!summary]+ Vak modellek
+>- szavakra épülnek, de nem tudnak róluk semmit
+>- fekete doboz építőelemek
+
+>[!summary]+ Szótárkészítés
+>- szótári címszó
+>- szóalakok
+>- alakváltozatok
+>- példamondatok
+>- szófaj(POS), jelentés, használati gyakoriság, stb.
+
+>[!summary]+ Ontológiakészítés
+>- osztályok (település, város, stb)
+>- kapcsolatok (törökország, selyemút, stb.)
+>- 
