@@ -113,7 +113,32 @@ A modellt nagy korpusz összegyűjtése után építjük meg, a karakterek, szav
 
 >[!summary]+ n-gram modellek (unigram, bigram, trigram)
 >- megfigyelés: szavak n hosszúságú sorozata
->- egy sorozat valószínűsége:
->- $$
->P(  \text{szó}_{1:n}=\prod_{j}P(\text{szó}_{j}|\text{szó}_{1:j-1})
+>- egy sorozat valószínűsége: 
 >$$
+>P(  \text{szó}_{1:n})=\prod_{j}P(\text{szó}_{j}|\text{szó}_{1:j-1})
+>$$
+>- szavak helyett karaktersorozatokkal is dolgozhatunk
+
+Az e módon készült  modellek használhatók klasszifikációra, mondatellenőrzésre, mondatgenerálásra. Így alkalmazhatjuk őket például nyelvfelismerésre, véleményelemzésre, levélszemétszűrésre, témakörazonosításra, stb.
+
+>[!warning]+ Kritika
+>
+>- Minden szó független?
+>- Mi van, ha nincs elég megfigyelés?
+>- Sok ritka szó -> túl nagy modelldimenzió-csökkentés?
+>- Sosem látott n-gram?
+> 	 (n-1)-gram + interpoláció???
+
+
+## Eszközök: NLTK
+
+ToolKit természetes nyelvű szövegek feldolgozására és elemzésére, [[Python]] nyelven. Korpuszokkal, szövegelemző könyvtárakkal rendelkezik, széleskörben elérhető, nyílt forráskódú eszköz.
+Elérhető eszközök:
+	- tokenizálás
+	- szótövesítés
+	- szintaktikai elemzés
+	- szófaji elemzés
+	- hangulatelemzés
+	- ...
+
+## A Statiszti
