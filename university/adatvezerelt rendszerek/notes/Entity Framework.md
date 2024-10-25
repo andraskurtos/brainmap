@@ -460,3 +460,5 @@ Megvalósítás: proxy osztályok, minden tagnak virtuálisnak kell lennie, stb.
 >[!warning]+ Lazy loading probléma
 >
 >A lazy loading túl sokszor fordul az adatbázishoz.
+>![[Pasted image 20241025165707.png]]
+
