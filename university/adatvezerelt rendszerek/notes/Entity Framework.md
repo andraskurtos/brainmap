@@ -491,7 +491,9 @@ Az entitás kikerül a DBContext alkalmazástartományából, és átkerül egy 
 1. Adatbázis nyitás
 2. Entitások *lekérdezése* és átadása a *kliensnek*
 3. Adatbázis zárás, dbContext törlődik
+4. 
 ...
+
 1. *Kliens* átadja az adatokat, állapot: **Unchanged**
 2. Adatbázis nyitva, dbContext üres
 3. Entitások elhelyezése dbContextben:
