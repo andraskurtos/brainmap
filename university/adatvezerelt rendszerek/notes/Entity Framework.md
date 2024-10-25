@@ -380,9 +380,9 @@ foreach(var p in q) {
 
 ---
 
-## Entitás típusok
+## Entitások
 
-## POCO Proxy
+### POCO Proxy
 
 Ez az alapértelmezett típus, konfigban kapcsolható ki. Jelentése *Plain Old CLR Object*, tehát nincs alaposztálya. Automatikus változáskövetéssel, navigációval és lazy loading támogatással jön.
 
@@ -393,4 +393,28 @@ Ez az alapértelmezett típus, konfigban kapcsolható ki. Jelentése *Plain Old 
 
 - Sallangmentes osztályok
 - Változáskövetés
-	- Automatikus
+	- Automatikus, de *összehasonlítás alapú*: DbContext tárolja az adatbázisból lekérdezett állapotot, és összehasonlítja az entitás aktuális állapotával.
+		- Nincs lazy loading támogatás
+	- A hivatkozott entitásokat kézzel kell betölteni, **nincs navigáció**
+
+
+### Kapcsolódó entitások betöltése
+
+- *Implicit*: a memóriában benne levő kapcsolódó entitásokat az EF automatikusan hozzáköti
+- *Előtöltés*: a kapcsolódó entitások betöltése az első lekérdezéssel együtt.
+- *Explicit betöltés*: már memóriában lévő entitáshoz további kapcsolódó entitások betöltése
+- *Késleltetett betöltés*: kapcsolódó entitások transzparens betöltése a navigáció property bejárásakor -> **NE HASZNÁLJUK!**
+
+#### Előtöltés
+
+DbSet Include metódusa:
+
+```c#
+var blogs = context.Blogs
+				.Include(blog => blog.Posts)
+				.ToList();
+```
+
+IncludeThen: lefúrás
+
+
