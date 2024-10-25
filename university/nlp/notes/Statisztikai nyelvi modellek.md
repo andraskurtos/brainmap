@@ -23,7 +23,7 @@ Az index egy gyakorisági tényezővel kiegészítve már *statisztikai adathalm
 >[!example]+ Példák:
 >- Témaelemzés
 >	- szavak <-- témakörök
->- Hangulatelemzés
+>- [[Hangulatelemzés]]
 >	- szavak <-- érzelmek
 >- Szerzőségvizsgálat
 >	- szókészletből
