@@ -556,4 +556,30 @@ Az entitás kikerül a DBContext alkalmazástartományából, és átkerül egy 
 - **EnsureCreated** és **EnsureDeleted** metódusok
 	- Megfelelő jogosultságra van szükség
 	- Fejlesztési ciklusban
-- **GenerateCreateScript**: SQL
+- **GenerateCreateScript**: SQL szkript az adatbázis létrehozásához
+- ***Ha migrációt használsz, ezeket ne használd!!***
+
+#### Migrációs pontok
+
+A *migrációs pont* az **adatbázis séma pillanatképe** egy időpillanatban. Fel és le lehet közöttük navigálni. Migráció során módosul a séma és **megőrződik az adattartalom**. Migrációs pontokra a **nevükkel hivatkozunk**. A séma leírása ilyenkor programozottan, ModelBuilderrel van tárolva a forráskódban. Az adatbázisban tároljuk az aktuális séma migrációs nevét. Tipikusan a kiadott verziókhoz készítünk migrációs pontokat, a fejlesztési ciklusban nem használjuk.
+
+
+> [!tip] Migráció -> parancssor
+> - Migrációs fájlok létrehozása:
+>   
+> ```c#
+> dotnet ef migrations add InitialCreate
+> ```
+> 
+> - Adatbázis frissítése az aktuális kódhoz
+> 
+> ```c#
+> dotnet ef database update
+>```
+>
+>Az adatbázisban megvan az aktuális migrációs pont neve -> attól a ponttól hajtja végre a migrálást az aktuális verziójú kódhoz.
+>Frissíthetjük az adatbázist tetszőleges migrációs ponthoz, annak nevét megadva.
+>
+>>[!warning]+ Ellenőrzés!
+>>A migrációs lépéseket mindig le kell ellenőrizni!
+>>- Például egy oszlop átneve
