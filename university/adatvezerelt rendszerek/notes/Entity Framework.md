@@ -533,4 +533,5 @@ Az entitás kikerül a DBContext alkalmazástartományából, és átkerül egy 
 >3. Ismerni fogjuk
 >	- A menteni kívánt adatokat
 >	- Az adatbázis jelenlegi tartalmát
->	- Az általunk korábban le
+>	- Az általunk korábban lekérdezett adatokat
+
