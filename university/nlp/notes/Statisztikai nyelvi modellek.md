@@ -115,5 +115,5 @@ A modellt nagy korpusz összegyűjtése után építjük meg, a karakterek, szav
 >- megfigyelés: szavak n hosszúságú sorozata
 >- egy sorozat valószínűsége:
 >- $$
->P(  \text{szó}_{1:n}=\prod_{j}P(\text{szó}_{j}|\text{szó}_{1:j-1}))
+>P(  \text{szó}_{1:n}=\prod_{j}P(\text{szó}_{j}|\text{szó}_{1:j-1})
 >$$
