@@ -417,4 +417,46 @@ var blogs = context.Blogs
 
 IncludeThen: lefúrás
 
+```c#
+var blogs = context.Blogs
+				.Include(blog=>blog.Posts)
+					.ThenInclude(post=>post.Author)
+					.ThenInclude(author=>author.Photo)
+				.ToList();
+```
 
+#### Explicit betöltés
+
+Kapcsolódó entitások, entitáshalmazok explicit betöltése
+
+```c#
+using (var context = new BloggingContext())
+{
+	var blog = context.Blogs
+				.Single(b=>b.BlogId == 1);
+	context.Entry(blog)
+			.Collection(b=>b.Posts)
+			.Load();
+
+	context.Entry(blog)
+			.Reference(b=>b.Owner)
+			.Load();
+}
+```
+
+#### Lazy loading
+
+A relációk olvasásakor (egy másik entitás lekérdezése propertyn keresztül) automatikusan olvassa az adatbázist.
+
+```c#
+foreach (var post in posts)
+	Console.WriteLine($"----- post blogid: {post.Blog?.BlogId}");
+```
+
+Megvalósítás: proxy osztályok, minden tagnak virtuálisnak kell lennie, stb.
+
+**NE HASZNÁLD!!!**
+
+>[!warning]+ Lazy loading probléma
+>
+>A lazy loading túl sokszor fordul az adatbázishoz.
