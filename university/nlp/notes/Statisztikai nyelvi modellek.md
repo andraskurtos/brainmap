@@ -141,4 +141,6 @@ Elérhető eszközök:
 	- hangulatelemzés
 	- ...
 
-## A Statiszti
+## A Statisztikai modellek javítása
+
+>[!summary]+ Vak modellek
