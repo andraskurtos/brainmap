@@ -57,7 +57,7 @@ Szavak és kategóriák gyakorisága alapján, megfigyelésekből állítunk fel
 >- kevés megjelenés -> pontatlan modell
 >- **szavak nem függetlenek**
 
->[!tip]+ Lehetséges megoldások
+>[!success]+ Lehetséges megoldások
 >- tulajdonságtér-bővítés
 >- szótári információk
 >- morfológiai elemzés
@@ -72,4 +72,33 @@ A *tudásalapú modellek*et nyelvészeti és tárgyterületi szakértők készí
 >[!warning]+ Problémák
 >- a nyelv változékony (időben és térben)
 >- elemzési algoritmusok hatékonysága és korlátai
->- **a modellépítés manuál**
+>- **a modellépítés manuális**
+
+>[!success]+ Lehetséges megoldások
+>- alkalmazási terület korlátozása
+>- kontrollált nyelv: szűk szókincs és szabálykészlet
+>- szabályozott bemenet
+
+---
+## Gépi tanulásos NLP
+
+A *Spacy* egy gépi tanulásra épülő NLP eszköz, ami sokféle NLP feladat megoldására használható: teljes NLP feldolgozóláncot építhetünk, entitásfelismerést, szófaji címkézést, klasszifikációt, függőség-elemzést valósíthatunk meg vele. Angol nyelven előre tanított modellekkel rendelkezik, továbbtanítása is lehetséges. Nyílt forráskódú alkalmazás, részletes dokumentációval.
+
+### Formális modellek tanulása
+
+> [!summary]+ "Treebank":
+> - szintaktikailag és szemantikailag elemzett korpusz
+> - Penn Treebank: 100000+ annotált elemzési fa
+
+> [!summary]+ Gyakoriság-->Nyelvi modell:
+> 
+> - az egyes szimbólumok előfordulásai
+> 	  pl ha 100 S csomópont alatt 60 *NP VP* található, akkor ezt tanuljuk: *S->NP VP \[0.6\]*
+> - tömörítés, általánosítás
+> 	  hasonló szerkezetű szabályok összevonása
+> - az alacsony számosságú esetek is finomítandók
+
+
+> [!warning] Nincs elég adat
+> - nem ellenőrzött tanulás
+> - 
