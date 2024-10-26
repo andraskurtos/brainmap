@@ -131,7 +131,7 @@ Az *öröklődés* modellezésének fajtái:
 >- Könnyű módosítani a szülő osztályok struktúráját
 
 >[!danger]+ Hátrányok:
->- Összetett [[adatbázis]] séma
+>- Összetett [[Adatbázis]] séma
 >- Egy példány adatai több táblában vannak
 >	- Összetettebb lekérdezések
 >	- Szükséges join --> lassabb
@@ -210,7 +210,7 @@ Közvetlenül nem leképezhető, kapcsolótáblát használunk.
 
 #### Kardinalitások:
 
-Mindkét oldal kötelezőt nem célszerű leképezni. Elindulási probléma [[adatbázis]] szinten. Számolás [[Adatelérési réteg|adatréteg]] szinten: 0, 1, több.
+Mindkét oldal kötelezőt nem célszerű leképezni. Elindulási probléma [[Adatbázis]] szinten. Számolás [[Adatelérési réteg|adatréteg]] szinten: 0, 1, több.
 
 >[!abstract]- Rekurzió
 >Másnéven reflexió, olyan kapcsolat, melynek kezdő és végpontja ugyanaz az entitás. Hasonlóan kezeljük a többi kapcsolathoz, több-több leképezésben kicsi eltéréssel.
