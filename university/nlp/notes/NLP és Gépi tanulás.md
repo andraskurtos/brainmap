@@ -113,4 +113,22 @@ A szó kontextusa fontos: milyen más szavak fordulnak elő a környezetében?
 > - Milyen nyelvi modell? Mi a feladat?
 > - Mekkora lesz a modellméret?
 > - Karakteralapú kontextus és modell? Elszabadulhat a modellméret
-> - Ismerjük a szavakat (szótár) <->
+> - Ismerjük a szavakat (szótár) <-> sokféle szóalak van (előfeldolgozás)
+
+---
+
+## Szóbeágyazások
+
+### Hogyan állítsuk elő a modellt?
+
+A modellt egyedi szó- vagy n-gram vektorokkal állítjuk elő. Nagy szókincs extrém ritka, hatalmas vektorokat eredményez.
+	
+Például  $n\space=\space?$  pl $10^5$ szó és 5-gram esetén $10^{25}$ dimenzió.
+
+![[Pasted image 20241026134631.png]]
+
+![[Pasted image 20241026134701.png]]
+
+
+> [!summary] Elvárások és célok:
+> 
