@@ -98,7 +98,19 @@ A *Spacy* egy gépi tanulásra épülő NLP eszköz, ami sokféle NLP feladat me
 > 	  hasonló szerkezetű szabályok összevonása
 > - az alacsony számosságú esetek is finomítandók
 
-
 > [!warning] Nincs elég adat
 > - nem ellenőrzött tanulás
-> - 
+>   pl: tananyagtalnulás, inkrementális nehezítés kétszavas-->háromszavas-->...
+> - félig ellenőrzött tanulás
+>   kis annotált adathalmaz-->nyelvtan-->kiterjesztés
+> - más annotációk (pl HTML) alkalmazása
+
+A szó kontextusa fontos: milyen más szavak fordulnak elő a környezetében?
+
+>[!question]+ Hogyan építsünk erre nyelvi modellt?
+> - Szó + kontextus --> nyelvi modell
+> - Mekkora kontextus? Hogyan reprezentáljuk?
+> - Milyen nyelvi modell? Mi a feladat?
+> - Mekkora lesz a modellméret?
+> - Karakteralapú kontextus és modell? Elszabadulhat a modellméret
+> - Ismerjük a szavakat (szótár) <->
