@@ -27,4 +27,49 @@ Az Amazon Alexa egy az Amazon által fejlesztett asszisztens alkalmazás.
 A skill az Alexában egy képesség valamire, például tények lekérdezésére, otthonvezérlésre, időjárás lekérdezésére, stb.
 Számos beépített képességgel rendelkezik, és továbbiakkal bővíthető az alkalmazásboltból. Saját képességeket is fejleszthetünk.
 
-**T**
+**Trigger word/Invocation name**: a képességet aktiváló *hívószó*
+"Alexa" - az általános hívószó, ami aktiválja a rendszert
+"radio" - internetes rádióállomások lejátszása
+
+### Intent
+
+Az intent a felhasználó *szándéka*: mit szeretne végrehajtani, milyen backend API funkciót aktiváljon a rendszer?
+
+**Sample utterances**: azon kifejezések, amelyekkel felismerhető az Intent
+"Alexa, turn on the radio", "Alexa, play last radio station"
+
+**Slot**: az Intent *argumentuma*, amely szerepelhet a kifejezésekben
+pl: melyik rádióállomást szeretné hallgatni a felhasználó
+"Alexa, play {radio station}"
+
+![[Pasted image 20241026131227.png]]
+
+---
+
+## Az eddig megismert nyelvi modellek
+
+### Statisztikai (**korpuszalapú**) modellek
+
+Szavak és kategóriák gyakorisága alapján, megfigyelésekből állítunk fel valószínűségi modelleket.
+
+>[!warning]+ Problémák
+>- rengeteg szó nagyon ritka, [[Zipf törvény]]
+>- kevés megjelenés -> pontatlan modell
+>- **szavak nem függetlenek**
+
+>[!tip]+ Lehetséges megoldások
+>- tulajdonságtér-bővítés
+>- szótári információk
+>- morfológiai elemzés
+>- kapcsolatbővítés
+>- ontológiák
+>- rejtett szemantika felderítése
+
+### Tudásalapú modellek
+
+A *tudásalapú modellek*et nyelvészeti és tárgyterületi szakértők készítik, nyelvtani szabályokkal és szemantikai bővítésekkel.
+
+>[!warning]+ Problémák
+>- a nyelv változékony (időben és térben)
+>- elemzési algoritmusok hatékonysága és korlátai
+>- **a modellépítés manuál**
