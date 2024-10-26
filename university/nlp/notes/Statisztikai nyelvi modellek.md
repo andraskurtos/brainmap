@@ -157,4 +157,3 @@ Elérhető eszközök:
 >[!summary]+ Ontológiakészítés
 >- osztályok (település, város, stb)
 >- kapcsolatok (törökország, selyemút, stb.)
->- 
