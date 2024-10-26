@@ -11,7 +11,7 @@ cssclasses:
 created: 2024-10-26 13:00
 ---
 
-# NLP és Gépi Tanulás
+# [[Természetesnyelv-feldolgozás|NLP]] és Gépi Tanulás
 
 >[!summary]+ [[Gépi tanulás]]
 >Olyan módszerek összefogó neve, melyek adatokból képesek önállóan modellt tanulni, amit korábban nem látott adatok esetében is sikeresen tudnak alkalmazni különféle feladatokban.
@@ -131,4 +131,10 @@ Például  $n\space=\space?$  pl $10^5$ szó és 5-gram esetén $10^{25}$ dimenz
 
 
 > [!summary] Elvárások és célok:
-> 
+> - hasonló jelentésű szavak -> hasonló vektorok (rejtett szemantika megragadása)
+> - keresési minta -> találati lista hasonlóság (információtartalom)
+> - adott szósorozat után következő szó (mondatbefejezés, válaszgenerálás)
+> - adott szósorozat hiányzó szava (helyesírás-ellenőrzés)
+> - angol szósorozat->magyar szósorozat (gépi fordítás)
+> - szavak jellemzői: szófaj, entitás, szintaktikai szerep (címkézés)
+
