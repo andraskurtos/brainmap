@@ -31,7 +31,7 @@ Példaadat:
 | /konyvtar/konyv[position()<3] | Első kettő gyerek                                         |
 | //cim[@nyelv='en']            | Olyan title elem, melynek a nyelv attribútuma 'en' értékű |
 
->[!example]+ Példák:
+>[!example]- Példák:
 >
 >### //konyv
 >![[Pasted image 20241104134315.png]]
