@@ -101,3 +101,32 @@ Sémával leírható a várt tartalom, pl DTD, XSD --> validálás: egy adott XM
 ## XML tárolása relációs adatbázisokban
 
 A Microsoft SQL, Oracle, PostgreSql mind XLM-képes relációs adatbázisok. Relációs adatok mellett xml adat is szerepelhet bennük. A relációs a főadat, hiszen abból van több, ehhez köthető az XML adat.
+
+Ilyenkor az oszlop adattípusa xml lesz, jól formázottnak kell lennie. Csatolható hozzá séma, amire automatikusan ellenőrzi a megfelelést. Kereshető, lekérdezhető, manipulálható, és index is definiálható rá.
+
+### Index XML típusú oszlopra
+
+Csak akkor kell, ha az XML adaton belül keresünk, az egész lekérdezéséhez nem használ indexet.
+
+Két fajta index:
+- elsődleges: teljes tartalmat indexeli
+	- egy darab ilyen index definiálható
+	- ha indexelt az oszlop, egy ilyen indexnek léteznie kell
+		- `CREATE PRIMARY XML INDEX idxname on Table(Col)`
+- másodlagos: konkrét xml elemre definiált
+	- tetszőleges darabszámú definiálható
+	- tovább segíti az optimalizációt
+		- `CREATE XML INDEX idxname2 ON Table(Col)`
+		- `USING XML INDEX idxname FOR VALUE`
+
+### Séma hozzárendelése XML oszlophoz
+
+Az adat validációját automatikusan elvégzi a rendszer a séma szerint, mint egy tartományi integritási kritérium. Lekérdezések optimalizálásához is használja. A hozzárendelés opcionális, nem kötelező.
+
+
+### Lekérdezés
+
+```sql
+select Description.query('/product/num_of_packages') from Product 1
+
+```
