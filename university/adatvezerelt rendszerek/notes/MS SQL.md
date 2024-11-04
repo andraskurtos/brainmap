@@ -31,3 +31,12 @@ Az [[Adatbázis|adatbázis]] definíció szerint logikailag összefüggő adatok
 
 
 Az *MS SQL* a [[T-SQL]] nyelvet használja a [[Adatbázisok Szerveroldali Programozása|szerveroldali programozás]] megvalósítására.
+
+## MS SQL adatszótár
+
+### Information Schema Views
+
+```tsql
+INFORMATION_SCHEMA.
+
+```
