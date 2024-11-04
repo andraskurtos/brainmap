@@ -1,7 +1,7 @@
 ## **incomplete tasks:**
 ```dataview
 TASK
-FROM #task
+FROM #weekly
 WHERE !completed
 SORT created ASC
 LIMIT 10

@@ -1,4 +1,4 @@
-## **daily routine tasks**:
+## **daily tasks**:
 ```dataview
 TASK
 FROM #daily 
