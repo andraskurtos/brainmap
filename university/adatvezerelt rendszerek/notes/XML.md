@@ -127,6 +127,39 @@ Az adat validációját automatikusan elvégzi a rendszer a séma szerint, mint 
 ### Lekérdezés
 
 ```sql
-select Description.query('/product/num_of_packages') from Product 1
+select Description.query('/product/num_of_packages')
+	from Product <num_of_packages>1</num_of_packages>
+
+select Description.value('(/product/num_of_packages)[1]','int') from Product 1)
+
+select Name from Product
+where Description.exist( '/product/num_of_packages eq 2')=1
 
 ```
+
+### Manipulálás 
+
+```sql
+update Product
+set Description.modify(
+'replace value of
+(/product/num_of_packages/text())[1] with "2"')
+where ID=8
+
+update Product
+set Description.modify( 'insert 1 after (/product)[1]')
+where ID=8
+
+update Product set Description.modify('delete /product/a')
+where ID=8
+```
+
+### FOR XML
+
+Lekérdezés eredményének konvertálása XML formába:
+
+```sql
+select ID, Name from Customer
+for xml auto
+```
+

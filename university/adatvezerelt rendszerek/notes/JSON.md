@@ -121,3 +121,9 @@ WeatherForecast? weatherForecast =
 
 ![[Pasted image 20241104172945.png]]
 
+
+## JSON kezelés relációs adatbázisokban
+
+> [!summary] MS SQL Json támogatás
+> 
+> 
