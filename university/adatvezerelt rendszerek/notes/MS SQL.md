@@ -38,5 +38,33 @@ Az *MS SQL* a [[T-SQL]] nyelvet használja a [[Adatbázisok Szerveroldali Progra
 
 ```tsql
 INFORMATION_SCHEMA.
+	TABLES, VIEWS, COLUMNS, PARAMETERS, TABLE_PRIVILEGES, ...
+```
 
+### Catalog Views
+
+Teljeskörű információ a szerverről.
+
+```t-sql
+sys.
+	databases, database_files, filegroups, messages, schemas,
+	objects, tables, columns, foreign_keys, ... 
+```
+
+### Dynamic Management Views
+
+Szerver diagnosztikai információk
+
+```t-sql
+sys.dm_tran_locks
+sys.dm_exec_cached_plans
+sys.dm_exec_sessions
+```
+
+### Adatszótár példa:
+```sql
+select * from sys.tables
+select * from INFORMATION_SCHEMA.TABLES
+select * from sys.objects
+select * from INFORMATION_SHEMA.COLUMNS
 ```

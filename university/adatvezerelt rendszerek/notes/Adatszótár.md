@@ -20,7 +20,7 @@ created: 2024-11-04 12:42
 
 Az *adatszótár* (data dictionary) egy **központi helyen tárolt információ az adatról, annak formátumáról és kapcsolatairól** (pl: táblák nevei, oszlopok nevei, típusai). Lehet akár egy dokumentum is.
 
-Az adatbáziskezelők *integrált része*, például a csak olvasható nézetek képében. Felhasználható DML és DDL utasításokban, mint például a sémamigráció.
+Az adatbáziskezelők *integrált része*, például a csak olvasható nézetek képében. Felhasználható DML és DDL utasításokban, mint például a sémamigráció. MS SQL-ben való használata [[MS SQL#MS SQL adatszótár|itt]] látható.
 
 ## Az adatszótár tartalma
 
