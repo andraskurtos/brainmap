@@ -98,3 +98,6 @@ Sémával leírható a várt tartalom, pl DTD, XSD --> validálás: egy adott XM
 
 ![[JSON#XML vs JSON]]
 
+## XML tárolása relációs adatbázisokban
+
+A Microsoft SQL, Oracle, PostgreSql mind XLM-képes relációs adatbázisok. Relációs adatok mellett xml adat is szerepelhet bennük. A relációs a főadat, hiszen abból van több, ehhez köthető az XML adat.
