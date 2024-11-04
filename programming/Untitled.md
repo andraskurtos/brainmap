@@ -43,3 +43,10 @@ Alapelemei:
 >[!fail]+ Problémák:
 > - Nincs komment
 > - Byte order mark nem lehet fájl elején
+> - Gyakorlati adattípusokra nincs egyértelmű reprezentáció
+> 	- pl: dátum
+> 	- szabvány nem határozza meg
+> 	- külön leírás szükséges a parsoláshoz
+> - Biztonsági kockázat
+> 	- Tipikus, de nem szerencsés gyakorlat: JSON eredményt [[JavaScript|JS]] motorral végrehajtjuk (*eval()*)
+
