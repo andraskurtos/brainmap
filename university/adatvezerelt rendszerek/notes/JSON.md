@@ -120,3 +120,4 @@ WeatherForecast? weatherForecast =
 ## [[XML]] vs [[JSON]]
 
 ![[Pasted image 20241104172945.png]]
+

@@ -9,8 +9,7 @@ cssclasses:
   - markdown-preview-view
 created: 2024-11-04 13:05
 ---
-
-# Extensible Markup Language (XML)
+ # Extensible Markup Language (XML)
 
 Az *XML* nyelv adatok **szöveges, platformfüggetlen reprezentációját** valósítja meg. Előnye, hogy emberi szemmel és programmal is könnyen olvasható. Célja az egyszerű, általános használat. Eredetileg dokumentum leírásnak készült, sok más helyen is használják. Lekérdezésére használhatjuk az [[XPath]] nyelvet.
 
@@ -97,3 +96,4 @@ Sémával leírható a várt tartalom, pl DTD, XSD --> validálás: egy adott XM
 ## [[XML]] vs [[JSON]]
 
 ![[JSON#XML vs JSON]]
+
