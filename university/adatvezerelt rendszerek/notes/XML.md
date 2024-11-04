@@ -92,3 +92,8 @@ Egy XML dokumentum *jól formázott*, ha szintaktikailag megfelelő a tartalma, 
 A tartalom érvényesége azonban más kérdés. Kérdéses, jó néven vannak-e benne a tagek, olyan tartalom van-e azokban, amire számítunk.
 
 Sémával leírható a várt tartalom, pl DTD, XSD --> validálás: egy adott XML dokumentum megfelel-e egy adott sémának.
+
+
+## [[XML]] vs [[JSON]]
+
+![[JSON#XML vs JSON]]

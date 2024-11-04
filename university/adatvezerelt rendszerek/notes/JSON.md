@@ -71,7 +71,7 @@ Alapelemei:
 
 A séma leírása, maga is JSON fájl.
 
-> [!example]- Példa
+> [!example]+ Példa
 > 
 > ```json
 > {
@@ -98,3 +98,25 @@ A séma leírása, maga is JSON fájl.
 > }
 > ```
 
+## .NET és JSON
+System.Text.Json
+
+```csharp
+
+var weatherForecast = new WeatherForecast {
+	Date = DateTime.Parse("2019-08-01")
+	TemperatureCelsius = 25,
+	Summary = "Hot" };
+
+string jsonString =
+		JsonSerializer.Serialize(weatherForecast);
+
+WeatherForecast? weatherForecast =
+		JsonSerializer.Deserealize<WeatherForecast>(jsonString);s
+
+```
+
+
+## [[XML]] vs [[JSON]]
+
+![[Pasted image 20241104172945.png]]
