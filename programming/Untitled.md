@@ -50,6 +50,40 @@ Alapelemei:
 > - Biztonsági kockázat
 > 	- Tipikus, de nem szerencsés gyakorlat: JSON eredményt [[JavaScript|JS]] motorral végrehajtjuk (*eval()*)
 
+>[!question]+ Mikor használjuk?
+>- Backend - vékonykliens kommunikáció
+>	- Kevés hálózati forgalom, mobilkliensnek előnyös
+>- [[JavaScript]] tudja parsolni
+>	- Webes rendszerekben
+>	- 
 ## JSON schema
 
 A séma leírása, maga is JSON fájl.
+
+> [!example]- Példa
+> 
+> ```json
+> {
+> 	"$schema": "http://json-schema.org/schema#",
+> 	"title": "Product",
+> 	"type": "object",
+> 	"required": ["id", "name"],
+> 	"properties": {
+> 		"id": {
+> 			"type": "number",
+> 			"description": "Product identifier"
+> 		},
+> 		"name": {
+> 			"type": "string",
+> 		},
+> 		"stock": {
+> 			"type": "object",
+> 			"properties": {
+> 				"warehouse": { "type": "number" },
+> 				"retail": { "type": "number" }
+> 			}
+> 		}
+> 	}
+> }
+> ```
+
