@@ -2,7 +2,12 @@
 aliases:
   - json
   - Json
-tags: 
+tags:
+  - programming
+  - adatvez
+  - 5semester
+  - uni
+  - datadriven
 cssclasses:
   - center-images
   - center-titles
@@ -52,10 +57,16 @@ Alapelemei:
 
 >[!question]+ Mikor használjuk?
 >- Backend - vékonykliens kommunikáció
->	- Kevés hálózati forgalom, mobilkliensnek előnyös
->- [[JavaScript]] tudja parsolni
->	- Webes rendszerekben
->	- 
+>	- Tömör, rövid
+>		- Kevés hálózati forgalom, mobilkliensnek előnyös
+>	- [[JavaScript]] tudja parsolni
+>		- Webes rendszerekben
+>- [[REST]]
+>- JSON adatbázisban
+>	- [[MS SQL]] Server 2016, Oracle Server 12c
+>	- [[MongoDB]]
+
+
 ## JSON schema
 
 A séma leírása, maga is JSON fájl.
