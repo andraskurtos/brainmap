@@ -50,3 +50,6 @@ Alapelemei:
 > - Biztonsági kockázat
 > 	- Tipikus, de nem szerencsés gyakorlat: JSON eredményt [[JavaScript|JS]] motorral végrehajtjuk (*eval()*)
 
+## JSON schema
+
+A séma leírása, maga is JSON fájl.
