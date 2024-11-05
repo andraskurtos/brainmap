@@ -1,0 +1,264 @@
+{
+  "main": {
+    "id": "164b3d8803ea2d7f",
+    "type": "split",
+    "children": [
+      {
+        "id": "65398ff8b50e57f5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "449d4b1b95f7d620",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "empty",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a5680a3e84c57783",
+    "type": "split",
+    "children": [
+      {
+        "id": "480d8ba01e4c7c0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "43b19cd596c354bd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTime"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "cd7dc7054d5e60aa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "eaf68633b1f2615b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "e021c82373e18306",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 350.00418853759766
+  },
+  "right": {
+    "id": "7aca21747588be5f",
+    "type": "split",
+    "children": [
+      {
+        "id": "0f65d66210f05bb1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e9cd28c7e0572679",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "ba84f29a9ea3ccae",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Dashboard.canvas",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": true,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Dashboard"
+            }
+          },
+          {
+            "id": "c651a56fcb00e793",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Dashboard.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Dashboard"
+            }
+          },
+          {
+            "id": "12c7e63ebd16c797",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "68a647c1592de860",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Dashboard.canvas"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Dashboard"
+            }
+          },
+          {
+            "id": "f517dc3a7d2c5095",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          }
+        ],
+        "currentTab": 5
+      },
+      {
+        "id": "2155656e41872540",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "913a0dffb242e9b7",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 355.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-kanban:Create new board": false
+    }
+  },
+  "active": "449d4b1b95f7d620",
+  "lastOpenFiles": [
+    "university/adatvezerelt rendszerek/notes/JSON.md",
+    "Dashboard.canvas",
+    "university/adatvezerelt rendszerek/notes/XML.md",
+    "university/adatvezerelt rendszerek/notes/Félig strukturált adatok.md",
+    "Pasted image 20241104172945.png",
+    "university/kliensoldali rendszerek/notes/Kliensoldali Szoftver.md",
+    "university/kliensoldali rendszerek/notes/Web Alapú Alkalmazás.md",
+    "REST.md",
+    "university/kliensoldali rendszerek/notes/JavaScript.md",
+    "university/adatvezerelt rendszerek/resources/Pasted image 20241104134510.png",
+    "cs basics/encoding.md",
+    "university/adatvezerelt rendszerek/notes/XPath.md",
+    "university/adatvezerelt rendszerek/resources/Pasted image 20241104134440.png",
+    "university/adatvezerelt rendszerek/resources/Pasted image 20241104134411.png",
+    "university/adatvezerelt rendszerek/resources/Pasted image 20241104134350.png",
+    "university/adatvezerelt rendszerek/resources/Pasted image 20241104134333.png",
+    "university/adatvezerelt rendszerek/resources/Pasted image 20241104134315.png",
+    "university/adatvezerelt rendszerek/resources/Pasted image 20241104133906.png",
+    "programming/XSLT.md",
+    "cs basics",
+    "Java.md",
+    "university/adatvezerelt rendszerek/resources/Pasted image 20241104131552.png",
+    "Untitled.md",
+    "smart-chats/UNTITLED CHAT 2024-10-15 22 01 46.md",
+    "university/adatvezerelt rendszerek/notes/Adatszótár.md",
+    "university/adatvezerelt rendszerek/lectures/05-Adat szótár és félig strukturált adatok kezelése.pdf",
+    "university/adatvezerelt rendszerek/notes/MS SQL.md",
+    "weekly notes/2024-W45.md",
+    "university/ai/notes/Mesterseges Intelligencia jegyzet 1.md",
+    "university/adatvezerelt rendszerek/notes/Adatvezérelt rendszerek I.md",
+    "templates/weekly note template.md",
+    "daily notes/2024-11-04.md",
+    "university/adatvezerelt rendszerek/notes/Adatelérési réteg leválasztása.md",
+    "2024-11-04.md",
+    "university/_old/databases/notes/Adatbázis.md",
+    "university/_old",
+    "university/nlp/resources/Pasted image 20241026134701.png",
+    "university/_old/databases/notes",
+    "databases/notes",
+    "databases",
+    "university/_old/databases",
+    "university/nlp/notes/Természetesnyelv-feldolgozás.md",
+    "university/nlp/notes/NLP és Gépi tanulás.md",
+    "smart-chats",
+    "Tags",
+    "university/mesterseges intelligencia",
+    "Untitled.canvas",
+    "brainmap/Dashboard.canvas",
+    "Untitled 1.canvas"
+  ]
+}
