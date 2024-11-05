@@ -10,9 +10,11 @@
           {
             "id": "449d4b1b95f7d620",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "empty",
               "state": {},
+              "pinned": true,
               "icon": "lucide-file",
               "title": "New tab"
             }
@@ -169,22 +171,12 @@
             "state": {
               "type": "review-queue-list-view",
               "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "Notes Review Queue"
-            }
-          },
-          {
-            "id": "a5da73691d483707",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "Notes Review Queue"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       },
       {
         "id": "2155656e41872540",
@@ -214,23 +206,13 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-kanban:Create new board": false,
-      "obsidian-git:Open Git source control": false,
-      "omnisearch:Omnisearch": false,
-      "homepage:Open homepage": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-spaced-repetition:Review flashcards": false,
-      "obsidian-full-calendar:Open Full Calendar": false,
-      "periodic-notes:Open today": false
+      "obsidian-kanban:Create new board": false
     }
   },
   "active": "449d4b1b95f7d620",
   "lastOpenFiles": [
-    "Dashboard.canvas",
-    "programming/Python.md",
-    "programming/HTML tag.md",
-    "daily notes/2024-09-06.md",
     "university/adatvezerelt rendszerek/notes/JSON.md",
+    "Dashboard.canvas",
     "university/adatvezerelt rendszerek/notes/XML.md",
     "university/adatvezerelt rendszerek/notes/Félig strukturált adatok.md",
     "Pasted image 20241104172945.png",
@@ -263,12 +245,15 @@
     "daily notes/2024-11-04.md",
     "university/adatvezerelt rendszerek/notes/Adatelérési réteg leválasztása.md",
     "2024-11-04.md",
+    "university/_old/databases/notes/Adatbázis.md",
     "university/_old",
     "university/nlp/resources/Pasted image 20241026134701.png",
     "university/_old/databases/notes",
     "databases/notes",
     "databases",
     "university/_old/databases",
+    "university/nlp/notes/Természetesnyelv-feldolgozás.md",
+    "university/nlp/notes/NLP és Gépi tanulás.md",
     "smart-chats",
     "Tags",
     "university/mesterseges intelligencia",
