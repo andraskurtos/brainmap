@@ -165,6 +165,8 @@ Egymás után több művelet definiálható
 - stb
 
 ```csharp
+// Labdák kategóriába tartozó termékek
+// Áfakulcs szerint csoportosítva
 foreach (var g in collection.Aggregate()
 			.Match(Builders<Product>.Filter.AnyEq(x=>x.Categories,
 														"Labdák"))
