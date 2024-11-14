@@ -21,6 +21,7 @@ cssclasses:
 ___
 
 ### **példa:**
+
 - Az adat maga határozza meg a rajta végrehajtható műveleteket (Neptun vizsgajelentkezés).
 - Adatvezérelt alkalmazás pl a Neptun, Gmail.
 

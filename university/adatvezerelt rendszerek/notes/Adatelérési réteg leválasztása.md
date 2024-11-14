@@ -15,7 +15,7 @@ created: 2024-10-24 14:25
 # Adatelérési réteg leválasztása
 
 
-Elképzelhető, hogy az alkalmazásunkban több adattárolót is szeretnénk használni, pl. egy [[MSSQL]], egy Oracle, és egy no-sql [[Adatbázis|adatbázist]] is. Ilyenkor célszerű a cserélhető részt egy interfész mögé tenni. Így megvalósul a laza csatolás, a részek jobban elkülönülnek, és az alkalmazás könnyebben tesztelhető lesz.
+Elképzelhető, hogy az alkalmazásunkban több adattárolót is szeretnénk használni, pl. egy [[MS SQL]], egy Oracle, és egy [[NoSQL]] [[Adatbázis|adatbázist]] is. Ilyenkor célszerű a cserélhető részt egy interfész mögé tenni. Így megvalósul a laza csatolás, a részek jobban elkülönülnek, és az alkalmazás könnyebben tesztelhető lesz.
 
 ![[Pasted image 20241024142814.png]]
 

@@ -28,6 +28,7 @@ Az O/R leképezés feladata az üzleti objektumok leképezése relációs adatmo
 ## Alapötlet
 
 Az alapötlet szerint az osztályokat táblákba, az adattagokat oszlopokba, a kapcsolatokat pedig foreign keyekbe képezzük le.
+
 ![[Pasted image 20241024131606.png]]
 
 Ezzel is adódnak azonban problémák.
@@ -54,10 +55,10 @@ A *shadow információk* szükségesek a perzisztencia megvalósításához. Ily
 
 Az *öröklődés* modellezésének fajtái:
 
-1. Hierarchia leképezése egy *közös táblába*
-2. Minden *valós osztály* leképezése saját táblába (akikből objektumok képződhetnek)
-3. *Minden osztály* leképezése saját táblába
-4. Osztályok és hierarchia szintek *általános leképezése*
+1. [[Objektum-relációs Leképezés#1 - egy táblába való leképezés|Hierarchia leképezése egy közös táblába]]
+2. [[Objektum-relációs Leképezés#2 - Valós osztályok leképezése táblába|Minden valós osztály leképezése saját táblába]] (akikből objektumok képződhetnek)
+3. [[Objektum-relációs Leképezés#3 - Összes osztály leképezése táblába|Minden osztály leképezése saját táblába]]
+4. [[Objektum-relációs Leképezés#4 - leképezés általános struktúrába|Osztályok és hierarchia szintek általános leképezése]]
 
 >[!example]+ Példa:
 >- Absztrakt Person osztály

@@ -285,7 +285,7 @@ CREATE [OR ALTER] FUNCTION név
 ( [ { @paraméter adattípus } ] [ ,...n ] )
 RETURNS TABLE
 [ AS ]
-RETURN select utasításs
+RETURN select utasítás
 ```
 
 ----
