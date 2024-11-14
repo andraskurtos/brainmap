@@ -36,7 +36,7 @@ created: 2024-11-13 19:55
 >- dokumentum/[[JSON]] műveletek
 >- eventual consistency
 
-## Tranzakciók
+## [[Tranzakciókezelés|Tranzakciók]]
 
 ### Elosztott ACID tranzakciók
 
