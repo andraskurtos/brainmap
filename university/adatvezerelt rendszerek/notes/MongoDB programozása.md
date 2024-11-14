@@ -1,6 +1,7 @@
 ---
 aliases: 
-tags: 
+tags:
+  - adatvez
 cssclasses:
   - center-images
   - center-titles
@@ -175,4 +176,43 @@ foreach (var g in collection.Aggregate()
 		Console.WriteLine($"\tProduct: {p.Name}");
 }
 ```
+
+
+### "join"
+
+Left outer joint lehet kérni aggregációs műveletben a $lookup funkcióval
+Nem erre van kitalálva --> ha túl sok a join, gondoljuk át
+	-> sémát
+	-> ez-e a megfelelő eszköz?
+
+```csharp
+var query = from p in collection.AsQueryable()
+			join o in otherCollection on p.Name equals o.Key into joined
+			select new {p.Name, AgeSum, joined.Sum(x=>x.Age)};
+```
+
+
+### Beszúrás
+
+```csharp
+var newProduct = new Product
+{
+	Name = "alma",
+	Price=800,
+	Categories=new[] {"Gyümölcsök"}
+};
+collection.InsertOne(newProduct);
+```
+
+
+### Törlés
+Törlés szűrőfeltétel alapján
+-> egy vagy több dokumentumot
+-> DeleteOne/DeleteMany
+
+```csharp
+var deleteResult = collection.DeleteOne(x=>x.Id == new ObjectId("..."));
+Console.WriteLine($"Törölve: {deleteResult.DeletedCount} db");
+```
+
 
