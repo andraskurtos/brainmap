@@ -277,8 +277,8 @@ protected override void OnModelCreating(ModelBuilder mb) {
 - SaveChanges meghívásával a változások átvezetődnek az adatbázisba
 
 ```c#
-var course = context.Course.Single(q => q.Neptun== "VIAUAC01");
-var aut = context.Department.Single( q => q.Code== "AUT");
+var course = context.Course.Single(q => q.Neptun == "VIAUAC01");
+var aut = context.Department.Single( q => q.Code == "AUT");
 course.Name = "Adatvezérelt rendszerek";
 course.Department = aut;
 context.SaveChanges();

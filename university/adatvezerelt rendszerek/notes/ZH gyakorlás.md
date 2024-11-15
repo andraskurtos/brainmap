@@ -354,3 +354,45 @@ collection.Find(Builders<Product>.Filter.Lt(x=>x.Price,1000));
 ```csharp
 collection.UpdateMany(filter: Builders<Product>.Filter.Eq(x=>x.Name, "Apple"), update: Builders<Product>.Update.Mul(p=>p.Price,2));
 ```
+
+*1. Készíts egy `DbVat` osztályt a `VAT` tábla leképzésére az `ef` névtérbe a `DbProduct` -hoz hasonlóan. Ne felejtsd el felvenni a DbSet property-t a `ProductDbContext` -be `Vat` néven.*
+
+```csharp
+namespace ef
+{
+	[Table("Product")] public class DbProduct
+	{
+		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		public int ID { get; set; }
+		public string Name { get; set; }
+		public double Price { get; set; }
+		public int Stock { get; set; }
+		[ForeignKey(nameof(DbVat))]
+		public DbVat Vat {get; set;}
+	}
+	
+	[Table("Vat")]
+	public class DbVat
+	{
+		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		public int ID {get; set;}
+		public int Percent {get; set;}
+		public List<DbProduct> Products {get;} = new();
+	}
+}
+```
+
+```sql
+create or alter trigger PasswordExpiryReset
+on Customer
+for insert, update
+begin
+	update Customer
+	set PasswordExpiry = DATEADD(year,1,GETDATE())
+	from Customer c
+	inner join inserted i on i.ID = c.ID
+	left outer join deleted d on d.ID = c.ID
+	where d.ID is null or i.Password != d.Password
+end
+```
+

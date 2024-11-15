@@ -6,7 +6,6 @@ tags:
   - datadriven
 cssclasses:
   - center-images
-  - center-titles
   - markdown-preview-view
 ---
 
