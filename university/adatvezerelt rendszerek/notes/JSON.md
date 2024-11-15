@@ -17,7 +17,7 @@ created: 2024-11-04 15:34
 
 # JSON
 
-A JSON (*JavaScript Object Notation*) egy kompakt és olvasható szöveges adatreprezentáció. A nevével ellentétben nem csak [[JavaScript]] ben használható.
+A JSON (*JavaScript Object Notation*) egy kompakt és olvasható szöveges adatreprezentáció. A nevével ellentétben nem csak [[JavaScript]]ben használható.
 
 Alapelemei:
 - Objektum: kulcs-érték párok halmaza
@@ -112,7 +112,7 @@ string jsonString =
 		JsonSerializer.Serialize(weatherForecast);
 
 WeatherForecast? weatherForecast =
-		JsonSerializer.Deserealize<WeatherForecast>(jsonString);s
+		JsonSerializer.Deserealize<WeatherForecast>(jsonString);
 
 ```
 

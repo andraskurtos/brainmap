@@ -13,10 +13,6 @@ cssclasses:
 created: 2024-09-24 16:55
 ---
 
-
-
-
-
 # Adatbázisok Szerveroldali Programozása
 
 

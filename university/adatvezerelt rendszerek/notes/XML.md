@@ -12,7 +12,7 @@ created: 2024-11-04 13:05
 
 # Extensible Markup Language (XML)
 
-Az *XML* nyelv adatok **szöveges, platformfüggetlen reprezentációját** valósítja meg. Az XLM [[félig strukturált adatok]] at reprezentál. Az XML Előnye, hogy emberi szemmel és programmal is könnyen olvasható. Célja az egyszerű, általános használat. Eredetileg dokumentum leírásnak készült, sok más helyen is használják. Lekérdezésére használhatjuk az [[XPath]] nyelvet.
+Az *XML* nyelv adatok **szöveges, platformfüggetlen reprezentációját** valósítja meg. Az XLM [[félig strukturált adatok]]at reprezentál. Az XML Előnye, hogy emberi szemmel és programmal is könnyen olvasható. Célja az egyszerű, általános használat. Eredetileg dokumentum leírásnak készült, sok más helyen is használják. Lekérdezésére használhatjuk az [[XPath]] nyelvet.
 
 >[!example]+ XML példa
 >Osztályok:
@@ -100,7 +100,7 @@ Sémával leírható a várt tartalom, pl DTD, XSD --> validálás: egy adott XM
 
 ## XML tárolása relációs adatbázisokban
 
-A Microsoft SQL, Oracle, PostgreSql mind XLM-képes relációs adatbázisok. Relációs adatok mellett xml adat is szerepelhet bennük. A relációs a főadat, hiszen abból van több, ehhez köthető az XML adat.
+A Microsoft SQL, Oracle, PostgreSql mind XML-képes relációs adatbázisok. Relációs adatok mellett xml adat is szerepelhet bennük. A relációs a főadat, hiszen abból van több, ehhez köthető az XML adat.
 
 Ilyenkor az oszlop adattípusa xml lesz, jól formázottnak kell lennie. Csatolható hozzá séma, amire automatikusan ellenőrzi a megfelelést. Kereshető, lekérdezhető, manipulálható, és index is definiálható rá.
 

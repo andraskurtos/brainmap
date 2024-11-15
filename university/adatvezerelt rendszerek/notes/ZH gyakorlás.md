@@ -200,7 +200,7 @@ where i.ID is null and d.ID is not null
 commit
 ```
 
-Tekintse a fenti adatbázis modellt és annak Entity Framework leképzését (a kulcsok mentén automatikusan generált navigation property-kkel). Írjon C# nyelven Linq-toEntities technológiával kódrészletet, amely törli azon Áfa kategóriákat, amelyhez nem tartozik termék.
+*Tekintse a fenti adatbázis modellt és annak Entity Framework leképzését (a kulcsok mentén automatikusan generált navigation property-kkel). Írjon C# nyelven Linq-toEntities technológiával kódrészletet, amely törli azon Áfa kategóriákat, amelyhez nem tartozik termék.*
 
 ```csharp
 var afaquery = db.AFA.Where(a=> !a.Termeks.Any()).ToList();
@@ -208,7 +208,7 @@ db.AFA.RemoveRange(afaquery);
 db.SaveChanges();
 ```
 
-Nevezze meg, az objektum-relációs leképzés mire képezi le az objektumorientált világ alábbi fogalmait a relációs adatbázisban!
+*Nevezze meg, az objektum-relációs leképzés mire képezi le az objektumorientált világ alábbi fogalmait a relációs adatbázisban!*
 *osztály:* tábla
 *objektum példány:* rekord/sor
 *asszociáció:* kapcsolat
@@ -240,7 +240,7 @@ A táblához kapcsolódó táblák előtöltésére használható, a megadottt k
 *Az alábbi json dokumentumban szintaktikai hibák vannak. Húzza alá a hibás részeket, és javítsa őket!*
 ```json
 {
-	”version”: 1.0
+	”version”: 1.0,
 	”name”: "Adam",
 	”hobbies”: [ "football", "card games"]
 }
@@ -352,7 +352,8 @@ collection.Find(Builders<Product>.Filter.Lt(x=>x.Price,1000));
 (Tipp: a szorzás operátor neve ,,Mul".)*
 
 ```csharp
-collection.UpdateMany(filter: Builders<Product>.Filter.Eq(x=>x.Name, "Apple"), update: Builders<Product>.Update.Mul(p=>p.Price,2));
+collection.UpdateMany(Builders<Product>.Filter.Eq(x=>x.Name, "Apple"),
+Builders<Product>.Update.Mul(p=>p.Price,2));
 ```
 
 *1. Készíts egy `DbVat` osztályt a `VAT` tábla leképzésére az `ef` névtérbe a `DbProduct` -hoz hasonlóan. Ne felejtsd el felvenni a DbSet property-t a `ProductDbContext` -be `Vat` néven.*

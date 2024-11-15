@@ -35,7 +35,7 @@ Ebben a rétegben a komponensek egy konkrét technológia köré csoportosulnak,
 
 Mivel az adatbázisban tárolás gondolkodásmódja és az objektumorientált modellezés nem fedik egymást egy az egyben, ezen réteg feladata a *két világ közötti leképezés és megfeleltetés.*
 
-A relációs DB-kben használt kulcsokat objektumorientált asszociációkra és kompozíciókra fordítjuk, és ha kell, *konvertáljuk* az adattípusokat.
+A relációs DB-kben használt kulcsokat [[Objektum-relációs Leképezés|objektumorientált asszociációkra és kompozíciókra fordítjuk]], és ha kell, *konvertáljuk* az adattípusokat.
 
 ---
 

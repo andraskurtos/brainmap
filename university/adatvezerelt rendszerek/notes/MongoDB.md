@@ -25,7 +25,7 @@ A MongoDB egy [[NoSQL]] adatbázis, melynek segítségével dokumentum alapú ad
 
 
 **Logikai felépítés**:
-- klaszer
+- klaszter
 	- szerver
 		- [[MongoDB#Adatbázis|adatbázis]]
 			- [[MongoDB#Gyűjtemény|gyűjtemény]]

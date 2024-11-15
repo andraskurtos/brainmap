@@ -56,7 +56,7 @@ A *Code First* leképezés esetén adatbázist generálunk C# kód alapján, vag
 
 Termék entitás osztálya:
 
-```c#
+```csharp
 public partial class Product
 {
 	public int Id {get;set;}
@@ -75,7 +75,7 @@ public partial class Product
 
 Adatbázis környezet:
 
-```c#
+```csharp
 class MyDbContext : DbContext
 {
 	public DbSet<Product> Products {get; set;}
@@ -94,13 +94,13 @@ class MyDbContext : DbContext
 >[!tip]+ Navigation Property
 >"Adatbázis join automatikusan"
 >
-> ```sql
+> ```csharp
 > from p in db.Products
 > 	join c in db.Categories on p.CategoryId equals c.Id
 > select c.Name
 > ```
 > helyett:
->```sql
+>```csharp
 >from p in db.Products select p.Category.Name
 >```
 
@@ -123,7 +123,7 @@ class MyDbContext : DbContext
 
 Táblák, mezők, típusok, kényszerek
 
-```c#
+```csharp
 [Table("blogs", Schema="blogging")]
 class Blog
 {
