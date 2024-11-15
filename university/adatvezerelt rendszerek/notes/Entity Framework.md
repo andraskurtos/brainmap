@@ -378,7 +378,6 @@ foreach(var p in q) {
 ```
 
 ---
-
 ## Entitások
 
 ### POCO Proxy
