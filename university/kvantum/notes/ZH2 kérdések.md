@@ -124,3 +124,4 @@ $$
 >5. Qubitek hatékony mérhetősége
 >6. Qubitek összefonódott állapotának előállítása
 >7. Qubitek átvitele
+
