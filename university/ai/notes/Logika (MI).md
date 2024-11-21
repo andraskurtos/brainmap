@@ -99,5 +99,31 @@ Tetszőleges modell szemantikája rekurzív elemzéssel meghatározható.
 > amikor új mondatot adunk hozzá TB-hoz, minden korábban maga után vonzott mondata az eredeti TB-nek továbbra is mondata marad az új TB-nek.
 
 
+inferencia szabályok
 
+1. Modus Ponens:
+$$
+p\to q; \space p;\space \therefore q
+$$
+2. Modus Tollens
+$$
+p\to q;\space \neg q \space \therefore \neg p$$
 
+3.  $$
+p\to q;q\to r;\therefore p\to r
+$$
+4. $$
+p \vee q;\neg p;\therefore q
+$$
+5. Addíció $$
+p \therefore p \vee q
+$$
+6. Egyszerűsítés $$
+p\wedge q \therefore p
+$$
+7. Konjunkció $$
+p; q; \therefore p\wedge q
+$$
+8. Rezolúció $$
+p\vee q; \neg p\vee r; \therefore q\vee r
+$$
