@@ -14,7 +14,7 @@ created: 2024-11-21 00:22
 
 # Logika
 
->[!note] Logika szerepe a komplex MI alkalmazásokban:
+>[!note] Logika szerepe a komplex [[Intelligencia#Mesterséges Intelligencia|MI]] alkalmazásokban:
 >Logikai szabályalapú következtetés és beavatkozás
 >Egy vagy több feltétel logikai állításként történő megfogalmazása
 >Reakciók, beavetkozások megadása logikai szabályok alapján

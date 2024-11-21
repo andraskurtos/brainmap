@@ -29,4 +29,4 @@ Slate és Atkin **1977**-ben alkotta meg a CHESS 4.5 sakkprogramot. Ez a program
 
 **Gyakorlatilag ötvözi a mélységi és a szélességi keresés előnyös tulajdonságait**
 
-A [[Szélességi keresés|szélességi kereséshez]] hasonlóan *optimális* és *teljes*, de csak a [[Mélységi keresés|mélységi keresés]] *szerény* memóriaigényével rendelkezik. Viszont bizonyos állapotokat az algoritmus *többször is kifejleszt!*
+A [[Szélességi keresés|szélességi kereséshez]] hasonlóan *optimális* és *teljes*, de csak a [[Mélységi keresés|mélységi keresés]] *szerény* memóriaigényével rendelkezik. Viszont bizonyos állapotokat az algoritmus *többször is kifejt!*
