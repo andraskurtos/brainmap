@@ -34,3 +34,18 @@ tanító halmaz: a teljes példahalmaz
 
 >[!summary]+ DEF
 >**triviális fa**: könnyű - mindegyik példához egy önálló bejárási út
+>- a levél a példa besorolását adja
+>- a fa memorizálja a példát, nem alakít ki mintákat
+>- nem általánosít
+>**igazi fa**: a jellegzetes minták kinyerése, a módszer képes nagyszámú esetet tömör formában leírni, és így az egyelőre ismeretlen példákra is általánosítani
+
+***Építése***:
+Van néhány pozitív és néhány negatív példánk.
+Heurisztika: válasszuk azt az attribútumot, amelyik a legjobban szétválasztja őket.
+Ha az összes megmaradt eset pozitív, vagy az összes negatív, készen vagyunk azzal az ággal: a válasz igen vagy nem.
+Ha **nem maradt egyetlen példa sem**, ez azt jelenti, hogy ilyen példát nem figyeltünk meg --> alapértéket adunk vissza
+Ha **nem maradt teszteletlen attribútum**, de vannak még pozitív példák:
+néhány adat nem korrekt: zaj torzít, vagy hiányzik még attribútum (infó)
+Megoldás: **többségi szavazás** használata
+
+
