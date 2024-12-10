@@ -4,6 +4,7 @@ aliases:
   - nosql
 tags:
   - adatvez
+  - datadriven
 cssclasses:
   - center-images
   - center-titles
