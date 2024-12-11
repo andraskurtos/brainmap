@@ -86,11 +86,11 @@ Előnyben részesítjük azt az **értéket**, amely a legkevesebb választást 
 
 ## Struktúra
 
->[!question]+ Miben segíthet a CSP struktúrája?
+>[!question]+ Miben segíthet a [[Kényszerkielégítési Problémák|CSP]] struktúrája?
 >
->CSP [[Gráf|gráfja]]: független komponensek
+>[[Kényszerkielégítési Problémák|CSP]] [[Gráf|gráfja]]: független komponensek
 >
->CSP fa [[Gráf|gráf]]: megoldás könnyű, változószámban lineáris
+>[[Kényszerkielégítési Problémák|CSP]] fa [[Gráf|gráf]]: megoldás könnyű, változószámban lineáris
 >
 >1. válasszunk egy levelet gyökérnek, majd sorrendezzük a változókat (élek irányítása)
 >2. élkonzisztencia-nyesés gyerekektől a szülőik felé

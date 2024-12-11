@@ -11,7 +11,7 @@ cssclasses:
   - markdown-preview-view
 created: 2024-12-10 13:47
 ---
-# Neurális hálók
+yaa# Neurális hálók
 
 ## Regressziós modellek
 

@@ -1,7 +1,8 @@
 ---
 aliases:
   - Bayes-háló
-tags: 
+tags:
+  - ai
 cssclasses:
   - center-images
   - center-titles

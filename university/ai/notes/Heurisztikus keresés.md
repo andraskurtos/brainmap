@@ -6,7 +6,7 @@ cssclasses:
   - center-titles
   - markdown-preview-view
 ---
-# HEURISZTIKUS KERESÉS
+x# HEURISZTIKUS KERESÉS
 ## Keresési heurisztika
 
 A *heurisztika* egy függvény, ami becslést ad arra, hogy az adott állapot mennyire van közel a célállapothoz. Egy adott keresési problémához kell tervezni. Ilyen például a Manhattan távolság, vagy útvonalaknál az Euklidészi távolság.
