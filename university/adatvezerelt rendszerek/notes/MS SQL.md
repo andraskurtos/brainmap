@@ -27,7 +27,7 @@ Az [[Adatbázis|adatbázis]] definíció szerint logikailag összefüggő adatok
 > [!example]- 
 > Az adatok lehetnek *hagyományosak*: szöveg, dátum, szám,
 > *multimédiások*: kép, hang, videó,
-> vagy *strukturáltak*: XML, JSON.
+> vagy *strukturáltak*: [[XML]], [[JSON]].
 
 
 Az *MS SQL* a [[T-SQL]] nyelvet használja a [[Adatbázisok Szerveroldali Programozása|szerveroldali programozás]] megvalósítására.

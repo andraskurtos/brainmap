@@ -30,6 +30,7 @@ ___
 
 ## Adatvezérelt rendszer felépítése
 ### **Háromrétegű architektúra**
+
 Az *adatvezérelt rendszereket* tipikusan *3 rétegű architektúra* szerint építjük fel. Ez az architektúra megkülönbözteti az alkalmazás 3 fő komponenscsaládját / rétegét:
 
 - [[Megjelenítési Réteg|megjelenítési réteg]]
@@ -46,14 +47,14 @@ Az *adatvezérelt rendszereket* tipikusan *3 rétegű architektúra* szerint ép
 
 Az alkalmazásban egyes komponensek rétegekbe szerveződnek, *minden réteg más funkcionalitásért felel*, ezzel megkönnyítve a fejlesztők munkáját.
 
-Az egyes rétegek meghatározzák azt az *interfészt*, amit a ráépülő rétegek használhatnak. Az *adatelérési réteg* definiálja, milyen műveleteken keresztül érhető el az *üzleti logika réteg* számára, és az hasonlóan a *megjelenítési* *réteg* számára.
+Az egyes rétegek meghatározzák azt az *interfészt*, amit a ráépülő rétegek használhatnak. Az *[[adatelérési réteg]]* definiálja, milyen műveleteken keresztül érhető el az *üzleti logika réteg* számára, és az hasonlóan a *megjelenítési* *réteg* számára.
 
 --> Minden réteg **csak az alatta lévővel kommunikál**
 --> A rétegek által definiált **interfész mögötti implementáció cserélhető** ==> elősegíti az alkalmazás karbantarthatóságát
 
 ---
 
-Gyakran az alkalmazás nem egy helyen, hanem a rétegek mentén több kiszolgálón fut. Például leválaszható a megjelenítési réteg, ami egy *webalkalmazás esetén a böngészőben fut*, vagy az adatréteg, ami *saját kiszolgálót kap teljesítmény okokból.*
+Gyakran az alkalmazás nem egy helyen, hanem a rétegek mentén több kiszolgálón fut. Például leválaszható a [[megjelenítési réteg]], ami egy *webalkalmazás esetén a böngészőben fut*, vagy az adatréteg, ami *saját kiszolgálót kap teljesítmény okokból.*
 
 Egy jó architektúrájú alkalmazás hosszú életciklus alatt is **karbantartható marad**. 
 
