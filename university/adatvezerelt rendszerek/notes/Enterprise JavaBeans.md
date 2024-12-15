@@ -44,6 +44,7 @@ Külön leíró fájl tartalmazza, milyen middleware szolgáltatásokat veszünk
 - Ha távolról el akarjuk érni: távoli interfész -> paraméterátadás az objektumok teljes másolásával + (de)szerializálási overhead
 - Ha csak ugyanabban az alkalmazásszerverben futó más *EJB*kből vagy webkomponensekből: lokális interfész -> paraméterátadás objektumok esetén a referencia másolásával
 - Ha nem akarunk távoli elérést, interfész nélkül
+
 *A konténer által generált csomagoló osztály*
 - Megvalósítja a business interfészt, vagy annak hiányában leszármazik a bean osztályból
 - Middleware szolgáltatásokat hív és delegálja a kliens kéréseit az implementációs osztálynak

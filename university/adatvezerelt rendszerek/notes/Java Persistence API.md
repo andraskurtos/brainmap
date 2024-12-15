@@ -153,7 +153,7 @@ public class MyBean {
 }
 ```
 
-A **@Resource** hatására az EJB konténer végzi ela JNDI keresést (függőséginjektálás), ha nekünk kellene:
+A **@Resource** hatására az [[Enterprise JavaBeans|EJB]] konténer végzi ela JNDI keresést (függőséginjektálás), ha nekünk kellene:
 ```java
 DataSource ds = (DataSource) new InitialContext().lookup("mydb");
 ```

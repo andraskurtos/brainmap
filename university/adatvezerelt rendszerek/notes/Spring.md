@@ -14,7 +14,7 @@ created: 2024-12-15 13:32
 
 # SPRING
 
-A *Spring* egy pehelysúlyú, neminvezív konténert nyújt, amely segít az alkalmazás objektumainak konfigurálásában és *"összedrótozásában"*, Dependency Injection-el vagy Inversion of Control-al.
+A *Spring* egy pehelysúlyú, neminvazív konténert nyújt, amely segít az alkalmazás objektumainak konfigurálásában és *"összedrótozásában"*, Dependency Injection-el vagy Inversion of Control-al.
 
 >[!question]+ És még?
 >- A tranzakciókezelés egységes absztrakcióját, lecserélhető tranzakciómenedzserrel

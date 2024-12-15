@@ -9,9 +9,9 @@ cssclasses:
 created: 2024-11-13 21:08
 ---
 
-# MongoDB programozása
+# [[MongoDB]] programozása
 
-## MongoDB "nyers" nyelve
+## [[MongoDB]] "nyers" nyelve
 
 ```json
 db.inventory.find( {
@@ -26,7 +26,7 @@ db.inventory.find( {
 })
 ```
 
-## MongoDB .NET
+## [[MongoDB]] .NET
 
 ### Kód - Adatbázis leképezés
 
@@ -86,7 +86,7 @@ Lambda kifejezéssel:
 collection.Find(x=>x.Price < 123 && x.Name.Contains("red"));
 ```
 
-Nyers MongoDB lekérdezés:
+Nyers [[MongoDB]] lekérdezés:
 
 ```csharp
 collection.Find(

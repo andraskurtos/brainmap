@@ -313,7 +313,7 @@ END CATCH
 
 A triggerek speciális eszközök, amelyhez hasonlót máshol nemigen találunk. A triggerek *eseménykezelő tárolt eljárások*, melyek használatával az [[Adatbázis|adatbázisban]] történő különböző eseményekre tudunk feliratkozni és azok bekövetkeztekor kódot futtatni.
 
->[!abstract]+
+>[!ABSTRACT]+
 >Az alábbiakban kifejezetten DML triggerekkel foglalkozunk. Ezek az adatmódosítás hatására lefutó triggerek. Léteznek más triggerek is, pl rendszereseményekre, ezekkel kapcsolatban lásd a hivatalos dokumentációt.
 
 
@@ -321,7 +321,7 @@ A triggerek speciális eszközök, amelyhez hasonlót máshol nemigen találunk.
 
 A triggerek segítségével több, nélkülük nagyon bonyolult feladatot meg tudunk oldani. 
 
->[!example] 
+>[!EXAMPLE] 
 >Például egy **audit naplózás** feladatnál: ha egy adott táblában módosítás történik, rögzítsünk egy rekordot a napló táblába. Ezt akár C#/Java/Python kóddal is megvalósíthatnánk, azonban ezek megkerülése sokkal egyszerűbb lenne egy felhasználó számára.
 >Naplózzuk tehát bármely termék törlését egy napló táblába:
 >
