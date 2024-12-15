@@ -1,6 +1,9 @@
 ---
 aliases: 
-tags: 
+tags:
+  - adatvez
+  - 5semester
+  - uni
 cssclasses:
   - center-images
   - center-titles

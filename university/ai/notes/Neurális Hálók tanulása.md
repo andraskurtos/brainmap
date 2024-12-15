@@ -1,6 +1,7 @@
 ---
 aliases: 
-tags: 
+tags:
+  - ai
 cssclasses:
   - center-images
   - center-titles

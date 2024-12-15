@@ -67,7 +67,7 @@ END
 - tudjuk: hogy néz ki a célállapot
 - egyáltalán nem: milyen költségű a célállapotba vezető út.
 
---> **[[Infomrált Keresés|Informált keresések]]** (heurisztikus keresések)
+--> **[[Informált Keresés|Informált keresések]]** (heurisztikus keresések)
 - tudjuk: hogy néz ki a célállapot
 - jó becslésünk van arra, hogy: milyen költségű lehet a célállapotba vezető út.
 
