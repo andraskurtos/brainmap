@@ -104,7 +104,7 @@ public class SettingsService {/*...*/}
 
 ## Adatelérés támogatása
 
-Támogatás a JDBC, JPA, JDO, Hibernate, iBatis egyszerűbb használatához:
+Támogatás a JDBC, [[Java Persistence API|JPA]], JDO, Hibernate, iBatis egyszerűbb használatához:
 - Injektáltatható az **EntityManager**, HIbernate-s **SessionFactory**, **JDBCTemplate**
 - Egységes tranzakciókezelési modell
 
