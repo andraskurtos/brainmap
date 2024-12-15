@@ -11,7 +11,6 @@ created: 2024-11-19 18:33
 
 # Kvantum ZH2 kérdések
 
-![[ZH kérdések]]
 
 >[!question]- 1. Hogyan szólnak a kvantummechanika posztulátumai mérnöki interpretációban?
 >1. Kvantumbit - Kvantumrendszereket állapotvektorokkal írjuk le, amely komplex együtthatókkal rendelkezik.
@@ -45,7 +44,7 @@ b_{1}\\b_{2}
 $$
 
 >[!question]- 6. Miért fontos a belső szorzat meghatározása a kvantuminformatikában?
->Mert ennek segítségével meghatározhatjuk a két kvantumállapot közti hasonlóságot. $|\braket{ \psi | \phi }|^{2} }$
+>Mert ennek segítségével meghatározhatjuk a két kvantumállapot közti hasonlóságot. $|\braket{ \psi | \phi }|^{2}$
 
 >[!question]- 7. Miért jó, hogy a kvantuminforma0kában unitér transzformációkat alkalmazunk?
 >Mert így megmarad a vektorok belső szorzata, a szuperpozíció és interferencia, a műveletek fordíthatóak lesznek
@@ -113,7 +112,7 @@ $$
 >Bob és Alíz bitértéket beszéli meg nyivánosan, és a bázist tartják meg, így mindig tudják, ha le lettek hallgatva. A bázis szolgálhat kulcsként.
 
 >[!question]- 22. Hogyan működik az E91 összefonódáson alapuló protokoll?
->
+> ???
 
 >[!question]- 23. Mik azok a DiVincenzo kritériumok?
 >Megszabják, mit kell tudnia egy kvantumszámítógépnek
@@ -124,4 +123,26 @@ $$
 >5. Qubitek hatékony mérhetősége
 >6. Qubitek összefonódott állapotának előállítása
 >7. Qubitek átvitele
+
+>[!question]- 24. Mit értünk kvantumpárhuzamosság alatt?
+>A ***kvantumpárhuzamosság*** a kvantumszámítás egyik alapvető jelensége, amely abból fakad, hogy a kvantumbitek (qubitek) a szuperpozíció állapotában lehetnek. Ez azt jelenti, hogy egy kvantumrendszer egyszerre több különböző állapotban lehet, és ennek köszönhetően a kvantumszámítógép képes párhuzamosan több számítási útvonalat is végrehajtani.
+
+>[!question]- 25. Hogyan működik az f-vezérelt kapu?
+>Az **f-vezérelt kapu** a kvantuminformatikában egy olyan kvantumkapu, amely egy adott f(x) függvény alapján működik, és a kvantumbitekre hatva állapotokat módosít
+>Az f-vezérelt kapu működése egy unitér transzformációval írható le, amelyet gyakran így definiálnak:
+> $\ket{x}\ket{y}\to^{U_{f}}\ket{x}\ket{y\oplus f(x)}$
+
+>[!question]- 26. Mi a kvantumalgoritmus általános tervezési „receptje”? Mit értünk az egyes lépések alatt?
+>1. Inicializáció
+>   Minden qubitet $\ket{0}$ állapotba állítunk. A kezdeti bemeneteket, ha szükséges, inicializáljuk.
+>2. Szuperpozíció létrehozása
+>   Hadamard kapukkal a qubiteket szuperpozíciózícióba kerülnek, így a rendszer egyidejűleg több állapotot képviselhet.
+>3. Függvény/Kapuértékelés
+>   A rendszerre alkalmazzuk a problémának megfelelő függvényt vagy kaput, ami az állapotok amplitúdóját módosítja
+>4. Mérés
+>   Az algoritmus végén a kvantumbitek állapotát kiolvassuk, a szuperpozíciózíció összeomlik. A mérés eredménye alapján visszanyerjük a klasszikus számításhoz hasznos infókat.
+
+>[!question]- 27. Mi a Deutsch-Jozsa algoritmus lényege?
+>A **Deutsch-Jozsa algoritmus** az egyik első kvantumalgoritmus, amely bemutatta, hogy egy kvantumszámítógép bizonyos problémákat sokkal hatékonyabban oldhat meg, mint a klasszikus számítógépek. A lényege, hogy egy függvényről gyorsan eldöntse, hogy **konstans** (minden bemenetre ugyanazt az értéket adja) vagy **kiegyensúlyozott** (a bemenetek felére 0-t, a másik felére 1-et ad).
+>Klasszikusan $2^{n-1}+1$ függvényhívásra lenne szükség, de az algoritmus egyetlen függvényértékeléssel megoldja ezt.
 
