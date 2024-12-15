@@ -43,4 +43,4 @@ Az SOA/Webszolgáltatások megvalósítására két megközelítés terjedt el, 
 
 Mindkettő esetében kulcsgondolat az "interop" - együttműködés különböző platformok között.
 
-További elterjedt alternatíva a GraphQL, illetve a gPRC.
+További elterjedt alternatíva a [[GraphQL]], illetve a gPRC.

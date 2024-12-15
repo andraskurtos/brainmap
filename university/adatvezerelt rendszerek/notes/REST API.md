@@ -12,7 +12,7 @@ created: 2024-12-03 13:35
 ---
 # REST API
 
-A *Representational State Transfer* API egy webes API, amin keresztül adatokat kérdezhet le / módosíthat a kliens. Az API erőforrás (URI) alapú, az adat [[JSON]] -ban vagy [[XML]] -ben utazik. A lekérdezéshez [[Webes Architektúra#Metódusok|HTTP methodokat]] használ. Megvalósításához használhatjuk a [[dotNET Web API|.NET Web API]] t, meghívására pedig [[REST kliens|REST klienseket]]
+A *Representational State Transfer* API egy webes API, amin keresztül adatokat kérdezhet le / módosíthat a kliens. Az API erőforrás (URI) alapú, az adat [[JSON]] -ban vagy [[XML]] -ben utazik. A lekérdezéshez [[Webes Architektúra#Metódusok|HTTP methodokat]] használ. Megvalósításához használhatjuk a [[dotNET Web API|.NET Web API]]-t. [[REST API]]-k hívására .NET környezetben a [**HttpClient**](https://dotnet.microsoft.com/apps/aspnet/apis) osztály használata a legcélszerűbb.
 
 Alapelve: az api nem más, mint címezhető erőforrások halmaza.
 	Az erőforrás tipikusan adatentitás.
@@ -120,3 +120,25 @@ Törekedjünk szerver oldali állapotmentességre
 
 
 Ma már nagyságrendekkel népszerűbb, mint a [[SOAP]], az egyszerűsége, széleskörű támogatása miatt. Ritkán előfordulhat, hogy a SOAP alkalmasabb, például "heavyweight" vállalati rendszerintegráció esetén.
+
+## Dokumentálása
+
+### Ad-hoc megoldások
+
+Egyes erőforrásokhoz URL-ek + verb-ök + támogatott paraméterek táblázatos megadása, JSON kérés és válasz példák. Pl: [twitter dokumentáció](https://developer.x.com/en/docs/x-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-followers-list)
+### OpenAPI (Swagger)
+
+A [[SOAP#WSDL|SOAP WSDL-hez]] hasonló a REST világában. Egy API leíró formátumspecifikáció REST API-khoz, beleértve:
+- Elérhető végpontok
+- Minden végponthoz az elérhető műveletek
+- Paraméterek minden műveletre
+- Hitelesítési módszerek
+- Licenc, használati feltételek, és egyéb információk
+
+Szemmel is jól olvasható, és géppel is jól feldolgozható nyelv. (YAML és [[JSON]] támogatott).
+
+A SwaggerUI segítségével az OpenAPI leírás alapján interaktív HTML "help" oldalakat generálhatunk az API végpontjaihoz, amelyek hívhatók is.
+
+#### .NET környezetben:
+
+**Swashbuckle.AspNetCore** NuGet csomag segítségével.
