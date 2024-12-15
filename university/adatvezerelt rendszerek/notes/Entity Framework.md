@@ -193,7 +193,7 @@ public class Tag {
 
 A *shadow property*-k olyan tulajdonságok, amik nem jelennek meg az entitásosztályon propertyként. Fluent API-al deklarálhatók.
 
-```c#
+```csharp
 class BlogContext : DbContext
 {
 	public DbSet<Blog> Blogs {get;set;}
