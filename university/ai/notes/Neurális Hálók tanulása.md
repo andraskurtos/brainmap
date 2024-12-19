@@ -8,7 +8,7 @@ cssclasses:
   - markdown-preview-view
 created: 2024-12-10 21:11
 ---
-#  [[Neurális Hálók]] tanítása
+#  [[university/ai/notes/Neurális Hálók]] tanítása
 
 
 >[!summary]+ 
