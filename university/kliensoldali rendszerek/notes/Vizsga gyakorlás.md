@@ -54,3 +54,17 @@ export function useCountDown({initial}:{initial:number})
 ```
 
 
+A WebAssembly (wasm) alacsonyszintű programozási nyelv
+- bináris formátum
+- hatékony tömörítés, betöltés
+- verem alapú nyelv
+- egyelőre nem fér hozzá a DOM-hoz.
+
+Célja: más magasszintű nyelvek erre fordítva a böngészőben hatékonyan futtathatók legyenek.
+
+A .NET futtatókörnyezet WebAssemblyben -> böngészőben fut.
+- Az alap .NET mérete több MB (verzió függő stb.)
+	- tree shaking nélkül 6mb
+- fontos a cachelés, de még így is lassú lehet a betöltés
+
+WebAssembly-n támogatott kódok
