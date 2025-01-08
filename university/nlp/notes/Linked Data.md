@@ -1,11 +1,14 @@
 ---
 aliases: 
-tags: 
+tags:
+  - uni
+  - nlp
+  - 5semester
 cssclasses:
   - center-images
   - center-titles
   - markdown-preview-view
-created: 2024-12-15 20:12
+created: 2025-01-07 23:48
 ---
 
 

@@ -1,6 +1,9 @@
 ---
 aliases: 
-tags: 
+tags:
+  - uni
+  - 5semester
+  - client
 cssclasses:
   - center-images
   - center-titles

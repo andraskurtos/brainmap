@@ -88,7 +88,7 @@ Pontosság???
 		- megjelöljük (XML)
 		- értelmezzük (ontológia)
 		- kikövetkeztetjük (logika)
-	- A *szemantikus web* koncepció:
+	- A *[[szemantikus web]]* koncepció:
 		- W3C
 		- strukturált dokumentumok
 			- szemantikus jelölés
