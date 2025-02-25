@@ -12,7 +12,7 @@ created: 2024-11-04 13:05
 
 # Extensible Markup Language (XML)
 
-Az *XML* nyelv adatok **szöveges, platformfüggetlen reprezentációját** valósítja meg. Az XLM [[félig strukturált adatok]]at reprezentál. Az XML Előnye, hogy emberi szemmel és programmal is könnyen olvasható. Célja az egyszerű, általános használat. Eredetileg dokumentum leírásnak készült, sok más helyen is használják. Lekérdezésére használhatjuk az [[XPath]] nyelvet.
+Az *XML* nyelv adatok **szöveges, platformfüggetlen reprezentációját** valósítja meg. Az XLM [[Félig strukturált adatok]]at reprezentál. Az XML Előnye, hogy emberi szemmel és programmal is könnyen olvasható. Célja az egyszerű, általános használat. Eredetileg dokumentum leírásnak készült, sok más helyen is használják. Lekérdezésére használhatjuk az [[XPath]] nyelvet.
 
 >[!example]+ XML példa
 >Osztályok:

@@ -328,7 +328,7 @@ end
 
 Szerver oldalon az üzleti logikában. Így az adatbázistól függetlenül működhet a rendszer.
 
-*A keresés, szűrés funkció a többrétegű architektúrában eltérő módokon valósítható meg. Lehet csak és kizárólag a [[megjelenítési réteg]] felelős érte, de bízhatjuk ezt az adatbázisra/adatelérési rétegre is. Válassza ki az egyik alternatívát és érveljen mellette, mikor praktikus azt választani.*
+*A keresés, szűrés funkció a többrétegű architektúrában eltérő módokon valósítható meg. Lehet csak és kizárólag a [[Megjelenítési Réteg]] felelős érte, de bízhatjuk ezt az adatbázisra/adatelérési rétegre is. Válassza ki az egyik alternatívát és érveljen mellette, mikor praktikus azt választani.*
 
 A keresést érdemes az adatbázisra bízni, ha nagy mennyiségű adattal dolgozunk, vagy komplex keresési logikát végzünk, hiszen az nagy mennyiségű adat gyors keresésére van optimalizálva. Elkerülhetjük vele továbbá, hogy fölösleges adatok továbbítódjanak a hálózaton, ezzel növelve a biztonságot és a teljesítményt.
 

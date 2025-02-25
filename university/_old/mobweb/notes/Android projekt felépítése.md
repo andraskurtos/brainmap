@@ -27,7 +27,7 @@ A *.apk* állomány leginkább a [[Java]] világban megszokott .jar-hoz hasonlí
 - META-INF könyvtár
 	- CERT.RSA: alkalmazás tanúsítvány
 	- MANIFEST.MF: meta információk kulcs érték párokban
-	- CERT.SF: [[erőforrások]] listája és SHA-1 hash értékük
+	- CERT.SF: [[Erőforrások]] listája és SHA-1 hash értékük
 - Res könyvtár: erőforrásokat tartalmazza
 - AndroidManifest.xml: név, verzió, jogosultság, könyvtárak
 - classes.dex: lefordított osztályok a VM számára érthető formátumban
@@ -129,7 +129,7 @@ A *Manifest állomány* az alkalmazás leírója, mely definiálja az alkalmazá
 
 ## [[Erőforrások]] kezelése
 
-Egy android alkalmazás nem csak forráskódból áll, hanem erőforrásokból is, úgy mint *képek*, *hanganyagok*, stb. Emellett [[erőforrások]] az [[XML]]-ben definiált felületek is: *elrendezés*, *animáció*, *menü*, *szín*, *stílus*. Erőforrásokkal sokkal rugalmasabban változtatható az alkalmazás. Minden erőforráshoz a rendszer automatikusan azonosítót generál, amin keresztül elérhető a forráskódból.
+Egy android alkalmazás nem csak forráskódból áll, hanem erőforrásokból is, úgy mint *képek*, *hanganyagok*, stb. Emellett [[Erőforrások]] az [[XML]]-ben definiált felületek is: *elrendezés*, *animáció*, *menü*, *szín*, *stílus*. Erőforrásokkal sokkal rugalmasabban változtatható az alkalmazás. Minden erőforráshoz a rendszer automatikusan azonosítót generál, amin keresztül elérhető a forráskódból.
 
 >[!example]+ Erőforráshivatkozás példa
 >

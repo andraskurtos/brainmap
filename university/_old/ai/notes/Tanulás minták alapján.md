@@ -51,7 +51,7 @@ h(x) = f(x), x - ismert példákon gyakran teljes pontosság
 h(x') $\approx$ f(x') x' - a tanulás közben nem látott esetek (**általánosító képesség**)
 
 Sokféle tanítható modell van:
-- [[university/ai/notes/Neurális Hálók]]
+- [[Neurális Hálók]]
 - Bayes-hálók
 - kernelgépek
 - [[Döntési fák]]

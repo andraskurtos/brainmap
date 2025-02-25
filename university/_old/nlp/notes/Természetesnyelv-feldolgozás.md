@@ -54,7 +54,7 @@ Ismereteink a világról:
 
 - főként természetes nyelvű szövegek írják le
 - kevés a formalizált adat- és tudásbázis
-- --> *[[szemantikus web]]* koncepció
+- --> *[[Szemantikus Web]]* koncepció
 	- ontológiák, tartalmi modellek ->> logikai következtetés
 ![[Pasted image 20240909154641.png]]
 
