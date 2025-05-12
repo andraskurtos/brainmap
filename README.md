@@ -10,3 +10,4 @@
 - [x] Did the sync work on mobile? YES IT DID
 
 tesztteszt
+teszt2teszt
