@@ -1,6 +1,9 @@
 ---
 aliases: 
-tags: 
+tags:
+  - 5semester
+  - nlp
+  - termnyelv
 cssclasses:
   - center-images
   - center-titles
