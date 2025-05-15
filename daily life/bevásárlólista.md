@@ -8,7 +8,7 @@ cssclasses:
   - markdown-preview-view
 created: 2025-05-12 20:47
 ---
-# BEVÁSÁRLÓLISTA
+ch# BEVÁSÁRLÓLISTA
 
 #### general dolgok
 

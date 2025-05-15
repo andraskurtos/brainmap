@@ -12,8 +12,7 @@ created: 2024-11-04 13:05
 
 # Extensible Markup Language (XML)
 
-Az *XML* nyelv adatok **szöveges, platformfüggetlen reprezentációját** valósítja meg. Az XLM [[Félig strukturált adatok]]at reprezentál. Az XML Előnye, hogy emberi szemmel és programmal is könnyen olvasható. Célja az egyszerű, általános használat. Eredetileg dokumentum leírásnak készült, sok más helyen is használják. Lekérdezésére használhatjuk az [[XPath]] nyelvet.
-
+Az *XML* nyelv adatok **szöveges, platformfüggetlen reprezentációját** valósítja meg. Az XLM [[Félig strukturált adatok]] at reprezentál. Az XML Előnye, hogy emberi szemmel és programmal is könnyen olvasható. Célja az egyszerű, általános használat. Eredetileg dokumentum leírásnak készült, sok más helyen is használják. Lekérdezésére használhatjuk az [[XPath]] nyelvet.
 >[!example]+ XML példa
 >Osztályok:
 >
@@ -40,6 +39,7 @@ Az XML fájlok XML [[encoding]] ban mentődnek.
 ## XML névterek
 
 Mivel a tagnevek szabadon választhatóak, előfordulhat ütközés. Ennek kiküszöbölésére szolgálnak az *XML névterek*, hasonlóan a [[C++]] / [[C#]] névterekhez és a [[Java]] package-khez. A névtér egy prefix: <*ns*:tag>. Az XML fájl elején deklarálnunk kell őket: `xmlns:ns="URI"`.
+
 
 ## XML jellemzők
 
